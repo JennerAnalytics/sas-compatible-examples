@@ -1,0 +1,40 @@
+                                                   The FREQ Procedure
+
+Table of Statut académique (1er trimestre) by Devenir observé
+
+Statut académique (1er trimestre)  |   Abandon |   Diplômé |   Inscrit |      Total
+-----------------------------------+-----------+-----------+-----------+-----------
+Avertissement académique           |        21 |         8 |         0 |         29
+-----------------------------------+-----------+-----------+-----------+-----------
+En règle                           |        28 |        41 |         2 |         71
+-----------------------------------+-----------+-----------+-----------+-----------
+Total                              |        49 |        49 |         2 |        100
+
+Statistics for Table of Statut académique (1er trimestre) by Devenir observé
+
+Statistic                                DF  Value         Prob
+--------------------------------------------------------------
+Chi-Square                                2 9.2089       0.0100
+Likelihood Ratio Chi-Square               2 9.8909       0.0071
+
+Cramer's V                           0.3035
+Contingency Coefficient              0.2904
+
+
+                                                                Cumulative    Cumulative
+Statut académique (1er trimestre)     Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------------------------------
+Avertissement académique                     29     29.00           29        29.00
+En règle                                     71     71.00          100       100.00
+
+                                                              Cumulative    Cumulative
+Statut de première génération       Frequency    Percent     Frequency      Percent
+-----------------------------------------------------------------------------------------
+Génération continue                        63     63.00           63        63.00
+Première génération                        37     37.00          100       100.00
+      Centiles du délai avant abandon (trimestres), par statut académique       
+
+                   STATUT  T_10  T_50  T_90
+Avertissement académique    0.2   2.4   7.9
+En règle                    0.4   2.6   8.7
+

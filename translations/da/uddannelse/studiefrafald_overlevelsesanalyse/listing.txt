@@ -1,0 +1,40 @@
+                                                   The FREQ Procedure
+
+Table of Akademisk status by Udfald
+
+Akademisk status   |Dimitteret | Frafaldet |Indskrevet |      Total
+-------------------+-----------+-----------+-----------+-----------
+Akademisk advarsel |         8 |        21 |         0 |         29
+-------------------+-----------+-----------+-----------+-----------
+God status         |        41 |        28 |         2 |         71
+-------------------+-----------+-----------+-----------+-----------
+Total              |        49 |        49 |         2 |        100
+
+Statistics for Table of Akademisk status by Udfald
+
+Statistic                                DF  Value         Prob
+--------------------------------------------------------------
+Chi-Square                                2 9.2089       0.0100
+Likelihood Ratio Chi-Square               2 9.8909       0.0071
+
+Cramer's V                           0.3035
+Contingency Coefficient              0.2904
+
+
+                                                Cumulative    Cumulative
+Akademisk status      Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------------------
+Akademisk advarsel           29     29.00           29        29.00
+God status                   71     71.00          100       100.00
+
+                                                      Cumulative    Cumulative
+Status for generation       Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------------------------
+Fortsættende generation            63     63.00           63        63.00
+Første generation                  37     37.00          100       100.00
+       Percentiler for tid til frafald (semestre), efter akademisk status       
+
+  Akademisk status  10. percentil  Median  90. percentil
+Akademisk advarsel            0.2     2.4            7.9
+God status                    0.4     2.6            8.7
+

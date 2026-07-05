@@ -1,0 +1,40 @@
+                                                   The FREQ Procedure
+
+Table of Akademisk ställning by Utfall
+
+Akademisk ställning  |    Avhopp |    Examen | Inskriven |      Total
+---------------------+-----------+-----------+-----------+-----------
+Akademisk varning    |        21 |         8 |         0 |         29
+---------------------+-----------+-----------+-----------+-----------
+God ställning        |        28 |        41 |         2 |         71
+---------------------+-----------+-----------+-----------+-----------
+Total                |        49 |        49 |         2 |        100
+
+Statistics for Table of Akademisk ställning by Utfall
+
+Statistic                                DF  Value         Prob
+--------------------------------------------------------------
+Chi-Square                                2 9.2089       0.0100
+Likelihood Ratio Chi-Square               2 9.8909       0.0071
+
+Cramer's V                           0.3035
+Contingency Coefficient              0.2904
+
+
+                                                  Cumulative    Cumulative
+Akademisk ställning     Frequency    Percent     Frequency      Percent
+-----------------------------------------------------------------------------
+Akademisk varning              29     29.00           29        29.00
+God ställning                  71     71.00          100       100.00
+
+                                                     Cumulative    Cumulative
+Generationsstatus          Frequency    Percent     Frequency      Percent
+--------------------------------------------------------------------------------
+Ej första generationen            63     63.00           63        63.00
+Första generationen               37     37.00          100       100.00
+      Percentiler för tid till avhopp (terminer), per akademisk ställning       
+
+        STALLNING  10:e percentilen (terminer)  Median (terminer)  90:e percentilen (terminer)
+Akademisk varning                          0.2                2.4                          7.9
+God ställning                              0.4                2.6                          8.7
+

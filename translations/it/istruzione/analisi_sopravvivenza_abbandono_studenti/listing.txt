@@ -1,0 +1,40 @@
+                                                   The FREQ Procedure
+
+Table of Posizione accademica primo periodo by Esito osservato
+
+Posizione accademica primo periodo |Abbandonato |   Iscritto |   Laureato |       Total
+-----------------------------------+------------+------------+------------+------------
+Allerta accademica                 |         21 |          0 |          8 |          29
+-----------------------------------+------------+------------+------------+------------
+Buona posizione                    |         28 |          2 |         41 |          71
+-----------------------------------+------------+------------+------------+------------
+Total                              |         49 |          2 |         49 |         100
+
+Statistics for Table of Posizione accademica primo periodo by Esito osservato
+
+Statistic                                DF  Value         Prob
+--------------------------------------------------------------
+Chi-Square                                2 9.2089       0.0100
+Likelihood Ratio Chi-Square               2 9.8909       0.0071
+
+Cramer's V                           0.3035
+Contingency Coefficient              0.2904
+
+
+                                                                Cumulative    Cumulative
+Posizione accademica primo periodo    Frequency    Percent     Frequency      Percent
+-------------------------------------------------------------------------------------------
+Allerta accademica                           29     29.00           29        29.00
+Buona posizione                              71     71.00          100       100.00
+
+                                                      Cumulative    Cumulative
+Status prima generazione    Frequency    Percent     Frequency      Percent
+---------------------------------------------------------------------------------
+Generazione continua               63     63.00           63        63.00
+Prima generazione                  37     37.00          100       100.00
+     Percentili del tempo all'abbandono (periodi), per posizione accademica     
+
+         POSIZIONE  T_10  T_50  T_90
+Allerta accademica   0.2   2.4   7.9
+Buona posizione      0.4   2.6   8.7
+

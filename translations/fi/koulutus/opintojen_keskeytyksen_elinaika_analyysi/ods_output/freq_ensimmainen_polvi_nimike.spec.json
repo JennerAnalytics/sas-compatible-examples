@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "Ensimmäisen polven",
+      "Jatkava polvi"
+    ],
+    "counts": [
+      37.0,
+      63.0
+    ],
+    "var_name": "ensimmainen_polvi_nimike"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_ensimmainen_polvi_nimike.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

@@ -1,0 +1,30 @@
+                                                   The REG Procedure                                                    
+                                                     Model: MODEL1                                                      
+                            Dependent Variable: kayttoaste Käyttöaste (nostettu/limiitti)                             
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                   6         1.29700      0.21617     11.84    <.0001
+Error                  93         1.69847      0.01826                    
+Corrected Total        99         2.99547                                 
+
+Root MSE           0.13514    R-Square            0.4330
+Dependent Mean       0.39654    Adj R-Sq            0.3964
+Coeff Var         34.08019
+
+                                                                                                   Parameter Estimates                                                                                                   
+
+Variable                     Label                                   DF  Estimate  Standard Error   t Value  Pr > |t|  Standardized Estimate  Tolerance  Variance Inflation  95% Confidence Limits  95% Confidence Limits
+---------------------------  --------------------------------  --------  --------  --------------  --------  --------  ---------------------  ---------  ------------------  ---------------------  ---------------------
+Intercept                    Intercept                                1   0.06199         0.12969      0.48    0.6338                0.00000          .                   .               -0.19554                0.31953
+velanhoitokate                                                        1  -0.10893         0.01979     -5.51    <.0001               -0.43360    0.98276             1.01754               -0.14822               -0.06963
+liikevaihdon_volatiliteetti  Liikevaihdon volatiliteetti (CV)         1   0.36239         0.16177      2.24    0.0275                0.18900    0.85656             1.16747                0.04116                0.68363
+aiempi_kayttoaste            Edellisen jakson käyttöaste              1   0.38462         0.07559      5.09    <.0001                0.41719    0.90684             1.10273                0.23451                0.53474
+ika_kuukausina               Limiitin ikä (kuukautta)                 1  -0.00069         0.00062     -1.12    0.2668               -0.09143    0.91029             1.09855               -0.00191                0.00053
+tyottomyysaste               Paikallinen työttömyysaste (%)           1   0.03536         0.01353      2.61    0.0105                0.20453    0.99496             1.00507                0.00848                0.06223
+lyhyt_korko                  Lyhyen aikavälin viitekorko (%)          1   0.03676         0.01735      2.12    0.0368                0.16715    0.97976             1.02066                0.00231                0.07120
+
+  Käyttöasteen keskiarvo  2,5. persentiili (matala stressi)  97,5. persentiili (korkea stressi)
+------------------------  ---------------------------------  ----------------------------------
+                0.396538                             0.1212                              0.7438
+

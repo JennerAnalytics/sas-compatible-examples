@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "Hyvä opintomenestys",
+      "Opintovaroitus"
+    ],
+    "counts": [
+      71.0,
+      29.0
+    ],
+    "var_name": "asema"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_asema.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

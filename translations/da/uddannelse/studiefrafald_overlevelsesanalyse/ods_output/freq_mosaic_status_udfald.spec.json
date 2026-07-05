@@ -1,0 +1,35 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "col_labels": [
+      "Dimitteret",
+      "Frafaldet",
+      "Indskrevet"
+    ],
+    "col_var": "udfald",
+    "matrix": [
+      [
+        8.0,
+        21.0,
+        0.0
+      ],
+      [
+        41.0,
+        28.0,
+        2.0
+      ]
+    ],
+    "row_labels": [
+      "Akademisk advarsel",
+      "God status"
+    ],
+    "row_var": "status"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_mosaic_status_udfald.svg",
+  "proc_name": "FREQ",
+  "type": "freq_mosaicplot",
+  "width": "640px"
+}

@@ -1,0 +1,30 @@
+                                                   The REG Procedure                                                    
+                                                     Model: MODEL1                                                      
+                      Dependent Variable: tasa_utilizacion Tasa de utilizacion (dispuesto/limite)                       
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                   6         1.33856      0.22309     12.56    <.0001
+Error                  93         1.65226      0.01777                    
+Corrected Total        99         2.99082                                 
+
+Root MSE           0.13329    R-Square            0.4476
+Dependent Mean       0.40374    Adj R-Sq            0.4119
+Coeff Var         33.01401
+
+                                                                                                   Parameter Estimates                                                                                                    
+
+Variable              Label                                           DF  Estimate  Standard Error   t Value  Pr > |t|  Standardized Estimate  Tolerance  Variance Inflation  95% Confidence Limits  95% Confidence Limits
+--------------------  ----------------------------------------  --------  --------  --------------  --------  --------  ---------------------  ---------  ------------------  ---------------------  ---------------------
+Intercept             Intercept                                        1   0.07953         0.12791      0.62    0.5356                0.00000          .                   .               -0.17447                0.33354
+cobertura             Ratio de cobertura del servicio de deuda         1  -0.11334         0.01952     -5.81    <.0001               -0.45152    0.98276             1.01754               -0.15209               -0.07459
+volatilidad_ingresos  Volatilidad de ingresos (CV)                     1   0.37302         0.15955      2.34    0.0215                0.19469    0.85656             1.16747                0.05618                0.68985
+util_previa           Tasa de utilizacion del periodo previo           1   0.37851         0.07456      5.08    <.0001                0.41088    0.90684             1.10273                0.23045                0.52657
+meses_antiguedad      Antiguedad de la linea (meses)                   1  -0.00073         0.00061     -1.20    0.2342               -0.09672    0.91029             1.09855               -0.00193                0.00048
+tasa_desempleo        Tasa de desempleo local (%)                      1   0.03571         0.01335      2.68    0.0088                0.20673    0.99496             1.00507                0.00920                0.06221
+tasa_corto            Tasa de referencia a corto plazo (%)             1   0.03648         0.01711      2.13    0.0356                0.16603    0.97976             1.02066                0.00251                0.07046
+
+Utilizacion media  Pctl 2.5 (estres bajo)  Pctl 97.5 (estres alto)
+-----------------  ----------------------  -----------------------
+         0.403738                  0.1212                   0.7438
+

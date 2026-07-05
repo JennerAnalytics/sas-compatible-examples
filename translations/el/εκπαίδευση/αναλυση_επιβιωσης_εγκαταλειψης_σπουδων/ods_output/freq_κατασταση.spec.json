@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "Ακαδημαϊκή προειδοποίηση",
+      "Καλή κατάσταση"
+    ],
+    "counts": [
+      29.0,
+      71.0
+    ],
+    "var_name": "κατασταση"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_κατασταση.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

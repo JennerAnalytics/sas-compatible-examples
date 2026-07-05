@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="574.387719pt" height="412.105156pt" viewBox="0 0 574.387719 412.105156" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>1970-01-01T00:00:00+00:00</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 412.105156 
+L 574.387719 412.105156 
+L 574.387719 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 20.940625 391.227031 
+L 465.740625 391.227031 
+L 465.740625 21.627031 
+L 20.940625 21.627031 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="text_1">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="243.340625" y="402.825469" transform="rotate(-0 243.340625 402.825469)">κατασταση</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="text_2">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="14.860938" y="206.427031" transform="rotate(-90 14.860938 206.427031)">εκβαση</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 33.771394 360.987031 
+L 149.248317 360.987031 
+L 149.248317 275.017376 
+L 33.771394 275.017376 
+z
+" clip-path="url(#p625651f2ea)" style="fill: #0072b2; opacity: 0.85; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 33.771394 268.297376 
+L 149.248317 268.297376 
+L 149.248317 31.707031 
+L 33.771394 31.707031 
+z
+" clip-path="url(#p625651f2ea)" style="fill: #009e73; opacity: 0.85; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 157.802163 360.987031 
+L 452.909856 360.987031 
+L 452.909856 173.678862 
+L 157.802163 173.678862 
+z
+" clip-path="url(#p625651f2ea)" style="fill: #0072b2; opacity: 0.85; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 157.802163 166.958862 
+L 452.909856 166.958862 
+L 452.909856 164.214074 
+L 157.802163 164.214074 
+z
+" clip-path="url(#p625651f2ea)" style="fill: #d55e00; opacity: 0.85; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 157.802163 157.494074 
+L 452.909856 157.494074 
+L 452.909856 31.707031 
+L 157.802163 31.707031 
+z
+" clip-path="url(#p625651f2ea)" style="fill: #009e73; opacity: 0.85; stroke: #ffffff; stroke-width: 1.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 474.636625 47.499031 
+L 487.980625 47.499031 
+L 487.980625 36.411031 
+L 474.636625 36.411031 
+z
+" style="fill: #0072b2"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 474.636625 69.675031 
+L 487.980625 69.675031 
+L 487.980625 58.587031 
+L 474.636625 58.587031 
+z
+" style="fill: #d55e00"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 474.636625 91.851031 
+L 487.980625 91.851031 
+L 487.980625 80.763031 
+L 474.636625 80.763031 
+z
+" style="fill: #009e73"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 20.940625 391.227031 
+L 20.940625 21.627031 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 20.940625 391.227031 
+L 465.740625 391.227031 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #ffffff" x="91.509856" y="321.037516" transform="rotate(-0 91.509856 321.037516)">8</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #ffffff" x="91.509856" y="153.037516" transform="rotate(-0 91.509856 153.037516)">21</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="91.509856" y="384.985625" transform="rotate(-0 91.509856 384.985625)">Ακαδημαϊκή προειδοποίηση</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #ffffff" x="305.35601" y="270.368259" transform="rotate(-0 305.35601 270.368259)">41</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #ffffff" x="305.35601" y="97.635865" transform="rotate(-0 305.35601 97.635865)">28</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="305.35601" y="384.985625" transform="rotate(-0 305.35601 384.985625)">Καλή κατάσταση</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="496.876625" y="44.618469" transform="rotate(-0 496.876625 44.618469)">Αποφοίτησε</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="496.876625" y="66.785328" transform="rotate(-0 496.876625 66.785328)">Εγγεγραμμένος</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: start" x="496.876625" y="88.970469" transform="rotate(-0 496.876625 88.970469)">Εγκατέλειψε</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle" x="243.340625" y="15.627031" transform="rotate(-0 243.340625 15.627031)">Mosaic Plot: κατασταση by εκβαση</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p625651f2ea">
+   <rect x="20.940625" y="21.627031" width="444.8" height="369.6"/>
+  </clipPath>
+ </defs>
+</svg>

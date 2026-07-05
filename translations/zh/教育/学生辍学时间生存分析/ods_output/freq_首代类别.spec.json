@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "持续代",
+      "第一代大学生"
+    ],
+    "counts": [
+      63.0,
+      37.0
+    ],
+    "var_name": "首代类别"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_首代类别.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

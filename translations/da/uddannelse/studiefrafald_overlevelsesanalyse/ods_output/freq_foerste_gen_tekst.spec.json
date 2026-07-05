@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "Fortsættende generation",
+      "Første generation"
+    ],
+    "counts": [
+      63.0,
+      37.0
+    ],
+    "var_name": "foerste_gen_tekst"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_foerste_gen_tekst.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

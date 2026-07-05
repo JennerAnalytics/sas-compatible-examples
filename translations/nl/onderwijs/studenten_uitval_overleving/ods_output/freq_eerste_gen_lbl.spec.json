@@ -1,0 +1,21 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "categories": [
+      "Eerste-generatie",
+      "Niet-eerste-gen"
+    ],
+    "counts": [
+      37.0,
+      63.0
+    ],
+    "var_name": "eerste_gen_lbl"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_eerste_gen_lbl.svg",
+  "proc_name": "FREQ",
+  "type": "freq_barplot",
+  "width": "640px"
+}

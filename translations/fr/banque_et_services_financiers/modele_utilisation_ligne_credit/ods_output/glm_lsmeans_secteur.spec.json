@@ -1,0 +1,53 @@
+{
+  "border": true,
+  "data": {
+    "effect_name": "secteur",
+    "levels": [
+      {
+        "level": "Commerce de d<c3><a9>tai",
+        "lower_cl": 0.291413850300353,
+        "lsmean": 0.34072784793686617,
+        "std_err": 0.024822383649736608,
+        "std_error": 0.024822383649736608,
+        "upper_cl": 0.39004184557337934
+      },
+      {
+        "level": "Construction",
+        "lower_cl": 0.4164411420353402,
+        "lsmean": 0.49219921573894526,
+        "std_err": 0.038133107437299786,
+        "std_error": 0.038133107437299786,
+        "upper_cl": 0.5679572894425502
+      },
+      {
+        "level": "Fabrication",
+        "lower_cl": 0.3308473731663759,
+        "lsmean": 0.39432344525176904,
+        "std_err": 0.03195091636041559,
+        "std_error": 0.03195091636041559,
+        "upper_cl": 0.4577995173371622
+      },
+      {
+        "level": "Sant",
+        "lower_cl": 0.3487454786107616,
+        "lsmean": 0.41737852408287807,
+        "std_err": 0.03454669804536966,
+        "std_error": 0.03454669804536966,
+        "upper_cl": 0.48601156955499464
+      },
+      {
+        "level": "Services",
+        "lower_cl": 0.377431920460548,
+        "lsmean": 0.4280861255718621,
+        "std_err": 0.02549698205392521,
+        "std_error": 0.02549698205392521,
+        "upper_cl": 0.4787403306831762
+      }
+    ]
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/glm_lsmeans_secteur.svg",
+  "type": "glm_lsmeans",
+  "width": "640px"
+}

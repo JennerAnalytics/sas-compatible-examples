@@ -1,0 +1,35 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "col_labels": [
+      "재학",
+      "졸업",
+      "중퇴"
+    ],
+    "col_var": "결과",
+    "matrix": [
+      [
+        2.0,
+        41.0,
+        28.0
+      ],
+      [
+        0.0,
+        8.0,
+        21.0
+      ]
+    ],
+    "row_labels": [
+      "양호",
+      "학사경고"
+    ],
+    "row_var": "학사상태"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_mosaic_학사상태_결과.svg",
+  "proc_name": "FREQ",
+  "type": "freq_mosaicplot",
+  "width": "640px"
+}

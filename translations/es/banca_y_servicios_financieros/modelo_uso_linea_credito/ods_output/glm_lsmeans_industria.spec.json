@@ -1,0 +1,53 @@
+{
+  "border": true,
+  "data": {
+    "effect_name": "industria",
+    "levels": [
+      {
+        "level": "Construccion",
+        "lower_cl": 0.41623133565889103,
+        "lsmean": 0.49186966156754586,
+        "std_err": 0.03807283194048503,
+        "std_error": 0.03807283194048503,
+        "upper_cl": 0.5675079874762007
+      },
+      {
+        "level": "Manufactura",
+        "lower_cl": 0.3305627597654763,
+        "lsmean": 0.3939384977307851,
+        "std_err": 0.0319004128088632,
+        "std_error": 0.0319004128088632,
+        "upper_cl": 0.457314235696094
+      },
+      {
+        "level": "Minorista",
+        "lower_cl": 0.31626150487487537,
+        "lsmean": 0.36549755382303817,
+        "std_err": 0.02478314788829035,
+        "std_error": 0.02478314788829035,
+        "upper_cl": 0.41473360277120097
+      },
+      {
+        "level": "Salud",
+        "lower_cl": 0.3055449079660096,
+        "lsmean": 0.37406946789389,
+        "std_err": 0.03449209144423123,
+        "std_error": 0.03449209144423123,
+        "upper_cl": 0.4425940278217704
+      },
+      {
+        "level": "Servicios",
+        "lower_cl": 0.37771988126745343,
+        "lsmean": 0.42829401927739463,
+        "std_err": 0.02545667998142543,
+        "std_error": 0.02545667998142543,
+        "upper_cl": 0.4788681572873358
+      }
+    ]
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/glm_lsmeans_industria.svg",
+  "type": "glm_lsmeans",
+  "width": "640px"
+}

@@ -1,0 +1,53 @@
+{
+  "border": true,
+  "data": {
+    "effect_name": "setor",
+    "levels": [
+      {
+        "level": "Constru<c3><a7>",
+        "lower_cl": 0.35310993703079135,
+        "lsmean": 0.4292072752346566,
+        "std_err": 0.038303877482070245,
+        "std_error": 0.038303877482070245,
+        "upper_cl": 0.505304613438522
+      },
+      {
+        "level": "Manufatura",
+        "lower_cl": 0.3305173700517863,
+        "lsmean": 0.394277704616698,
+        "std_err": 0.03209400093400556,
+        "std_error": 0.03209400093400556,
+        "upper_cl": 0.45803803918160974
+      },
+      {
+        "level": "Sa<c3><ba>d",
+        "lower_cl": 0.3482272114096868,
+        "lsmean": 0.41716761363911126,
+        "std_err": 0.034701407209357354,
+        "std_error": 0.034701407209357354,
+        "upper_cl": 0.4861080158685357
+      },
+      {
+        "level": "Servi<c3><a7>o",
+        "lower_cl": 0.3771096749342146,
+        "lsmean": 0.42799072284581446,
+        "std_err": 0.025611164218964387,
+        "std_error": 0.025611164218964387,
+        "upper_cl": 0.47887177075741433
+      },
+      {
+        "level": "Varejo",
+        "lower_cl": 0.3165075060970406,
+        "lsmean": 0.3660423447336756,
+        "std_err": 0.02493354478639846,
+        "std_error": 0.02493354478639846,
+        "upper_cl": 0.4155771833703106
+      }
+    ]
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/glm_lsmeans_setor.svg",
+  "type": "glm_lsmeans",
+  "width": "640px"
+}

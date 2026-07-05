@@ -1,0 +1,35 @@
+{
+  "border": true,
+  "column_formats": {},
+  "data": {
+    "col_labels": [
+      "中退",
+      "卒業",
+      "在籍中"
+    ],
+    "col_var": "転帰",
+    "matrix": [
+      [
+        21.0,
+        8.0,
+        0.0
+      ],
+      [
+        28.0,
+        41.0,
+        2.0
+      ]
+    ],
+    "row_labels": [
+      "学業警告",
+      "良好な成績状態"
+    ],
+    "row_var": "成績状態"
+  },
+  "format": "SVG",
+  "height": "480px",
+  "output_path": "./ods_output/freq_mosaic_成績状態_転帰.svg",
+  "proc_name": "FREQ",
+  "type": "freq_mosaicplot",
+  "width": "640px"
+}
