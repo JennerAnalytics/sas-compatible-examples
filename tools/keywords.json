@@ -1,0 +1,5501 @@
+{
+ "language_order": [
+  "en",
+  "fr",
+  "de",
+  "es",
+  "pt",
+  "it",
+  "nl",
+  "ja",
+  "ko",
+  "zh",
+  "yue",
+  "ru",
+  "ar",
+  "he",
+  "hi",
+  "th",
+  "el",
+  "sv",
+  "no",
+  "da",
+  "cs",
+  "fi",
+  "pl",
+  "tr",
+  "id",
+  "vi"
+ ],
+ "languages": {
+  "en": {
+   "name": "English",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROC"
+    ],
+    "Sort": [
+     "SORT"
+    ],
+    "Set": [
+     "SET"
+    ],
+    "Merge": [
+     "MERGE"
+    ],
+    "By": [
+     "BY"
+    ],
+    "Run": [
+     "RUN"
+    ],
+    "Input": [
+     "INPUT"
+    ],
+    "Keep": [
+     "KEEP"
+    ],
+    "Drop": [
+     "DROP"
+    ],
+    "Rename": [
+     "RENAME"
+    ],
+    "Libname": [
+     "LIBNAME"
+    ],
+    "If": [
+     "IF"
+    ],
+    "Then": [
+     "THEN"
+    ],
+    "Else": [
+     "ELSE"
+    ],
+    "Do": [
+     "DO"
+    ],
+    "To": [
+     "TO"
+    ],
+    "While": [
+     "WHILE"
+    ],
+    "Until": [
+     "UNTIL"
+    ],
+    "Leave": [
+     "LEAVE"
+    ],
+    "Continue": [
+     "CONTINUE"
+    ],
+    "Goto": [
+     "GOTO"
+    ],
+    "Select": [
+     "SELECT"
+    ],
+    "When": [
+     "WHEN"
+    ],
+    "Otherwise": [
+     "OTHERWISE"
+    ],
+    "End": [
+     "END"
+    ],
+    "Output": [
+     "OUTPUT"
+    ],
+    "Put": [
+     "PUT"
+    ],
+    "Delete": [
+     "DELETE"
+    ],
+    "Stop": [
+     "STOP"
+    ],
+    "Abort": [
+     "ABORT"
+    ],
+    "Abend": [
+     "ABEND"
+    ],
+    "Return": [
+     "RETURN"
+    ],
+    "Call": [
+     "CALL"
+    ],
+    "Retain": [
+     "RETAIN"
+    ],
+    "Attrib": [
+     "ATTRIB"
+    ],
+    "Length": [
+     "LENGTH"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Informat": [
+     "INFORMAT"
+    ],
+    "Label": [
+     "LABEL"
+    ],
+    "Where": [
+     "WHERE"
+    ],
+    "Options": [
+     "OPTIONS"
+    ],
+    "Array": [
+     "ARRAY"
+    ],
+    "Of": [
+     "OF"
+    ],
+    "And": [
+     "AND"
+    ],
+    "Or": [
+     "OR"
+    ],
+    "Not": [
+     "NOT"
+    ],
+    "In": [
+     "IN"
+    ],
+    "Between": [
+     "BETWEEN"
+    ],
+    "Is": [
+     "IS"
+    ],
+    "Contains": [
+     "CONTAINS"
+    ],
+    "Like": [
+     "LIKE"
+    ],
+    "Value": [
+     "VALUE"
+    ],
+    "Picture": [
+     "PICTURE"
+    ],
+    "Invalue": [
+     "INVALUE"
+    ],
+    "Low": [
+     "LOW"
+    ],
+    "High": [
+     "HIGH"
+    ],
+    "Other": [
+     "OTHER"
+    ],
+    "Library": [
+     "LIBRARY"
+    ],
+    "Cntlin": [
+     "CNTLIN"
+    ],
+    "Cntlout": [
+     "CNTLOUT"
+    ],
+    "Univariate": [
+     "UNIVARIATE"
+    ],
+    "Means": [
+     "MEANS"
+    ],
+    "Var": [
+     "VAR"
+    ],
+    "Class": [
+     "CLASS"
+    ],
+    "Weight": [
+     "WEIGHT"
+    ],
+    "Noprint": [
+     "NOPRINT"
+    ],
+    "Nway": [
+     "NWAY"
+    ],
+    "Missing": [
+     "MISSING"
+    ],
+    "Types": [
+     "TYPES"
+    ],
+    "Ways": [
+     "WAYS"
+    ],
+    "Descending": [
+     "DESCENDING"
+    ],
+    "Export": [
+     "EXPORT"
+    ],
+    "Outfile": [
+     "OUTFILE"
+    ],
+    "Dbms": [
+     "DBMS"
+    ],
+    "Replace": [
+     "REPLACE"
+    ],
+    "Putnames": [
+     "PUTNAMES"
+    ],
+    "Import": [
+     "IMPORT"
+    ],
+    "Datafile": [
+     "DATAFILE"
+    ],
+    "Getnames": [
+     "GETNAMES"
+    ],
+    "Guessingrows": [
+     "GUESSINGROWS"
+    ],
+    "Contents": [
+     "CONTENTS"
+    ],
+    "Varnum": [
+     "VARNUM"
+    ],
+    "Print": [
+     "PRINT"
+    ],
+    "Report": [
+     "REPORT"
+    ],
+    "Column": [
+     "COLUMN"
+    ],
+    "Define": [
+     "DEFINE"
+    ],
+    "Nowindows": [
+     "NOWINDOWS",
+     "NOWD"
+    ],
+    "Headline": [
+     "HEADLINE"
+    ],
+    "Headskip": [
+     "HEADSKIP"
+    ],
+    "Display": [
+     "DISPLAY"
+    ],
+    "Analysis": [
+     "ANALYSIS"
+    ],
+    "Computed": [
+     "COMPUTED"
+    ],
+    "Across": [
+     "ACROSS"
+    ],
+    "Center": [
+     "CENTER"
+    ],
+    "Nocenter": [
+     "NOCENTER"
+    ],
+    "Spacing": [
+     "SPACING"
+    ],
+    "Printto": [
+     "PRINTTO"
+    ],
+    "Log": [
+     "LOG"
+    ],
+    "New": [
+     "NEW"
+    ],
+    "Freq": [
+     "FREQ"
+    ],
+    "Tables": [
+     "TABLES"
+    ],
+    "Tabulate": [
+     "TABULATE"
+    ],
+    "Keylabel": [
+     "KEYLABEL"
+    ],
+    "Standard": [
+     "STANDARD"
+    ],
+    "Rank": [
+     "RANK"
+    ],
+    "Ranks": [
+     "RANKS"
+    ],
+    "Groups": [
+     "GROUPS"
+    ],
+    "Ties": [
+     "TIES"
+    ],
+    "Fraction": [
+     "FRACTION"
+    ],
+    "Nplus1": [
+     "NPLUS1"
+    ],
+    "Percent": [
+     "PERCENT"
+    ],
+    "Normal": [
+     "NORMAL"
+    ],
+    "Savage": [
+     "SAVAGE"
+    ],
+    "Http": [
+     "HTTP"
+    ],
+    "Url": [
+     "URL"
+    ],
+    "Timeout": [
+     "TIMEOUT"
+    ],
+    "Headerout": [
+     "HEADEROUT"
+    ],
+    "Headerin": [
+     "HEADERIN"
+    ],
+    "Headers": [
+     "HEADERS"
+    ],
+    "System": [
+     "SYSTEM"
+    ],
+    "Prompt": [
+     "PROMPT"
+    ],
+    "Embed": [
+     "EMBED"
+    ],
+    "Parallel": [
+     "PARALLEL"
+    ],
+    "Xsl": [
+     "XSL"
+    ],
+    "Json": [
+     "JSON"
+    ],
+    "Pretty": [
+     "PRETTY"
+    ],
+    "Nosastags": [
+     "NOSASTAGS"
+    ],
+    "Sastags": [
+     "SASTAGS"
+    ],
+    "Trimblanks": [
+     "TRIMBLANKS"
+    ],
+    "Notrimblanks": [
+     "NOTRIMBLANKS"
+    ],
+    "Fmtdatetime": [
+     "FMTDATETIME"
+    ],
+    "Nofmtdatetime": [
+     "NOFMTDATETIME"
+    ],
+    "Fmtnumeric": [
+     "FMTNUMERIC"
+    ],
+    "Nofmtnumeric": [
+     "NOFMTNUMERIC"
+    ],
+    "Fmtcharacter": [
+     "FMTCHARACTER"
+    ],
+    "Nofmtcharacter": [
+     "NOFMTCHARACTER"
+    ],
+    "True": [
+     "TRUE"
+    ],
+    "False": [
+     "FALSE"
+    ],
+    "Object": [
+     "OBJECT"
+    ],
+    "Open": [
+     "OPEN"
+    ],
+    "Close": [
+     "CLOSE"
+    ],
+    "Values": [
+     "VALUES"
+    ],
+    "Tablename": [
+     "TABLENAME"
+    ],
+    "Nokeys": [
+     "NOKEYS"
+    ],
+    "Nopretty": [
+     "NOPRETTY"
+    ],
+    "Append": [
+     "APPEND"
+    ],
+    "Force": [
+     "FORCE"
+    ],
+    "Nowarn": [
+     "NOWARN"
+    ],
+    "Datasets": [
+     "DATASETS"
+    ],
+    "Change": [
+     "CHANGE"
+    ],
+    "Exchange": [
+     "EXCHANGE"
+    ],
+    "Age": [
+     "AGE"
+    ],
+    "Save": [
+     "SAVE"
+    ],
+    "Modify": [
+     "MODIFY"
+    ],
+    "Index": [
+     "INDEX"
+    ],
+    "Kill": [
+     "KILL"
+    ],
+    "Memtype": [
+     "MEMTYPE"
+    ],
+    "Encryptkey": [
+     "ENCRYPTKEY"
+    ],
+    "Move": [
+     "MOVE"
+    ],
+    "Exclude": [
+     "EXCLUDE"
+    ],
+    "Catalog": [
+     "CATALOG"
+    ],
+    "Entrytype": [
+     "ENTRYTYPE",
+     "ET"
+    ],
+    "Compare": [
+     "COMPARE"
+    ],
+    "Base": [
+     "BASE"
+    ],
+    "Criterion": [
+     "CRITERION"
+    ],
+    "Method": [
+     "METHOD"
+    ],
+    "Maxprint": [
+     "MAXPRINT"
+    ],
+    "Listall": [
+     "LISTALL"
+    ],
+    "Listvar": [
+     "LISTVAR"
+    ],
+    "Listobs": [
+     "LISTOBS"
+    ],
+    "Listequalvar": [
+     "LISTEQUALVAR"
+    ],
+    "Outbase": [
+     "OUTBASE"
+    ],
+    "Outcomp": [
+     "OUTCOMP"
+    ],
+    "Outnoequal": [
+     "OUTNOEQUAL"
+    ],
+    "Transpose": [
+     "TRANSPOSE"
+    ],
+    "With": [
+     "WITH"
+    ],
+    "Copy": [
+     "COPY"
+    ],
+    "Notsorted": [
+     "NOTSORTED"
+    ],
+    "Let": [
+     "LET"
+    ],
+    "Sql": [
+     "SQL"
+    ],
+    "FedSql": [
+     "FEDSQL"
+    ],
+    "Quit": [
+     "QUIT"
+    ],
+    "From": [
+     "FROM"
+    ],
+    "Group": [
+     "GROUP"
+    ],
+    "Having": [
+     "HAVING"
+    ],
+    "Order": [
+     "ORDER"
+    ],
+    "As": [
+     "AS"
+    ],
+    "Distinct": [
+     "DISTINCT"
+    ],
+    "All": [
+     "ALL"
+    ],
+    "Null": [
+     "NULL"
+    ],
+    "Asc": [
+     "ASC"
+    ],
+    "Desc": [
+     "DESC"
+    ],
+    "Create": [
+     "CREATE"
+    ],
+    "Table": [
+     "TABLE"
+    ],
+    "View": [
+     "VIEW"
+    ],
+    "Insert": [
+     "INSERT"
+    ],
+    "Update": [
+     "UPDATE"
+    ],
+    "Join": [
+     "JOIN"
+    ],
+    "Left": [
+     "LEFT"
+    ],
+    "Right": [
+     "RIGHT"
+    ],
+    "Full": [
+     "FULL"
+    ],
+    "Inner": [
+     "INNER"
+    ],
+    "Outer": [
+     "OUTER"
+    ],
+    "Cross": [
+     "CROSS"
+    ],
+    "Natural": [
+     "NATURAL"
+    ],
+    "On": [
+     "ON"
+    ],
+    "Using": [
+     "USING"
+    ],
+    "Union": [
+     "UNION"
+    ],
+    "Intersect": [
+     "INTERSECT"
+    ],
+    "Except": [
+     "EXCEPT"
+    ],
+    "Into": [
+     "INTO"
+    ],
+    "Calculated": [
+     "CALCULATED"
+    ],
+    "Exists": [
+     "EXISTS"
+    ],
+    "Any": [
+     "ANY"
+    ],
+    "Some": [
+     "SOME"
+    ],
+    "Case": [
+     "CASE"
+    ],
+    "Coalesce": [
+     "COALESCE"
+    ],
+    "Limit": [
+     "LIMIT"
+    ],
+    "Offset": [
+     "OFFSET"
+    ],
+    "Connect": [
+     "CONNECT"
+    ],
+    "Disconnect": [
+     "DISCONNECT"
+    ],
+    "Execute": [
+     "EXECUTE"
+    ],
+    "Connection": [
+     "CONNECTION"
+    ],
+    "Filename": [
+     "FILENAME"
+    ],
+    "Temp": [
+     "TEMP"
+    ],
+    "Infile": [
+     "INFILE"
+    ],
+    "Lrecl": [
+     "LRECL"
+    ],
+    "Recfm": [
+     "RECFM"
+    ],
+    "Datalines": [
+     "DATALINES",
+     "CARDS"
+    ],
+    "Datalines4": [
+     "DATALINES4",
+     "CARDS4"
+    ],
+    "File": [
+     "FILE"
+    ],
+    "Ods": [
+     "ODS"
+    ],
+    "Graphics": [
+     "GRAPHICS"
+    ],
+    "Off": [
+     "OFF"
+    ],
+    "Width": [
+     "WIDTH"
+    ],
+    "Height": [
+     "HEIGHT"
+    ],
+    "Outputfmt": [
+     "OUTPUTFMT"
+    ],
+    "Imagename": [
+     "IMAGENAME"
+    ],
+    "Border": [
+     "BORDER"
+    ],
+    "Noborder": [
+     "NOBORDER"
+    ],
+    "Sgplot": [
+     "SGPLOT"
+    ],
+    "Sgpanel": [
+     "SGPANEL"
+    ],
+    "Sgscatter": [
+     "SGSCATTER"
+    ],
+    "Sgpie": [
+     "SGPIE"
+    ],
+    "Panelby": [
+     "PANELBY"
+    ],
+    "Pie": [
+     "PIE"
+    ],
+    "Donut": [
+     "DONUT"
+    ],
+    "Holevalue": [
+     "HOLEVALUE"
+    ],
+    "Holelabel": [
+     "HOLELABEL"
+    ],
+    "Ringsize": [
+     "RINGSIZE"
+    ],
+    "Startangle": [
+     "STARTANGLE"
+    ],
+    "Direction": [
+     "DIRECTION"
+    ],
+    "Clockwise": [
+     "CLOCKWISE"
+    ],
+    "Counterclockwise": [
+     "COUNTERCLOCKWISE"
+    ],
+    "Categoryorder": [
+     "CATEGORYORDER"
+    ],
+    "Datalabelloc": [
+     "DATALABELLOC"
+    ],
+    "Datalabeldisplay": [
+     "DATALABELDISPLAY"
+    ],
+    "Matrix": [
+     "MATRIX"
+    ],
+    "Diagonal": [
+     "DIAGONAL"
+    ],
+    "Scatter": [
+     "SCATTER"
+    ],
+    "Series": [
+     "SERIES"
+    ],
+    "Vbar": [
+     "VBAR"
+    ],
+    "Hbar": [
+     "HBAR"
+    ],
+    "Histogram": [
+     "HISTOGRAM"
+    ],
+    "Vbox": [
+     "VBOX"
+    ],
+    "Hbox": [
+     "HBOX"
+    ],
+    "Response": [
+     "RESPONSE"
+    ],
+    "Stat": [
+     "STAT"
+    ],
+    "Groupdisplay": [
+     "GROUPDISPLAY"
+    ],
+    "Cluster": [
+     "CLUSTER"
+    ],
+    "Lineattrs": [
+     "LINEATTRS"
+    ],
+    "Markerattrs": [
+     "MARKERATTRS"
+    ],
+    "Datalabel": [
+     "DATALABEL"
+    ],
+    "Transparency": [
+     "TRANSPARENCY"
+    ],
+    "Xaxis": [
+     "XAXIS"
+    ],
+    "Yaxis": [
+     "YAXIS"
+    ],
+    "Title": [
+     "TITLE",
+     "TITLE1"
+    ],
+    "Min": [
+     "MIN"
+    ],
+    "Max": [
+     "MAX"
+    ],
+    "Binwidth": [
+     "BINWIDTH"
+    ],
+    "Scale": [
+     "SCALE"
+    ],
+    "Refline": [
+     "REFLINE"
+    ],
+    "Axis": [
+     "AXIS"
+    ],
+    "Density": [
+     "DENSITY"
+    ],
+    "Kernel": [
+     "KERNEL"
+    ],
+    "Mu": [
+     "MU"
+    ],
+    "Sigma": [
+     "SIGMA"
+    ],
+    "Reg": [
+     "REG"
+    ],
+    "Degree": [
+     "DEGREE"
+    ],
+    "Clm": [
+     "CLM"
+    ],
+    "Cli": [
+     "CLI"
+    ],
+    "Alpha": [
+     "ALPHA"
+    ],
+    "Nomarkers": [
+     "NOMARKERS"
+    ],
+    "Step": [
+     "STEP"
+    ],
+    "Justify": [
+     "JUSTIFY"
+    ],
+    "Markers": [
+     "MARKERS"
+    ],
+    "Vline": [
+     "VLINE"
+    ],
+    "Hline": [
+     "HLINE"
+    ],
+    "Band": [
+     "BAND"
+    ],
+    "Lower": [
+     "LOWER"
+    ],
+    "Upper": [
+     "UPPER"
+    ],
+    "Nooutline": [
+     "NOOUTLINE"
+    ],
+    "Template": [
+     "TEMPLATE"
+    ],
+    "Statgraph": [
+     "STATGRAPH"
+    ],
+    "Begingraph": [
+     "BEGINGRAPH"
+    ],
+    "Endgraph": [
+     "ENDGRAPH"
+    ],
+    "Layout": [
+     "LAYOUT"
+    ],
+    "Overlay": [
+     "OVERLAY"
+    ],
+    "Endlayout": [
+     "ENDLAYOUT"
+    ],
+    "Scatterplot": [
+     "SCATTERPLOT"
+    ],
+    "Seriesplot": [
+     "SERIESPLOT"
+    ],
+    "Barchart": [
+     "BARCHART"
+    ],
+    "Regressionplot": [
+     "REGRESSIONPLOT"
+    ],
+    "Sgrender": [
+     "SGRENDER"
+    ],
+    "Dynamic": [
+     "DYNAMIC"
+    ],
+    "Sgdesign": [
+     "SGDESIGN"
+    ],
+    "Sgd": [
+     "SGD"
+    ],
+    "Gchart": [
+     "GCHART"
+    ],
+    "Sumvar": [
+     "SUMVAR"
+    ],
+    "Subgroup": [
+     "SUBGROUP"
+    ],
+    "Explode": [
+     "EXPLODE"
+    ],
+    "Slice": [
+     "SLICE"
+    ],
+    "Lifetest": [
+     "LIFETEST"
+    ],
+    "Time": [
+     "TIME"
+    ],
+    "Survival": [
+     "SURVIVAL"
+    ],
+    "Phreg": [
+     "PHREG"
+    ],
+    "Model": [
+     "MODEL"
+    ],
+    "Strata": [
+     "STRATA"
+    ],
+    "Plots": [
+     "PLOTS"
+    ],
+    "Icphreg": [
+     "ICPHREG"
+    ],
+    "Iclifetest": [
+     "ICLIFETEST"
+    ],
+    "Lifereg": [
+     "LIFEREG"
+    ],
+    "Dist": [
+     "DIST",
+     "DISTRIBUTION"
+    ],
+    "Logistic": [
+     "LOGISTIC"
+    ],
+    "Event": [
+     "EVENT"
+    ],
+    "Ref": [
+     "REF"
+    ],
+    "Param": [
+     "PARAM"
+    ],
+    "Descend": [
+     "DESCEND"
+    ],
+    "Mixed": [
+     "MIXED"
+    ],
+    "Random": [
+     "RANDOM"
+    ],
+    "Solution": [
+     "SOLUTION"
+    ],
+    "Subject": [
+     "SUBJECT"
+    ],
+    "Intercept": [
+     "INTERCEPT"
+    ],
+    "Glimmix": [
+     "GLIMMIX"
+    ],
+    "Link": [
+     "LINK"
+    ],
+    "CovType": [
+     "COVTYPE"
+    ],
+    "Ttest": [
+     "TTEST"
+    ],
+    "Paired": [
+     "PAIRED"
+    ],
+    "H0": [
+     "H0"
+    ],
+    "Glm": [
+     "GLM"
+    ],
+    "Lsmeans": [
+     "LSMEANS"
+    ],
+    "Tukey": [
+     "TUKEY"
+    ],
+    "Scheffe": [
+     "SCHEFFE"
+    ],
+    "Duncan": [
+     "DUNCAN"
+    ],
+    "Snk": [
+     "SNK"
+    ],
+    "Bon": [
+     "BON"
+    ],
+    "Lsd": [
+     "LSD"
+    ],
+    "Pdiff": [
+     "PDIFF"
+    ],
+    "Adjust": [
+     "ADJUST"
+    ],
+    "Genmod": [
+     "GENMOD"
+    ],
+    "Repeated": [
+     "REPEATED"
+    ],
+    "Estimate": [
+     "ESTIMATE"
+    ],
+    "Exp": [
+     "EXP"
+    ],
+    "Ilink": [
+     "ILINK"
+    ],
+    "Corrw": [
+     "CORRW"
+    ],
+    "Modelse": [
+     "MODELSE"
+    ],
+    "Npar1way": [
+     "NPAR1WAY"
+    ],
+    "Wilcoxon": [
+     "WILCOXON"
+    ],
+    "Median": [
+     "MEDIAN"
+    ],
+    "Exact": [
+     "EXACT"
+    ],
+    "Power": [
+     "POWER"
+    ],
+    "Twosamplemeans": [
+     "TWOSAMPLEMEANS"
+    ],
+    "Onesamplemeans": [
+     "ONESAMPLEMEANS"
+    ],
+    "Twosamplefreq": [
+     "TWOSAMPLEFREQ"
+    ],
+    "Onecorr": [
+     "ONECORR"
+    ],
+    "Meandiff": [
+     "MEANDIFF"
+    ],
+    "Stddev": [
+     "STDDEV"
+    ],
+    "Npergroup": [
+     "NPERGROUP"
+    ],
+    "Ntotal": [
+     "NTOTAL"
+    ],
+    "Nullmean": [
+     "NULLMEAN"
+    ],
+    "Nullcorr": [
+     "NULLCORR"
+    ],
+    "Nulldiff": [
+     "NULLDIFF"
+    ],
+    "Groupproportions": [
+     "GROUPPROPORTIONS"
+    ],
+    "Corr": [
+     "CORR"
+    ],
+    "Sides": [
+     "SIDES"
+    ],
+    "Test": [
+     "TEST"
+    ],
+    "Diff": [
+     "DIFF"
+    ],
+    "Pchi": [
+     "PCHI"
+    ],
+    "Fisherz": [
+     "FISHERZ"
+    ],
+    "Anova": [
+     "ANOVA"
+    ],
+    "Absorb": [
+     "ABSORB"
+    ],
+    "Manova": [
+     "MANOVA"
+    ],
+    "Contrast": [
+     "CONTRAST"
+    ],
+    "Variogram": [
+     "VARIOGRAM"
+    ],
+    "Compute": [
+     "COMPUTE"
+    ],
+    "Coordinates": [
+     "COORDINATES"
+    ],
+    "Lagd": [
+     "LAGD"
+    ],
+    "Maxlag": [
+     "MAXLAG"
+    ],
+    "Novariogram": [
+     "NOVARIOGRAM"
+    ],
+    "Nhc": [
+     "NHC"
+    ],
+    "Robust": [
+     "ROBUST"
+    ],
+    "Ndir": [
+     "NDIR"
+    ],
+    "Atol": [
+     "ATOL"
+    ],
+    "Bw": [
+     "BW"
+    ],
+    "Cov": [
+     "COV"
+    ],
+    "Autocorr": [
+     "AUTOCORR"
+    ],
+    "Directions": [
+     "DIRECTIONS"
+    ],
+    "Outv": [
+     "OUTV",
+     "OUTVAR"
+    ],
+    "Outdistance": [
+     "OUTDISTANCE"
+    ],
+    "Xc": [
+     "XC"
+    ],
+    "Yc": [
+     "YC"
+    ],
+    "Zc": [
+     "ZC"
+    ],
+    "Form": [
+     "FORM"
+    ],
+    "Nugget": [
+     "NUGGET"
+    ],
+    "Tree": [
+     "TREE"
+    ],
+    "Fastclus": [
+     "FASTCLUS"
+    ],
+    "Factor": [
+     "FACTOR"
+    ],
+    "Nfactors": [
+     "NFACTORS"
+    ],
+    "Mineigen": [
+     "MINEIGEN"
+    ],
+    "Priors": [
+     "PRIORS"
+    ],
+    "Maxiter": [
+     "MAXITER"
+    ],
+    "Converge": [
+     "CONVERGE"
+    ],
+    "Residuals": [
+     "RESIDUALS"
+    ],
+    "Scree": [
+     "SCREE"
+    ],
+    "Msa": [
+     "MSA"
+    ],
+    "Score": [
+     "SCORE"
+    ],
+    "Outstat": [
+     "OUTSTAT"
+    ],
+    "Heywood": [
+     "HEYWOOD"
+    ],
+    "Ultraheywood": [
+     "ULTRAHEYWOOD"
+    ],
+    "Discrim": [
+     "DISCRIM"
+    ],
+    "Candisc": [
+     "CANDISC"
+    ],
+    "Princomp": [
+     "PRINCOMP"
+    ],
+    "Prefix": [
+     "PREFIX"
+    ],
+    "Partial": [
+     "PARTIAL"
+    ],
+    "Noint": [
+     "NOINT"
+    ],
+    "Singular": [
+     "SINGULAR"
+    ],
+    "Surveymeans": [
+     "SURVEYMEANS"
+    ],
+    "Domain": [
+     "DOMAIN"
+    ],
+    "Repweights": [
+     "REPWEIGHTS"
+    ],
+    "Varmethod": [
+     "VARMETHOD"
+    ],
+    "Ratio": [
+     "RATIO"
+    ],
+    "Total": [
+     "TOTAL"
+    ],
+    "Quartiles": [
+     "QUARTILES"
+    ],
+    "Percentiles": [
+     "PERCENTILES"
+    ],
+    "Deff": [
+     "DEFF"
+    ],
+    "Defft": [
+     "DEFFT"
+    ],
+    "Surveyfreq": [
+     "SURVEYFREQ"
+    ],
+    "Surveyreg": [
+     "SURVEYREG"
+    ],
+    "Lsmestimate": [
+     "LSMESTIMATE"
+    ],
+    "Surveylogistic": [
+     "SURVEYLOGISTIC"
+    ],
+    "Arima": [
+     "ARIMA"
+    ],
+    "Identify": [
+     "IDENTIFY"
+    ],
+    "Nlag": [
+     "NLAG"
+    ],
+    "Lead": [
+     "LEAD"
+    ],
+    "Crosscorr": [
+     "CROSSCORR"
+    ],
+    "Stationarity": [
+     "STATIONARITY"
+    ],
+    "Scan": [
+     "SCAN"
+    ],
+    "Esacf": [
+     "ESACF"
+    ],
+    "Minic": [
+     "MINIC"
+    ],
+    "Outlier": [
+     "OUTLIER"
+    ],
+    "Outcov": [
+     "OUTCOV"
+    ],
+    "Timeseries": [
+     "TIMESERIES"
+    ],
+    "Ucm": [
+     "UCM"
+    ],
+    "Goptions": [
+     "GOPTIONS"
+    ],
+    "Xpixels": [
+     "XPIXELS"
+    ],
+    "Ypixels": [
+     "YPIXELS"
+    ],
+    "Hsize": [
+     "HSIZE"
+    ],
+    "Vsize": [
+     "VSIZE"
+    ],
+    "Cback": [
+     "CBACK"
+    ],
+    "Ctext": [
+     "CTEXT"
+    ],
+    "Rotate": [
+     "ROTATE"
+    ],
+    "Landscape": [
+     "LANDSCAPE"
+    ],
+    "Portrait": [
+     "PORTRAIT"
+    ],
+    "Gplot": [
+     "GPLOT"
+    ],
+    "Plot": [
+     "PLOT"
+    ],
+    "Symbol": [
+     "SYMBOL"
+    ],
+    "Interpol": [
+     "INTERPOL"
+    ],
+    "Spline": [
+     "SPLINE"
+    ],
+    "Haxis": [
+     "HAXIS"
+    ],
+    "Vaxis": [
+     "VAXIS"
+    ],
+    "Href": [
+     "HREF"
+    ],
+    "Vref": [
+     "VREF"
+    ],
+    "Autohref": [
+     "AUTOHREF"
+    ],
+    "Autovref": [
+     "AUTOVREF"
+    ],
+    "Nolegend": [
+     "NOLEGEND"
+    ],
+    "Areas": [
+     "AREAS"
+    ],
+    "Regeqn": [
+     "REGEQN"
+    ],
+    "Skipmiss": [
+     "SKIPMISS"
+    ],
+    "Hminor": [
+     "HMINOR"
+    ],
+    "Vminor": [
+     "VMINOR"
+    ],
+    "Hzero": [
+     "HZERO"
+    ],
+    "Vzero": [
+     "VZERO"
+    ],
+    "Hreverse": [
+     "HREVERSE"
+    ],
+    "Vreverse": [
+     "VREVERSE"
+    ],
+    "Gmap": [
+     "GMAP"
+    ],
+    "Gproject": [
+     "GPROJECT"
+    ],
+    "Ginside": [
+     "GINSIDE"
+    ],
+    "Gremove": [
+     "GREMOVE"
+    ],
+    "Greduce": [
+     "GREDUCE"
+    ],
+    "Geocode": [
+     "GEOCODE"
+    ],
+    "Mapimport": [
+     "MAPIMPORT"
+    ],
+    "Choro": [
+     "CHORO"
+    ],
+    "Block": [
+     "BLOCK"
+    ],
+    "Prism": [
+     "PRISM"
+    ],
+    "Surface": [
+     "SURFACE"
+    ],
+    "Iml": [
+     "IML"
+    ],
+    "Use": [
+     "USE"
+    ],
+    "Read": [
+     "READ"
+    ],
+    "Colname": [
+     "COLNAME"
+    ],
+    "Start": [
+     "START"
+    ],
+    "Finish": [
+     "FINISH"
+    ],
+    "Global": [
+     "GLOBAL"
+    ],
+    "Free": [
+     "FREE"
+    ],
+    "Store": [
+     "STORE"
+    ],
+    "Load": [
+     "LOAD"
+    ],
+    "Mattrib": [
+     "MATTRIB"
+    ],
+    "Rowname": [
+     "ROWNAME"
+    ]
+   }
+  },
+  "fr": {
+   "name": "Français",
+   "keywords": {
+    "Data": [
+     "DONNÉES"
+    ],
+    "Proc": [
+     "PROCÉDURE"
+    ],
+    "Run": [
+     "EXÉCUTER"
+    ],
+    "Set": [
+     "DÉFINIR"
+    ],
+    "Merge": [
+     "FUSIONNER"
+    ],
+    "By": [
+     "PAR"
+    ],
+    "If": [
+     "SI"
+    ],
+    "Then": [
+     "ALORS"
+    ],
+    "Else": [
+     "SINON"
+    ],
+    "Do": [
+     "FAIRE"
+    ],
+    "End": [
+     "FIN"
+    ],
+    "Input": [
+     "ENTRÉE"
+    ],
+    "Datalines": [
+     "CARTES",
+     "LIGNES_DONNÉES"
+    ],
+    "Output": [
+     "SORTIE"
+    ],
+    "Keep": [
+     "GARDER"
+    ],
+    "Drop": [
+     "SUPPRIMER"
+    ],
+    "Where": [
+     "OÙ"
+    ],
+    "Sort": [
+     "TRIER"
+    ],
+    "Print": [
+     "IMPRIMER"
+    ],
+    "Means": [
+     "MOYENNES"
+    ],
+    "Freq": [
+     "FRÉQUENCES"
+    ],
+    "Tabulate": [
+     "TABULER"
+    ],
+    "Contents": [
+     "CONTENU"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Class": [
+     "CLASSE"
+    ],
+    "Weight": [
+     "POIDS"
+    ],
+    "Label": [
+     "ÉTIQUETTE"
+    ],
+    "To": [
+     "JUSQU_À"
+    ],
+    "While": [
+     "TANT_QUE"
+    ],
+    "Until": [
+     "JUSQU_À_CE_QUE"
+    ],
+    "Select": [
+     "SÉLECTIONNER"
+    ],
+    "When": [
+     "QUAND"
+    ],
+    "Otherwise": [
+     "AUTREMENT"
+    ],
+    "Leave": [
+     "QUITTER"
+    ],
+    "Continue": [
+     "CONTINUER"
+    ],
+    "Retain": [
+     "RETENIR"
+    ],
+    "Array": [
+     "TABLEAU"
+    ],
+    "Length": [
+     "LONGUEUR"
+    ],
+    "Attrib": [
+     "ATTRIBUT"
+    ],
+    "Options": [
+     "OPTIONS"
+    ],
+    "Libname": [
+     "LIBRAIRIE"
+    ],
+    "Filename": [
+     "NOM_FICHIER"
+    ],
+    "Title": [
+     "TITRE"
+    ],
+    "Infile": [
+     "FICHIER_ENTRÉE"
+    ],
+    "File": [
+     "FICHIER"
+    ],
+    "Put": [
+     "ÉCRIRE"
+    ],
+    "Delete": [
+     "EFFACER"
+    ],
+    "Stop": [
+     "ARRÊTER"
+    ],
+    "Abort": [
+     "ABANDONNER"
+    ],
+    "Call": [
+     "APPELER"
+    ],
+    "Rename": [
+     "RENOMMER"
+    ],
+    "Of": [
+     "DE"
+    ],
+    "Or": [
+     "OU"
+    ],
+    "Not": [
+     "NON"
+    ],
+    "In": [
+     "DANS"
+    ],
+    "Between": [
+     "ENTRE"
+    ],
+    "Is": [
+     "EST"
+    ],
+    "Noprint": [
+     "SANS_IMPRESSION"
+    ],
+    "Missing": [
+     "MANQUANT"
+    ],
+    "Descending": [
+     "DESCENDANT"
+    ],
+    "Replace": [
+     "REMPLACER"
+    ],
+    "Import": [
+     "IMPORTER"
+    ],
+    "Export": [
+     "EXPORTER"
+    ],
+    "Value": [
+     "VALEUR"
+    ],
+    "Picture": [
+     "IMAGE"
+    ],
+    "Invalue": [
+     "EN_VALEUR"
+    ],
+    "Univariate": [
+     "UNIVARIÉ"
+    ],
+    "Standard": [
+     "STANDARD"
+    ],
+    "Rank": [
+     "RANG"
+    ],
+    "Transpose": [
+     "TRANSPOSER"
+    ],
+    "Compare": [
+     "COMPARER"
+    ],
+    "Report": [
+     "RAPPORT"
+    ],
+    "Append": [
+     "AJOUTER"
+    ],
+    "Datasets": [
+     "JEUX_DE_DONNÉES"
+    ],
+    "Copy": [
+     "COPIER"
+    ],
+    "Sql": [
+     "SQL"
+    ],
+    "From": [
+     "DEPUIS"
+    ],
+    "Group": [
+     "GROUPE"
+    ],
+    "Having": [
+     "AYANT"
+    ],
+    "Order": [
+     "ORDRE"
+    ],
+    "As": [
+     "COMME"
+    ],
+    "Distinct": [
+     "DISTINCT"
+    ],
+    "All": [
+     "TOUT"
+    ],
+    "Null": [
+     "NUL"
+    ],
+    "Create": [
+     "CRÉER"
+    ],
+    "Table": [
+     "TABLE"
+    ],
+    "View": [
+     "VUE"
+    ],
+    "Insert": [
+     "INSÉRER"
+    ],
+    "Update": [
+     "METTRE_À_JOUR"
+    ],
+    "Join": [
+     "JOINDRE"
+    ],
+    "Left": [
+     "GAUCHE"
+    ],
+    "Right": [
+     "DROITE"
+    ],
+    "Full": [
+     "COMPLET"
+    ],
+    "Inner": [
+     "INTÉRIEUR"
+    ],
+    "Outer": [
+     "EXTÉRIEUR"
+    ],
+    "On": [
+     "SUR"
+    ],
+    "Union": [
+     "UNION"
+    ],
+    "Into": [
+     "VERS"
+    ],
+    "Exists": [
+     "EXISTE"
+    ],
+    "Case": [
+     "CAS"
+    ],
+    "Limit": [
+     "LIMITE"
+    ],
+    "Model": [
+     "MODÈLE"
+    ],
+    "Strata": [
+     "STRATES"
+    ],
+    "Estimate": [
+     "ESTIMATION"
+    ],
+    "Contrast": [
+     "CONTRASTE"
+    ],
+    "Random": [
+     "ALÉATOIRE"
+    ],
+    "Repeated": [
+     "RÉPÉTÉ"
+    ],
+    "Paired": [
+     "APPARIÉ"
+    ],
+    "Logistic": [
+     "LOGISTIQUE"
+    ],
+    "Mixed": [
+     "MIXTE"
+    ],
+    "Glm": [
+     "MLG"
+    ],
+    "Anova": [
+     "ANOVA"
+    ],
+    "Ttest": [
+     "TEST_T"
+    ],
+    "Factor": [
+     "FACTEUR"
+    ],
+    "Cluster": [
+     "GRAPPE"
+    ]
+   }
+  },
+  "de": {
+   "name": "Deutsch",
+   "keywords": {
+    "Data": [
+     "DATEN"
+    ],
+    "Proc": [
+     "PROZEDUR"
+    ],
+    "Run": [
+     "AUSFÜHREN"
+    ],
+    "Set": [
+     "FESTLEGEN"
+    ],
+    "Merge": [
+     "ZUSAMMENFÜHREN"
+    ],
+    "By": [
+     "NACH"
+    ],
+    "If": [
+     "WENN"
+    ],
+    "Then": [
+     "DANN"
+    ],
+    "Else": [
+     "SONST"
+    ],
+    "Do": [
+     "AUSFÜHRUNG"
+    ],
+    "End": [
+     "ENDE"
+    ],
+    "Input": [
+     "EINGABE"
+    ],
+    "Output": [
+     "AUSGABE"
+    ],
+    "Keep": [
+     "BEHALTEN"
+    ],
+    "Drop": [
+     "ENTFERNEN"
+    ],
+    "Where": [
+     "WO"
+    ],
+    "Sort": [
+     "SORTIEREN"
+    ],
+    "Print": [
+     "DRUCKEN"
+    ],
+    "Means": [
+     "MITTELWERTE"
+    ],
+    "Freq": [
+     "HÄUFIGKEITEN"
+    ],
+    "Contents": [
+     "INHALT"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Class": [
+     "KLASSE"
+    ],
+    "Weight": [
+     "GEWICHT"
+    ],
+    "Label": [
+     "BEZEICHNUNG"
+    ],
+    "To": [
+     "BIS"
+    ],
+    "While": [
+     "SOLANGE"
+    ],
+    "Select": [
+     "AUSWÄHLEN"
+    ],
+    "When": [
+     "FALLS"
+    ],
+    "Otherwise": [
+     "ANDERNFALLS"
+    ],
+    "Leave": [
+     "VERLASSEN"
+    ],
+    "Continue": [
+     "FORTSETZEN"
+    ],
+    "Retain": [
+     "BEHALTEN_W"
+    ],
+    "Array": [
+     "FELD"
+    ],
+    "Length": [
+     "LÄNGE"
+    ],
+    "Options": [
+     "OPTIONEN"
+    ],
+    "Libname": [
+     "BIBLIOTHEK"
+    ],
+    "Title": [
+     "TITEL"
+    ],
+    "Delete": [
+     "LÖSCHEN"
+    ],
+    "Stop": [
+     "STOPP"
+    ],
+    "Call": [
+     "AUFRUFEN"
+    ],
+    "Rename": [
+     "UMBENENNEN"
+    ],
+    "And": [
+     "UND"
+    ],
+    "Or": [
+     "ODER"
+    ],
+    "Not": [
+     "NICHT"
+    ],
+    "In": [
+     "IN"
+    ],
+    "Missing": [
+     "FEHLEND"
+    ],
+    "Descending": [
+     "ABSTEIGEND"
+    ],
+    "From": [
+     "VON"
+    ],
+    "Table": [
+     "TABELLE"
+    ],
+    "Create": [
+     "ERSTELLEN"
+    ],
+    "Model": [
+     "MODELL"
+    ],
+    "Estimate": [
+     "SCHÄTZUNG"
+    ]
+   }
+  },
+  "es": {
+   "name": "Español",
+   "keywords": {
+    "Data": [
+     "DATOS"
+    ],
+    "Proc": [
+     "PROCEDIMIENTO"
+    ],
+    "Run": [
+     "EJECUTAR"
+    ],
+    "Set": [
+     "ESTABLECER"
+    ],
+    "Merge": [
+     "COMBINAR"
+    ],
+    "By": [
+     "POR"
+    ],
+    "If": [
+     "SI"
+    ],
+    "Then": [
+     "ENTONCES"
+    ],
+    "Else": [
+     "SINO"
+    ],
+    "Do": [
+     "HACER"
+    ],
+    "Input": [
+     "ENTRADA"
+    ],
+    "Output": [
+     "SALIDA"
+    ],
+    "Keep": [
+     "MANTENER"
+    ],
+    "Drop": [
+     "ELIMINAR"
+    ],
+    "Where": [
+     "DONDE"
+    ],
+    "Sort": [
+     "ORDENAR"
+    ],
+    "Print": [
+     "IMPRIMIR"
+    ],
+    "Means": [
+     "MEDIAS"
+    ],
+    "Freq": [
+     "FRECUENCIAS"
+    ],
+    "Contents": [
+     "CONTENIDO"
+    ],
+    "Format": [
+     "FORMATO"
+    ],
+    "Class": [
+     "CLASE"
+    ],
+    "Weight": [
+     "PESO"
+    ],
+    "Label": [
+     "ETIQUETA"
+    ],
+    "To": [
+     "HASTA"
+    ],
+    "While": [
+     "MIENTRAS"
+    ],
+    "Select": [
+     "SELECCIONAR"
+    ],
+    "When": [
+     "CUANDO"
+    ],
+    "Otherwise": [
+     "OTRO"
+    ],
+    "Leave": [
+     "SALIR"
+    ],
+    "Continue": [
+     "CONTINUAR"
+    ],
+    "Retain": [
+     "RETENER"
+    ],
+    "Array": [
+     "ARREGLO"
+    ],
+    "Length": [
+     "LONGITUD"
+    ],
+    "Options": [
+     "OPCIONES"
+    ],
+    "Libname": [
+     "BIBLIOTECA"
+    ],
+    "Title": [
+     "TÍTULO"
+    ],
+    "Delete": [
+     "BORRAR"
+    ],
+    "Stop": [
+     "PARAR"
+    ],
+    "Call": [
+     "LLAMAR"
+    ],
+    "Rename": [
+     "RENOMBRAR"
+    ],
+    "Missing": [
+     "FALTANTE"
+    ],
+    "Descending": [
+     "DESCENDENTE"
+    ],
+    "From": [
+     "DESDE"
+    ],
+    "Table": [
+     "TABLA"
+    ],
+    "Create": [
+     "CREAR"
+    ],
+    "Model": [
+     "MODELO"
+    ],
+    "Estimate": [
+     "ESTIMACIÓN"
+    ]
+   }
+  },
+  "pt": {
+   "name": "Português",
+   "keywords": {
+    "Data": [
+     "DADOS"
+    ],
+    "Proc": [
+     "PROCEDIMENTO"
+    ],
+    "Run": [
+     "EXECUTAR"
+    ],
+    "Set": [
+     "DEFINIR"
+    ],
+    "Merge": [
+     "MESCLAR"
+    ],
+    "By": [
+     "POR"
+    ],
+    "If": [
+     "SE"
+    ],
+    "Then": [
+     "ENTÃO"
+    ],
+    "Else": [
+     "SENÃO"
+    ],
+    "Do": [
+     "FAZER"
+    ],
+    "End": [
+     "FIM"
+    ],
+    "Input": [
+     "ENTRADA"
+    ],
+    "Output": [
+     "SAÍDA"
+    ],
+    "Keep": [
+     "MANTER"
+    ],
+    "Drop": [
+     "REMOVER"
+    ],
+    "Where": [
+     "ONDE"
+    ],
+    "Sort": [
+     "ORDENAR"
+    ],
+    "Print": [
+     "IMPRIMIR"
+    ],
+    "Means": [
+     "MÉDIAS"
+    ],
+    "Freq": [
+     "FREQUÊNCIAS"
+    ],
+    "Contents": [
+     "CONTEÚDO"
+    ],
+    "Format": [
+     "FORMATO"
+    ],
+    "Var": [
+     "VARIÁVEL"
+    ],
+    "Class": [
+     "CLASSE"
+    ],
+    "Weight": [
+     "PESO"
+    ],
+    "Label": [
+     "RÓTULO"
+    ],
+    "To": [
+     "ATÉ"
+    ],
+    "While": [
+     "ENQUANTO"
+    ],
+    "Select": [
+     "SELECIONAR"
+    ],
+    "When": [
+     "QUANDO"
+    ],
+    "Otherwise": [
+     "OUTROS"
+    ],
+    "Leave": [
+     "SAIR"
+    ],
+    "Continue": [
+     "CONTINUAR"
+    ],
+    "Retain": [
+     "RETER"
+    ],
+    "Array": [
+     "VETOR"
+    ],
+    "Length": [
+     "COMPRIMENTO"
+    ],
+    "Options": [
+     "OPÇÕES"
+    ],
+    "Libname": [
+     "BIBLIOTECA"
+    ],
+    "Title": [
+     "TÍTULO"
+    ],
+    "Delete": [
+     "EXCLUIR"
+    ],
+    "Stop": [
+     "PARAR"
+    ],
+    "Call": [
+     "CHAMAR"
+    ],
+    "Rename": [
+     "RENOMEAR"
+    ],
+    "And": [
+     "E_LÓGICO"
+    ],
+    "Or": [
+     "OU"
+    ],
+    "Not": [
+     "NÃO"
+    ],
+    "Missing": [
+     "AUSENTE"
+    ],
+    "Descending": [
+     "DECRESCENTE"
+    ],
+    "From": [
+     "DE_TABELA"
+    ],
+    "Table": [
+     "TABELA"
+    ],
+    "Create": [
+     "CRIAR"
+    ],
+    "Model": [
+     "MODELO"
+    ],
+    "Estimate": [
+     "ESTIMATIVA"
+    ]
+   }
+  },
+  "it": {
+   "name": "Italiano",
+   "keywords": {
+    "Data": [
+     "DATI"
+    ],
+    "Proc": [
+     "PROCEDURA"
+    ],
+    "Run": [
+     "ESEGUIRE"
+    ],
+    "Set": [
+     "IMPOSTARE"
+    ],
+    "Merge": [
+     "UNIRE"
+    ],
+    "By": [
+     "PER"
+    ],
+    "If": [
+     "SE_COND"
+    ],
+    "Then": [
+     "ALLORA"
+    ],
+    "Else": [
+     "ALTRIMENTI"
+    ],
+    "Do": [
+     "FARE"
+    ],
+    "End": [
+     "FINE"
+    ],
+    "Input": [
+     "INGRESSO"
+    ],
+    "Output": [
+     "USCITA"
+    ],
+    "Keep": [
+     "MANTENERE"
+    ],
+    "Drop": [
+     "RIMUOVERE"
+    ],
+    "Where": [
+     "DOVE"
+    ],
+    "Sort": [
+     "ORDINARE"
+    ],
+    "Print": [
+     "STAMPARE"
+    ],
+    "Means": [
+     "MEDIE"
+    ],
+    "Freq": [
+     "FREQUENZE"
+    ],
+    "Contents": [
+     "CONTENUTO"
+    ],
+    "Format": [
+     "FORMATO"
+    ],
+    "Var": [
+     "VARIABILE"
+    ],
+    "Class": [
+     "CLASSE"
+    ],
+    "Weight": [
+     "PESO"
+    ],
+    "Label": [
+     "ETICHETTA"
+    ],
+    "To": [
+     "FINO_A"
+    ],
+    "While": [
+     "FINCHÉ"
+    ],
+    "Select": [
+     "SELEZIONARE"
+    ],
+    "When": [
+     "QUANDO"
+    ],
+    "Otherwise": [
+     "ALTRIMENTI_S"
+    ],
+    "Leave": [
+     "USCIRE"
+    ],
+    "Continue": [
+     "CONTINUARE"
+    ],
+    "Retain": [
+     "CONSERVARE"
+    ],
+    "Array": [
+     "VETTORE"
+    ],
+    "Length": [
+     "LUNGHEZZA"
+    ],
+    "Options": [
+     "OPZIONI"
+    ],
+    "Libname": [
+     "LIBRERIA"
+    ],
+    "Title": [
+     "TITOLO"
+    ],
+    "Delete": [
+     "CANCELLARE"
+    ],
+    "Stop": [
+     "FERMARE"
+    ],
+    "Call": [
+     "CHIAMARE"
+    ],
+    "Rename": [
+     "RINOMINARE"
+    ],
+    "And": [
+     "E_LOG"
+    ],
+    "Or": [
+     "O_LOG"
+    ],
+    "Not": [
+     "NON"
+    ],
+    "Missing": [
+     "MANCANTE"
+    ],
+    "Descending": [
+     "DISCENDENTE"
+    ],
+    "Table": [
+     "TABELLA"
+    ],
+    "Create": [
+     "CREARE"
+    ],
+    "Model": [
+     "MODELLO"
+    ],
+    "Estimate": [
+     "STIMA"
+    ]
+   }
+  },
+  "nl": {
+   "name": "Nederlands",
+   "keywords": {
+    "Data": [
+     "GEGEVENS"
+    ],
+    "Proc": [
+     "PROCEDURE"
+    ],
+    "Run": [
+     "UITVOEREN"
+    ],
+    "Set": [
+     "INSTELLEN"
+    ],
+    "Merge": [
+     "SAMENVOEGEN"
+    ],
+    "By": [
+     "VOLGENS"
+    ],
+    "If": [
+     "ALS"
+    ],
+    "Then": [
+     "DAN"
+    ],
+    "Else": [
+     "ANDERS"
+    ],
+    "Do": [
+     "DOE"
+    ],
+    "End": [
+     "EINDE"
+    ],
+    "Input": [
+     "INVOER"
+    ],
+    "Output": [
+     "UITVOER"
+    ],
+    "Keep": [
+     "BEWAREN"
+    ],
+    "Drop": [
+     "VERWIJDEREN"
+    ],
+    "Where": [
+     "WAAR"
+    ],
+    "Sort": [
+     "SORTEREN"
+    ],
+    "Print": [
+     "AFDRUKKEN"
+    ],
+    "Means": [
+     "GEMIDDELDEN"
+    ],
+    "Freq": [
+     "FREQUENTIES"
+    ],
+    "Tabulate": [
+     "TABULEREN"
+    ],
+    "Contents": [
+     "INHOUD"
+    ],
+    "Format": [
+     "OPMAAK"
+    ],
+    "Var": [
+     "VARIABELE"
+    ],
+    "Class": [
+     "KLASSE"
+    ],
+    "Weight": [
+     "GEWICHT"
+    ],
+    "Label": [
+     "LABEL"
+    ],
+    "To": [
+     "TOT"
+    ],
+    "While": [
+     "ZOLANG"
+    ],
+    "Until": [
+     "TOTDAT"
+    ],
+    "Select": [
+     "SELECTEREN"
+    ],
+    "When": [
+     "WANNEER"
+    ],
+    "Otherwise": [
+     "ANDERS_WEL"
+    ],
+    "Leave": [
+     "VERLATEN"
+    ],
+    "Continue": [
+     "DOORGAAN"
+    ],
+    "Retain": [
+     "BEHOUDEN"
+    ],
+    "Array": [
+     "REEKS"
+    ],
+    "Length": [
+     "LENGTE"
+    ],
+    "Options": [
+     "OPTIES"
+    ],
+    "Title": [
+     "TITEL"
+    ],
+    "File": [
+     "BESTAND"
+    ],
+    "Put": [
+     "SCHRIJVEN"
+    ],
+    "Delete": [
+     "WISSEN"
+    ],
+    "Stop": [
+     "STOPPEN"
+    ],
+    "Rename": [
+     "HERNOEMEN"
+    ],
+    "Not": [
+     "NIET"
+    ],
+    "In": [
+     "IN"
+    ],
+    "Missing": [
+     "ONTBREKEND"
+    ],
+    "Descending": [
+     "AFLOPEND"
+    ],
+    "Import": [
+     "IMPORTEREN"
+    ],
+    "Export": [
+     "EXPORTEREN"
+    ]
+   }
+  },
+  "ja": {
+   "name": "日本語",
+   "keywords": {
+    "Data": [
+     "データ"
+    ],
+    "Proc": [
+     "処理"
+    ],
+    "Run": [
+     "実行"
+    ],
+    "Set": [
+     "設定"
+    ],
+    "Merge": [
+     "結合"
+    ],
+    "By": [
+     "基準"
+    ],
+    "If": [
+     "もし"
+    ],
+    "Then": [
+     "なら"
+    ],
+    "Else": [
+     "他"
+    ],
+    "Do": [
+     "繰返"
+    ],
+    "End": [
+     "終了"
+    ],
+    "Input": [
+     "入力"
+    ],
+    "Datalines": [
+     "カード"
+    ],
+    "Output": [
+     "出力"
+    ],
+    "Keep": [
+     "保持"
+    ],
+    "Drop": [
+     "削除"
+    ],
+    "Where": [
+     "条件"
+    ],
+    "Sort": [
+     "並替"
+    ],
+    "Print": [
+     "印刷"
+    ],
+    "Means": [
+     "平均"
+    ],
+    "Freq": [
+     "度数"
+    ],
+    "Tabulate": [
+     "集計"
+    ],
+    "Contents": [
+     "内容"
+    ],
+    "Format": [
+     "書式"
+    ],
+    "Var": [
+     "変数"
+    ],
+    "Class": [
+     "分類"
+    ],
+    "Weight": [
+     "重み"
+    ],
+    "Label": [
+     "見出"
+    ],
+    "To": [
+     "から"
+    ],
+    "While": [
+     "間"
+    ],
+    "Missing": [
+     "欠損"
+    ],
+    "Select": [
+     "選択"
+    ],
+    "When": [
+     "場合"
+    ],
+    "Otherwise": [
+     "その他"
+    ],
+    "Leave": [
+     "脱出"
+    ],
+    "Continue": [
+     "継続"
+    ],
+    "Retain": [
+     "保存"
+    ],
+    "Array": [
+     "配列"
+    ],
+    "Length": [
+     "長さ"
+    ],
+    "Options": [
+     "設定値"
+    ],
+    "Libname": [
+     "図書館"
+    ],
+    "Title": [
+     "表題"
+    ],
+    "Delete": [
+     "消去"
+    ],
+    "Stop": [
+     "停止"
+    ],
+    "Call": [
+     "呼出"
+    ],
+    "Rename": [
+     "改名"
+    ],
+    "And": [
+     "かつ"
+    ],
+    "Or": [
+     "又は"
+    ],
+    "Not": [
+     "非"
+    ],
+    "Univariate": [
+     "単変量"
+    ],
+    "Standard": [
+     "標準"
+    ],
+    "Rank": [
+     "順位"
+    ],
+    "Transpose": [
+     "転置"
+    ],
+    "Compare": [
+     "比較"
+    ],
+    "Append": [
+     "追加"
+    ],
+    "Copy": [
+     "複写"
+    ],
+    "Model": [
+     "模型"
+    ],
+    "Estimate": [
+     "推定"
+    ],
+    "Strata": [
+     "層"
+    ],
+    "Random": [
+     "乱数"
+    ],
+    "Factor": [
+     "因子"
+    ],
+    "Cluster": [
+     "群"
+    ]
+   }
+  },
+  "ko": {
+   "name": "한국어",
+   "keywords": {
+    "Data": [
+     "데이터"
+    ],
+    "Proc": [
+     "처리"
+    ],
+    "Run": [
+     "실행"
+    ],
+    "Set": [
+     "설정"
+    ],
+    "Merge": [
+     "결합"
+    ],
+    "By": [
+     "기준"
+    ],
+    "If": [
+     "만약"
+    ],
+    "Then": [
+     "이면"
+    ],
+    "Else": [
+     "아니면"
+    ],
+    "Do": [
+     "반복"
+    ],
+    "End": [
+     "종료"
+    ],
+    "Input": [
+     "입력"
+    ],
+    "Datalines": [
+     "자료"
+    ],
+    "Output": [
+     "출력"
+    ],
+    "Keep": [
+     "유지"
+    ],
+    "Drop": [
+     "제거"
+    ],
+    "Where": [
+     "조건"
+    ],
+    "Sort": [
+     "정렬"
+    ],
+    "Print": [
+     "인쇄"
+    ],
+    "Means": [
+     "평균"
+    ],
+    "Freq": [
+     "빈도"
+    ],
+    "Tabulate": [
+     "도표"
+    ],
+    "Contents": [
+     "내용"
+    ],
+    "Format": [
+     "형식"
+    ],
+    "Var": [
+     "변수"
+    ],
+    "Class": [
+     "분류"
+    ],
+    "Weight": [
+     "가중"
+    ],
+    "Label": [
+     "라벨"
+    ],
+    "To": [
+     "까지"
+    ],
+    "While": [
+     "동안"
+    ],
+    "Missing": [
+     "결측"
+    ],
+    "Select": [
+     "선택"
+    ],
+    "When": [
+     "경우"
+    ],
+    "Otherwise": [
+     "기타"
+    ],
+    "Leave": [
+     "탈출"
+    ],
+    "Continue": [
+     "계속"
+    ],
+    "Retain": [
+     "보존"
+    ],
+    "Array": [
+     "배열"
+    ],
+    "Length": [
+     "길이"
+    ],
+    "Options": [
+     "옵션"
+    ],
+    "Title": [
+     "제목"
+    ],
+    "Delete": [
+     "삭제"
+    ],
+    "Stop": [
+     "중지"
+    ],
+    "Call": [
+     "호출"
+    ],
+    "Rename": [
+     "개명"
+    ],
+    "And": [
+     "그리고"
+    ],
+    "Or": [
+     "또는"
+    ],
+    "Not": [
+     "아닌"
+    ],
+    "Univariate": [
+     "단변량"
+    ],
+    "Standard": [
+     "표준"
+    ],
+    "Rank": [
+     "순위"
+    ],
+    "Transpose": [
+     "전치"
+    ],
+    "Compare": [
+     "비교"
+    ],
+    "Append": [
+     "추가"
+    ],
+    "Copy": [
+     "복사"
+    ],
+    "Model": [
+     "모형"
+    ],
+    "Estimate": [
+     "추정"
+    ]
+   }
+  },
+  "zh": {
+   "name": "中文",
+   "keywords": {
+    "Data": [
+     "数据"
+    ],
+    "Proc": [
+     "过程"
+    ],
+    "Run": [
+     "运行"
+    ],
+    "Set": [
+     "设置"
+    ],
+    "Merge": [
+     "合并"
+    ],
+    "By": [
+     "按照"
+    ],
+    "If": [
+     "如果"
+    ],
+    "Then": [
+     "那么"
+    ],
+    "Else": [
+     "否则"
+    ],
+    "Do": [
+     "循环"
+    ],
+    "End": [
+     "结束"
+    ],
+    "Input": [
+     "输入"
+    ],
+    "Output": [
+     "输出"
+    ],
+    "Keep": [
+     "保留"
+    ],
+    "Drop": [
+     "删除"
+    ],
+    "Where": [
+     "条件"
+    ],
+    "Sort": [
+     "排序"
+    ],
+    "Print": [
+     "打印"
+    ],
+    "Means": [
+     "均值"
+    ],
+    "Freq": [
+     "频率"
+    ],
+    "Tabulate": [
+     "制表"
+    ],
+    "Contents": [
+     "内容"
+    ],
+    "Format": [
+     "格式"
+    ],
+    "Var": [
+     "变量"
+    ],
+    "Class": [
+     "分类"
+    ],
+    "Weight": [
+     "权重"
+    ],
+    "Label": [
+     "标签"
+    ],
+    "To": [
+     "到"
+    ],
+    "While": [
+     "当"
+    ],
+    "Missing": [
+     "缺失"
+    ],
+    "Select": [
+     "选择"
+    ],
+    "When": [
+     "当条件"
+    ],
+    "Otherwise": [
+     "其他"
+    ],
+    "Leave": [
+     "退出"
+    ],
+    "Continue": [
+     "继续"
+    ],
+    "Retain": [
+     "保留值"
+    ],
+    "Array": [
+     "数组"
+    ],
+    "Length": [
+     "长度"
+    ],
+    "Options": [
+     "选项"
+    ],
+    "Title": [
+     "标题"
+    ],
+    "Delete": [
+     "删除记录"
+    ],
+    "Stop": [
+     "停止"
+    ],
+    "Call": [
+     "调用"
+    ],
+    "Rename": [
+     "重命名"
+    ],
+    "And": [
+     "并且"
+    ],
+    "Or": [
+     "或者"
+    ],
+    "Not": [
+     "非"
+    ],
+    "Model": [
+     "模型"
+    ],
+    "Estimate": [
+     "估计"
+    ]
+   }
+  },
+  "yue": {
+   "name": "粵語",
+   "keywords": {
+    "Data": [
+     "數據"
+    ],
+    "Proc": [
+     "程序"
+    ],
+    "Run": [
+     "執行"
+    ],
+    "Set": [
+     "設定"
+    ],
+    "Merge": [
+     "合併"
+    ],
+    "By": [
+     "按"
+    ],
+    "If": [
+     "如果"
+    ],
+    "Then": [
+     "就"
+    ],
+    "Else": [
+     "否則"
+    ],
+    "Do": [
+     "循環"
+    ],
+    "End": [
+     "結束"
+    ],
+    "Input": [
+     "輸入"
+    ],
+    "Output": [
+     "輸出"
+    ],
+    "Keep": [
+     "保留"
+    ],
+    "Drop": [
+     "刪除"
+    ],
+    "Where": [
+     "條件"
+    ],
+    "Sort": [
+     "排序"
+    ],
+    "Print": [
+     "列印"
+    ],
+    "Means": [
+     "均值"
+    ],
+    "Freq": [
+     "頻率"
+    ],
+    "Contents": [
+     "內容"
+    ],
+    "Format": [
+     "格式"
+    ],
+    "Var": [
+     "變量"
+    ],
+    "Class": [
+     "分類"
+    ],
+    "Weight": [
+     "權重"
+    ],
+    "Label": [
+     "標籤"
+    ],
+    "To": [
+     "至"
+    ],
+    "While": [
+     "當"
+    ],
+    "Missing": [
+     "缺漏"
+    ],
+    "Select": [
+     "揀選"
+    ],
+    "When": [
+     "情況"
+    ],
+    "Otherwise": [
+     "其他"
+    ],
+    "Leave": [
+     "離開"
+    ],
+    "Continue": [
+     "繼續"
+    ],
+    "Retain": [
+     "保留值"
+    ],
+    "Array": [
+     "陣列"
+    ],
+    "Length": [
+     "長度"
+    ],
+    "Options": [
+     "選項"
+    ],
+    "Title": [
+     "標題"
+    ],
+    "Delete": [
+     "刪除紀錄"
+    ],
+    "Stop": [
+     "停止"
+    ],
+    "Call": [
+     "調用"
+    ],
+    "Rename": [
+     "改名"
+    ],
+    "Model": [
+     "模型"
+    ],
+    "Estimate": [
+     "估計"
+    ]
+   }
+  },
+  "ru": {
+   "name": "Русский",
+   "keywords": {
+    "Data": [
+     "ДАННЫЕ"
+    ],
+    "Proc": [
+     "ПРОЦЕДУРА"
+    ],
+    "Run": [
+     "ВЫПОЛНИТЬ"
+    ],
+    "Set": [
+     "ЗАДАТЬ"
+    ],
+    "If": [
+     "ЕСЛИ"
+    ],
+    "Then": [
+     "ТОГДА"
+    ],
+    "Else": [
+     "ИНАЧЕ"
+    ],
+    "Do": [
+     "ЦИКЛ"
+    ],
+    "End": [
+     "КОНЕЦ"
+    ],
+    "Merge": [
+     "ОБЪЕДИНИТЬ"
+    ],
+    "By": [
+     "ПО"
+    ],
+    "Output": [
+     "ВЫВОД"
+    ],
+    "Input": [
+     "ВВОД"
+    ],
+    "Sort": [
+     "СОРТИРОВАТЬ"
+    ],
+    "Means": [
+     "СРЕДНИЕ"
+    ],
+    "Freq": [
+     "ЧАСТОТЫ"
+    ],
+    "Print": [
+     "ПЕЧАТЬ"
+    ],
+    "Select": [
+     "ВЫБРАТЬ"
+    ],
+    "Missing": [
+     "ПРОПУСК"
+    ],
+    "Keep": [
+     "ОСТАВИТЬ"
+    ],
+    "Drop": [
+     "УДАЛИТЬ"
+    ],
+    "Where": [
+     "ГДЕ"
+    ],
+    "Contents": [
+     "СОДЕРЖАНИЕ"
+    ],
+    "Var": [
+     "ПЕРЕМЕННАЯ"
+    ],
+    "Class": [
+     "КЛАСС"
+    ],
+    "Weight": [
+     "ВЕС"
+    ],
+    "Label": [
+     "МЕТКА"
+    ],
+    "To": [
+     "ДО"
+    ],
+    "While": [
+     "ПОКА"
+    ],
+    "When": [
+     "КОГДА"
+    ],
+    "Otherwise": [
+     "ПРОЧЕЕ"
+    ],
+    "Leave": [
+     "ПОКИНУТЬ"
+    ],
+    "Continue": [
+     "ПРОДОЛЖИТЬ"
+    ],
+    "Retain": [
+     "СОХРАНИТЬ"
+    ],
+    "Array": [
+     "МАССИВ"
+    ],
+    "Length": [
+     "ДЛИНА"
+    ],
+    "Options": [
+     "ПАРАМЕТРЫ"
+    ],
+    "Title": [
+     "ЗАГОЛОВОК"
+    ],
+    "Delete": [
+     "УДАЛИТЬ_ЗАПИСЬ"
+    ],
+    "Stop": [
+     "СТОП"
+    ],
+    "Call": [
+     "ВЫЗВАТЬ"
+    ],
+    "Rename": [
+     "ПЕРЕИМЕНОВАТЬ"
+    ],
+    "And": [
+     "И_ЛОГ"
+    ],
+    "Or": [
+     "ИЛИ"
+    ],
+    "Not": [
+     "НЕ"
+    ],
+    "Model": [
+     "МОДЕЛЬ"
+    ],
+    "Estimate": [
+     "ОЦЕНКА"
+    ],
+    "Format": [
+     "ФОРМАТ"
+    ],
+    "Table": [
+     "ТАБЛИЦА"
+    ],
+    "Create": [
+     "СОЗДАТЬ"
+    ],
+    "From": [
+     "ИЗ"
+    ]
+   }
+  },
+  "ar": {
+   "name": "العربية",
+   "keywords": {
+    "Data": [
+     "بيانات"
+    ],
+    "Proc": [
+     "إجراء"
+    ],
+    "Run": [
+     "تنفيذ"
+    ],
+    "Set": [
+     "تعيين"
+    ],
+    "If": [
+     "إذا"
+    ],
+    "Then": [
+     "عندها"
+    ],
+    "Else": [
+     "وإلا"
+    ],
+    "Do": [
+     "كرر"
+    ],
+    "End": [
+     "نهاية"
+    ],
+    "Merge": [
+     "دمج"
+    ],
+    "By": [
+     "حسب"
+    ],
+    "Output": [
+     "إخراج"
+    ],
+    "Input": [
+     "إدخال"
+    ],
+    "Sort": [
+     "ترتيب"
+    ],
+    "Means": [
+     "متوسطات"
+    ],
+    "Freq": [
+     "تكرارات"
+    ],
+    "Print": [
+     "طباعة"
+    ],
+    "Select": [
+     "اختيار"
+    ],
+    "Missing": [
+     "مفقود"
+    ],
+    "Keep": [
+     "احتفاظ"
+    ],
+    "Drop": [
+     "حذف"
+    ],
+    "Where": [
+     "حيث"
+    ],
+    "Contents": [
+     "محتويات"
+    ],
+    "Var": [
+     "متغير"
+    ],
+    "Class": [
+     "فئة"
+    ],
+    "Weight": [
+     "وزن"
+    ],
+    "Label": [
+     "تسمية"
+    ],
+    "To": [
+     "إلى"
+    ],
+    "While": [
+     "بينما"
+    ],
+    "When": [
+     "عندما"
+    ],
+    "Otherwise": [
+     "خلاف_ذلك"
+    ],
+    "Model": [
+     "نموذج"
+    ],
+    "Format": [
+     "تنسيق"
+    ]
+   }
+  },
+  "he": {
+   "name": "עברית",
+   "keywords": {
+    "Data": [
+     "נתונים"
+    ],
+    "Proc": [
+     "הליך"
+    ],
+    "Run": [
+     "הרץ"
+    ],
+    "Set": [
+     "קבע"
+    ],
+    "If": [
+     "אם"
+    ],
+    "Then": [
+     "אז"
+    ],
+    "Else": [
+     "אחרת"
+    ],
+    "Do": [
+     "בצע"
+    ],
+    "End": [
+     "סוף"
+    ],
+    "Merge": [
+     "מזג"
+    ],
+    "By": [
+     "לפי"
+    ],
+    "Output": [
+     "פלט"
+    ],
+    "Input": [
+     "קלט"
+    ],
+    "Sort": [
+     "מיין"
+    ],
+    "Means": [
+     "ממוצעים"
+    ],
+    "Freq": [
+     "שכיחויות"
+    ],
+    "Print": [
+     "הדפס"
+    ],
+    "Select": [
+     "בחר"
+    ],
+    "Missing": [
+     "חסר"
+    ],
+    "Keep": [
+     "שמור"
+    ],
+    "Drop": [
+     "הסר"
+    ],
+    "Where": [
+     "היכן"
+    ],
+    "Contents": [
+     "תוכן"
+    ],
+    "Var": [
+     "משתנה"
+    ],
+    "Class": [
+     "מחלקה"
+    ],
+    "Weight": [
+     "משקל"
+    ],
+    "Label": [
+     "תווית"
+    ],
+    "To": [
+     "עד"
+    ],
+    "While": [
+     "כל_עוד"
+    ],
+    "When": [
+     "כאשר"
+    ],
+    "Otherwise": [
+     "אחר"
+    ],
+    "Model": [
+     "מודל"
+    ],
+    "Format": [
+     "תבנית"
+    ]
+   }
+  },
+  "hi": {
+   "name": "हिन्दी",
+   "keywords": {
+    "Data": [
+     "डेटा"
+    ],
+    "Proc": [
+     "प्रक्रिया"
+    ],
+    "Run": [
+     "चलाएं"
+    ],
+    "Set": [
+     "सेट"
+    ],
+    "If": [
+     "यदि"
+    ],
+    "Then": [
+     "तो"
+    ],
+    "Else": [
+     "अन्यथा"
+    ],
+    "Do": [
+     "करें"
+    ],
+    "End": [
+     "समाप्त"
+    ],
+    "Merge": [
+     "मिलाएं"
+    ],
+    "By": [
+     "द्वारा"
+    ],
+    "Output": [
+     "आउटपुट"
+    ],
+    "Input": [
+     "इनपुट"
+    ],
+    "Sort": [
+     "क्रमबद्ध"
+    ],
+    "Means": [
+     "औसत"
+    ],
+    "Freq": [
+     "आवृत्ति"
+    ],
+    "Print": [
+     "छापें"
+    ],
+    "Select": [
+     "चुनें"
+    ],
+    "Missing": [
+     "लुप्त"
+    ],
+    "Keep": [
+     "रखें"
+    ],
+    "Drop": [
+     "हटाएं"
+    ],
+    "Where": [
+     "जहां"
+    ],
+    "Contents": [
+     "विषय"
+    ],
+    "Var": [
+     "चर"
+    ],
+    "Class": [
+     "वर्ग"
+    ],
+    "Weight": [
+     "भार"
+    ],
+    "Label": [
+     "लेबल"
+    ],
+    "To": [
+     "तक"
+    ],
+    "While": [
+     "जबतक"
+    ],
+    "When": [
+     "जब"
+    ],
+    "Otherwise": [
+     "वरना"
+    ],
+    "Model": [
+     "मॉडल"
+    ],
+    "Format": [
+     "प्रारूप"
+    ]
+   }
+  },
+  "th": {
+   "name": "ภาษาไทย",
+   "keywords": {
+    "Data": [
+     "ข้อมูล"
+    ],
+    "Proc": [
+     "กระบวนการ"
+    ],
+    "Run": [
+     "ดำเนินการ"
+    ],
+    "Set": [
+     "กำหนด"
+    ],
+    "If": [
+     "ถ้า"
+    ],
+    "Then": [
+     "แล้ว"
+    ],
+    "Else": [
+     "มิฉะนั้น"
+    ],
+    "Do": [
+     "ทำ"
+    ],
+    "End": [
+     "สิ้นสุด"
+    ],
+    "Merge": [
+     "รวม"
+    ],
+    "By": [
+     "ตาม"
+    ],
+    "Output": [
+     "ผลลัพธ์"
+    ],
+    "Input": [
+     "นำเข้า"
+    ],
+    "Sort": [
+     "เรียง"
+    ],
+    "Means": [
+     "ค่าเฉลี่ย"
+    ],
+    "Freq": [
+     "ความถี่"
+    ],
+    "Print": [
+     "พิมพ์"
+    ],
+    "Select": [
+     "เลือก"
+    ],
+    "Missing": [
+     "ขาดหาย"
+    ],
+    "Keep": [
+     "เก็บ"
+    ],
+    "Drop": [
+     "ตัดออก"
+    ],
+    "Where": [
+     "เงื่อนไข"
+    ],
+    "Contents": [
+     "เนื้อหา"
+    ],
+    "Var": [
+     "ตัวแปร"
+    ],
+    "Class": [
+     "ประเภท"
+    ],
+    "Weight": [
+     "น้ำหนัก"
+    ],
+    "Label": [
+     "ป้าย"
+    ],
+    "To": [
+     "ถึง"
+    ],
+    "While": [
+     "ขณะที่"
+    ],
+    "When": [
+     "เมื่อ"
+    ],
+    "Otherwise": [
+     "อื่นๆ"
+    ],
+    "Model": [
+     "แบบจำลอง"
+    ],
+    "Format": [
+     "รูปแบบ"
+    ]
+   }
+  },
+  "el": {
+   "name": "Ελληνικά",
+   "keywords": {
+    "Data": [
+     "ΔΕΔΟΜΕΝΑ"
+    ],
+    "Proc": [
+     "ΔΙΑΔΙΚΑΣΙΑ"
+    ],
+    "Run": [
+     "ΕΚΤΕΛΕΣΗ"
+    ],
+    "Set": [
+     "ΟΡΙΣΜΟΣ"
+    ],
+    "If": [
+     "ΕΑΝ"
+    ],
+    "Then": [
+     "ΤΟΤΕ"
+    ],
+    "Else": [
+     "ΑΛΛΙΩΣ"
+    ],
+    "Do": [
+     "ΕΠΑΝΑΛΗΨΗ"
+    ],
+    "End": [
+     "ΤΕΛΟΣ"
+    ],
+    "Merge": [
+     "ΣΥΓΧΩΝΕΥΣΗ"
+    ],
+    "By": [
+     "ΚΑΤΑ"
+    ],
+    "Output": [
+     "ΕΞΟΔΟΣ"
+    ],
+    "Input": [
+     "ΕΙΣΟΔΟΣ"
+    ],
+    "Sort": [
+     "ΤΑΞΙΝΟΜΗΣΗ"
+    ],
+    "Means": [
+     "ΜΕΣΟΙ"
+    ],
+    "Freq": [
+     "ΣΥΧΝΟΤΗΤΕΣ"
+    ],
+    "Print": [
+     "ΕΚΤΥΠΩΣΗ"
+    ],
+    "Select": [
+     "ΕΠΙΛΟΓΗ"
+    ],
+    "Missing": [
+     "ΕΛΛΕΙΨΗ"
+    ],
+    "Keep": [
+     "ΚΡΑΤΗΣΗ"
+    ],
+    "Drop": [
+     "ΑΦΑΙΡΕΣΗ"
+    ],
+    "Where": [
+     "ΟΠΟΥ"
+    ],
+    "Contents": [
+     "ΠΕΡΙΕΧΟΜΕΝΑ"
+    ],
+    "Var": [
+     "ΜΕΤΑΒΛΗΤΗ"
+    ],
+    "Class": [
+     "ΚΛΑΣΗ"
+    ],
+    "Weight": [
+     "ΒΑΡΟΣ"
+    ],
+    "Label": [
+     "ΕΤΙΚΕΤΑ"
+    ],
+    "To": [
+     "ΕΩΣ"
+    ],
+    "While": [
+     "ΟΣΟ"
+    ],
+    "When": [
+     "ΟΤΑΝ"
+    ],
+    "Otherwise": [
+     "ΑΛΛΟ"
+    ],
+    "Model": [
+     "ΜΟΝΤΕΛΟ"
+    ],
+    "Format": [
+     "ΜΟΡΦΗ"
+    ]
+   }
+  },
+  "sv": {
+   "name": "Svenska",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROCEDUR"
+    ],
+    "Run": [
+     "KÖR"
+    ],
+    "Set": [
+     "STÄLL_IN"
+    ],
+    "Merge": [
+     "SAMMANFOGA"
+    ],
+    "By": [
+     "EFTER"
+    ],
+    "If": [
+     "OM"
+    ],
+    "Then": [
+     "SÅ"
+    ],
+    "Else": [
+     "ANNARS"
+    ],
+    "Do": [
+     "GÖR"
+    ],
+    "End": [
+     "SLUT"
+    ],
+    "Input": [
+     "INDATA"
+    ],
+    "Output": [
+     "UTDATA"
+    ],
+    "Keep": [
+     "BEHÅLL"
+    ],
+    "Drop": [
+     "TA_BORT"
+    ],
+    "Where": [
+     "DÄR"
+    ],
+    "Sort": [
+     "SORTERA"
+    ],
+    "Print": [
+     "SKRIV"
+    ],
+    "Means": [
+     "MEDELVÄRDEN"
+    ],
+    "Freq": [
+     "FREKVENSER"
+    ],
+    "Tabulate": [
+     "TABULERA"
+    ],
+    "Contents": [
+     "INNEHÅLL"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Var": [
+     "VARIABEL"
+    ],
+    "Class": [
+     "KLASS"
+    ],
+    "Weight": [
+     "VIKT"
+    ],
+    "Label": [
+     "ETIKETT"
+    ],
+    "To": [
+     "TILL"
+    ],
+    "While": [
+     "MEDAN"
+    ],
+    "Until": [
+     "TILLS"
+    ],
+    "Select": [
+     "VÄLJ"
+    ],
+    "When": [
+     "NÄR"
+    ],
+    "Otherwise": [
+     "ANNARS_OM"
+    ],
+    "Leave": [
+     "LÄMNA"
+    ],
+    "Continue": [
+     "FORTSÄTT"
+    ],
+    "Retain": [
+     "BEHÅLL_VÄRDE"
+    ],
+    "Array": [
+     "FÄLT"
+    ],
+    "Length": [
+     "LÄNGD"
+    ],
+    "Options": [
+     "ALTERNATIV"
+    ],
+    "Title": [
+     "TITEL"
+    ],
+    "File": [
+     "FIL"
+    ],
+    "Put": [
+     "SKRIV_UT_V"
+    ],
+    "Delete": [
+     "RADERA"
+    ],
+    "Stop": [
+     "STOPPA"
+    ],
+    "Rename": [
+     "BYT_NAMN"
+    ],
+    "Or": [
+     "ELLER"
+    ],
+    "Not": [
+     "INTE"
+    ],
+    "Missing": [
+     "SAKNAD"
+    ],
+    "Descending": [
+     "FALLANDE"
+    ],
+    "Import": [
+     "IMPORTERA"
+    ],
+    "Export": [
+     "EXPORTERA"
+    ]
+   }
+  },
+  "no": {
+   "name": "Norsk",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROSEDYRE"
+    ],
+    "Run": [
+     "KJØR"
+    ],
+    "Set": [
+     "SETT"
+    ],
+    "Merge": [
+     "SLÅSAMMEN"
+    ],
+    "By": [
+     "ETTER"
+    ],
+    "If": [
+     "HVIS"
+    ],
+    "Then": [
+     "SÅ"
+    ],
+    "Else": [
+     "ELLERS"
+    ],
+    "Do": [
+     "GJØR"
+    ],
+    "End": [
+     "SLUTT"
+    ],
+    "Input": [
+     "INNDATA"
+    ],
+    "Output": [
+     "UTDATA"
+    ],
+    "Keep": [
+     "BEHOLD"
+    ],
+    "Drop": [
+     "FJERN"
+    ],
+    "Where": [
+     "HVOR"
+    ],
+    "Sort": [
+     "SORTER"
+    ],
+    "Print": [
+     "SKRIV_UT"
+    ],
+    "Means": [
+     "GJENNOMSNITT"
+    ],
+    "Freq": [
+     "FREKVENSER"
+    ],
+    "Tabulate": [
+     "TABULER"
+    ],
+    "Contents": [
+     "INNHOLD"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Var": [
+     "VARIABEL"
+    ],
+    "Class": [
+     "KLASSE"
+    ],
+    "Weight": [
+     "VEKT"
+    ],
+    "Label": [
+     "MERKELAPP"
+    ],
+    "To": [
+     "TIL"
+    ],
+    "While": [
+     "MENS"
+    ],
+    "Until": [
+     "INNTIL"
+    ],
+    "Select": [
+     "VELG"
+    ],
+    "When": [
+     "NÅR"
+    ],
+    "Otherwise": [
+     "ELLERS_OM"
+    ],
+    "Leave": [
+     "FORLAT"
+    ],
+    "Continue": [
+     "FORTSETT"
+    ],
+    "Retain": [
+     "BEHOLD_VERDI"
+    ],
+    "Array": [
+     "TABELL"
+    ],
+    "Length": [
+     "LENGDE"
+    ],
+    "Options": [
+     "VALG"
+    ],
+    "Title": [
+     "TITTEL"
+    ],
+    "File": [
+     "FIL"
+    ],
+    "Put": [
+     "SKRIV_V"
+    ],
+    "Delete": [
+     "SLETT"
+    ],
+    "Stop": [
+     "STOPP"
+    ],
+    "Rename": [
+     "GI_NYTT_NAVN"
+    ],
+    "Or": [
+     "ELLER"
+    ],
+    "Not": [
+     "IKKE"
+    ],
+    "Missing": [
+     "MANGLENDE"
+    ],
+    "Descending": [
+     "SYNKENDE"
+    ],
+    "Import": [
+     "IMPORTERE"
+    ],
+    "Export": [
+     "EKSPORTERE"
+    ]
+   }
+  },
+  "da": {
+   "name": "Dansk",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROCEDURE"
+    ],
+    "Run": [
+     "KØR"
+    ],
+    "Set": [
+     "SÆT"
+    ],
+    "Merge": [
+     "SAMMENFLET"
+    ],
+    "By": [
+     "EFTER"
+    ],
+    "If": [
+     "HVIS"
+    ],
+    "Then": [
+     "SÅ"
+    ],
+    "Else": [
+     "ELLERS"
+    ],
+    "Do": [
+     "GØR"
+    ],
+    "End": [
+     "SLUT"
+    ],
+    "Input": [
+     "INDDATA"
+    ],
+    "Output": [
+     "UDDATA"
+    ],
+    "Keep": [
+     "BEHOLD"
+    ],
+    "Drop": [
+     "FJERN"
+    ],
+    "Where": [
+     "HVOR"
+    ],
+    "Sort": [
+     "SORTER"
+    ],
+    "Print": [
+     "UDSKRIV"
+    ],
+    "Means": [
+     "GENNEMSNIT"
+    ],
+    "Freq": [
+     "FREKVENSER"
+    ],
+    "Tabulate": [
+     "TABULER"
+    ],
+    "Contents": [
+     "INDHOLD"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Var": [
+     "VARIABEL"
+    ],
+    "Class": [
+     "KLASSE"
+    ],
+    "Weight": [
+     "VÆGT"
+    ],
+    "Label": [
+     "MÆRKAT"
+    ],
+    "To": [
+     "TIL"
+    ],
+    "While": [
+     "MENS"
+    ],
+    "Until": [
+     "INDTIL"
+    ],
+    "Select": [
+     "VÆLG"
+    ],
+    "When": [
+     "NÅR"
+    ],
+    "Otherwise": [
+     "ELLERS_OM"
+    ],
+    "Leave": [
+     "FORLAD"
+    ],
+    "Continue": [
+     "FORTSÆT"
+    ],
+    "Retain": [
+     "BEHOLD_VÆRDI"
+    ],
+    "Array": [
+     "TABEL"
+    ],
+    "Length": [
+     "LÆNGDE"
+    ],
+    "Options": [
+     "INDSTILLINGER"
+    ],
+    "Title": [
+     "TITEL"
+    ],
+    "File": [
+     "FIL"
+    ],
+    "Put": [
+     "SKRIV_V"
+    ],
+    "Delete": [
+     "SLET"
+    ],
+    "Stop": [
+     "STOP"
+    ],
+    "Rename": [
+     "OMDØB"
+    ],
+    "Or": [
+     "ELLER"
+    ],
+    "Not": [
+     "IKKE"
+    ],
+    "Missing": [
+     "MANGLENDE"
+    ],
+    "Descending": [
+     "FALDENDE"
+    ],
+    "Import": [
+     "IMPORTERE"
+    ],
+    "Export": [
+     "EKSPORTERE"
+    ]
+   }
+  },
+  "cs": {
+   "name": "Čeština",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROCEDURA"
+    ],
+    "Run": [
+     "SPUSTIT"
+    ],
+    "Set": [
+     "NASTAVIT"
+    ],
+    "Merge": [
+     "SLOUČIT"
+    ],
+    "By": [
+     "PODLE"
+    ],
+    "If": [
+     "KDYŽ"
+    ],
+    "Then": [
+     "PAK"
+    ],
+    "Else": [
+     "JINAK"
+    ],
+    "Do": [
+     "OPAKUJ"
+    ],
+    "End": [
+     "KONEC"
+    ],
+    "Input": [
+     "VSTUP"
+    ],
+    "Output": [
+     "VÝSTUP"
+    ],
+    "Keep": [
+     "PONECHAT"
+    ],
+    "Drop": [
+     "ODSTRANIT"
+    ],
+    "Where": [
+     "KDE"
+    ],
+    "Sort": [
+     "ŘADIT"
+    ],
+    "Print": [
+     "TISK"
+    ],
+    "Means": [
+     "PRŮMĚRY"
+    ],
+    "Freq": [
+     "ČETNOSTI"
+    ],
+    "Tabulate": [
+     "TABULOVAT"
+    ],
+    "Contents": [
+     "OBSAH"
+    ],
+    "Format": [
+     "FORMÁT"
+    ],
+    "Var": [
+     "PROMĚNNÁ"
+    ],
+    "Class": [
+     "TŘÍDA"
+    ],
+    "Weight": [
+     "VÁHA"
+    ],
+    "Label": [
+     "ŠTÍTEK"
+    ],
+    "While": [
+     "DOKUD"
+    ],
+    "Until": [
+     "AŽ_DO"
+    ],
+    "Select": [
+     "VYBRAT"
+    ],
+    "When": [
+     "KDYŽ_V"
+    ],
+    "Otherwise": [
+     "JINAK_V"
+    ],
+    "Leave": [
+     "OPUSTIT"
+    ],
+    "Continue": [
+     "POKRAČOVAT"
+    ],
+    "Retain": [
+     "UCHOVAT"
+    ],
+    "Array": [
+     "POLE"
+    ],
+    "Length": [
+     "DÉLKA"
+    ],
+    "Options": [
+     "VOLBY"
+    ],
+    "Title": [
+     "NÁZEV"
+    ],
+    "File": [
+     "SOUBOR"
+    ],
+    "Put": [
+     "ZAPSAT"
+    ],
+    "Delete": [
+     "SMAZAT"
+    ],
+    "Stop": [
+     "ZASTAVIT"
+    ],
+    "Rename": [
+     "PŘEJMENOVAT"
+    ],
+    "Or": [
+     "NEBO"
+    ],
+    "Missing": [
+     "CHYBĚJÍCÍ"
+    ],
+    "Descending": [
+     "SESTUPNĚ"
+    ],
+    "Import": [
+     "IMPORTOVAT"
+    ],
+    "Export": [
+     "EXPORTOVAT"
+    ]
+   }
+  },
+  "fi": {
+   "name": "Suomi",
+   "keywords": {
+    "Data": [
+     "TIEDOT"
+    ],
+    "Proc": [
+     "PROSEDUURI"
+    ],
+    "Run": [
+     "SUORITA"
+    ],
+    "Set": [
+     "ASETA"
+    ],
+    "Merge": [
+     "YHDISTÄ"
+    ],
+    "By": [
+     "MUKAAN"
+    ],
+    "If": [
+     "JOS"
+    ],
+    "Then": [
+     "NIIN"
+    ],
+    "Else": [
+     "MUUTEN"
+    ],
+    "Do": [
+     "TEE"
+    ],
+    "End": [
+     "LOPPU"
+    ],
+    "Input": [
+     "SYÖTE"
+    ],
+    "Output": [
+     "TULOSTE"
+    ],
+    "Keep": [
+     "SÄILYTÄ"
+    ],
+    "Drop": [
+     "POISTA"
+    ],
+    "Where": [
+     "MISSÄ"
+    ],
+    "Sort": [
+     "LAJITTELE"
+    ],
+    "Print": [
+     "TULOSTA"
+    ],
+    "Means": [
+     "KESKIARVOT"
+    ],
+    "Freq": [
+     "FREKVENSSIT"
+    ],
+    "Tabulate": [
+     "TAULUKOI"
+    ],
+    "Contents": [
+     "SISÄLTÖ"
+    ],
+    "Format": [
+     "MUOTO"
+    ],
+    "Var": [
+     "MUUTTUJA"
+    ],
+    "Class": [
+     "LUOKKA"
+    ],
+    "Weight": [
+     "PAINO"
+    ],
+    "Label": [
+     "NIMIKE"
+    ],
+    "To": [
+     "ASTI"
+    ],
+    "While": [
+     "KUNNES_EI"
+    ],
+    "Until": [
+     "KUNNES"
+    ],
+    "Select": [
+     "VALITSE"
+    ],
+    "When": [
+     "KUN"
+    ],
+    "Otherwise": [
+     "MUULLOIN"
+    ],
+    "Leave": [
+     "POISTU"
+    ],
+    "Continue": [
+     "JATKA"
+    ],
+    "Retain": [
+     "PIDÄ"
+    ],
+    "Array": [
+     "TAULUKKO"
+    ],
+    "Length": [
+     "PITUUS"
+    ],
+    "Options": [
+     "ASETUKSET"
+    ],
+    "Title": [
+     "OTSIKKO"
+    ],
+    "File": [
+     "TIEDOSTO"
+    ],
+    "Put": [
+     "KIRJOITA"
+    ],
+    "Delete": [
+     "POISTA_V"
+    ],
+    "Stop": [
+     "PYSÄYTÄ"
+    ],
+    "Rename": [
+     "NIMEÄ_UUDELLEEN"
+    ],
+    "Or": [
+     "TAI"
+    ],
+    "In": [
+     "SISÄLLÄ"
+    ],
+    "Missing": [
+     "PUUTTUVA"
+    ],
+    "Descending": [
+     "LASKEVA"
+    ],
+    "Import": [
+     "TUO"
+    ],
+    "Export": [
+     "VIE"
+    ]
+   }
+  },
+  "pl": {
+   "name": "Polski",
+   "keywords": {
+    "Data": [
+     "DANE"
+    ],
+    "Proc": [
+     "PROCEDURA"
+    ],
+    "Run": [
+     "WYKONAJ"
+    ],
+    "Set": [
+     "USTAW"
+    ],
+    "Merge": [
+     "POŁĄCZ"
+    ],
+    "By": [
+     "WEDŁUG"
+    ],
+    "If": [
+     "JEŚLI"
+    ],
+    "Then": [
+     "WTEDY"
+    ],
+    "Else": [
+     "PRZECIWNIE"
+    ],
+    "Do": [
+     "POWTÓRZ"
+    ],
+    "End": [
+     "KONIEC"
+    ],
+    "Input": [
+     "WEJŚCIE"
+    ],
+    "Output": [
+     "WYJŚCIE"
+    ],
+    "Keep": [
+     "ZACHOWAJ"
+    ],
+    "Drop": [
+     "USUŃ"
+    ],
+    "Where": [
+     "GDZIE"
+    ],
+    "Sort": [
+     "SORTUJ"
+    ],
+    "Print": [
+     "DRUKUJ"
+    ],
+    "Means": [
+     "ŚREDNIE"
+    ],
+    "Freq": [
+     "CZĘSTOŚCI"
+    ],
+    "Tabulate": [
+     "TABELARYZUJ"
+    ],
+    "Contents": [
+     "ZAWARTOŚĆ"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Var": [
+     "ZMIENNA"
+    ],
+    "Class": [
+     "KLASA"
+    ],
+    "Weight": [
+     "WAGA"
+    ],
+    "Label": [
+     "ETYKIETA"
+    ],
+    "While": [
+     "DOPÓKI"
+    ],
+    "Until": [
+     "AŻ"
+    ],
+    "Select": [
+     "WYBIERZ"
+    ],
+    "When": [
+     "GDY"
+    ],
+    "Otherwise": [
+     "INACZEJ"
+    ],
+    "Leave": [
+     "OPUŚĆ"
+    ],
+    "Continue": [
+     "KONTYNUUJ"
+    ],
+    "Retain": [
+     "PRZECHOWAJ"
+    ],
+    "Array": [
+     "TABLICA"
+    ],
+    "Length": [
+     "DŁUGOŚĆ"
+    ],
+    "Options": [
+     "OPCJE"
+    ],
+    "Title": [
+     "TYTUŁ"
+    ],
+    "File": [
+     "PLIK"
+    ],
+    "Put": [
+     "ZAPISZ"
+    ],
+    "Delete": [
+     "SKASUJ"
+    ],
+    "Stop": [
+     "ZATRZYMAJ"
+    ],
+    "Rename": [
+     "PRZEMIANUJ"
+    ],
+    "Or": [
+     "LUB"
+    ],
+    "Not": [
+     "NIE"
+    ],
+    "Missing": [
+     "BRAKUJĄCE"
+    ],
+    "Descending": [
+     "MALEJĄCO"
+    ],
+    "Import": [
+     "IMPORTUJ"
+    ],
+    "Export": [
+     "EKSPORTUJ"
+    ]
+   }
+  },
+  "tr": {
+   "name": "Türkçe",
+   "keywords": {
+    "Data": [
+     "VERİ"
+    ],
+    "Proc": [
+     "PROSEDÜR"
+    ],
+    "Run": [
+     "ÇALIŞTIR"
+    ],
+    "Set": [
+     "AYARLA"
+    ],
+    "Merge": [
+     "BİRLEŞTİR"
+    ],
+    "By": [
+     "GÖRE"
+    ],
+    "If": [
+     "EĞER"
+    ],
+    "Then": [
+     "İSE"
+    ],
+    "Else": [
+     "DEĞİLSE"
+    ],
+    "Do": [
+     "YAP"
+    ],
+    "End": [
+     "SON"
+    ],
+    "Input": [
+     "GİRİŞ"
+    ],
+    "Output": [
+     "ÇIKIŞ"
+    ],
+    "Keep": [
+     "SAKLA"
+    ],
+    "Drop": [
+     "ÇIKAR"
+    ],
+    "Where": [
+     "NEREDE"
+    ],
+    "Sort": [
+     "SIRALA"
+    ],
+    "Print": [
+     "YAZDIR"
+    ],
+    "Means": [
+     "ORTALAMALAR"
+    ],
+    "Freq": [
+     "FREKANSLAR"
+    ],
+    "Tabulate": [
+     "TABLO_YAP"
+    ],
+    "Contents": [
+     "İÇERİK"
+    ],
+    "Format": [
+     "BİÇİM"
+    ],
+    "Var": [
+     "DEĞİŞKEN"
+    ],
+    "Class": [
+     "SINIF"
+    ],
+    "Weight": [
+     "AĞIRLIK"
+    ],
+    "Label": [
+     "ETİKET"
+    ],
+    "To": [
+     "KADAR"
+    ],
+    "While": [
+     "İKEN"
+    ],
+    "Until": [
+     "OLANA_KADAR"
+    ],
+    "Select": [
+     "SEÇ"
+    ],
+    "When": [
+     "OLDUĞUNDA"
+    ],
+    "Otherwise": [
+     "AKSİ_HALDE"
+    ],
+    "Leave": [
+     "AYRIL"
+    ],
+    "Continue": [
+     "DEVAM_ET"
+    ],
+    "Retain": [
+     "KORU"
+    ],
+    "Array": [
+     "DİZİ"
+    ],
+    "Length": [
+     "UZUNLUK"
+    ],
+    "Options": [
+     "SEÇENEKLER"
+    ],
+    "Title": [
+     "BAŞLIK"
+    ],
+    "File": [
+     "DOSYA"
+    ],
+    "Put": [
+     "YAZ"
+    ],
+    "Delete": [
+     "SİL"
+    ],
+    "Rename": [
+     "YENİDEN_ADLANDIR"
+    ],
+    "Or": [
+     "VEYA"
+    ],
+    "Not": [
+     "DEĞİL"
+    ],
+    "In": [
+     "İÇİNDE"
+    ],
+    "Missing": [
+     "EKSİK"
+    ],
+    "Descending": [
+     "AZALAN"
+    ],
+    "Import": [
+     "İÇE_AKTAR"
+    ],
+    "Export": [
+     "DIŞA_AKTAR"
+    ]
+   }
+  },
+  "id": {
+   "name": "Bahasa Indonesia",
+   "keywords": {
+    "Data": [
+     "DATA"
+    ],
+    "Proc": [
+     "PROSEDUR"
+    ],
+    "Run": [
+     "JALANKAN"
+    ],
+    "Set": [
+     "ATUR"
+    ],
+    "Merge": [
+     "GABUNG"
+    ],
+    "By": [
+     "BERDASARKAN"
+    ],
+    "If": [
+     "JIKA"
+    ],
+    "Then": [
+     "MAKA"
+    ],
+    "Else": [
+     "SELAINNYA"
+    ],
+    "Do": [
+     "LAKUKAN"
+    ],
+    "End": [
+     "AKHIR"
+    ],
+    "Input": [
+     "MASUKAN"
+    ],
+    "Output": [
+     "KELUARAN"
+    ],
+    "Keep": [
+     "SIMPAN"
+    ],
+    "Drop": [
+     "HAPUS"
+    ],
+    "Where": [
+     "DIMANA"
+    ],
+    "Sort": [
+     "URUTKAN"
+    ],
+    "Print": [
+     "CETAK"
+    ],
+    "Means": [
+     "RATA_RATA"
+    ],
+    "Freq": [
+     "FREKUENSI"
+    ],
+    "Tabulate": [
+     "TABULASI"
+    ],
+    "Contents": [
+     "ISI"
+    ],
+    "Format": [
+     "FORMAT"
+    ],
+    "Var": [
+     "VARIABEL"
+    ],
+    "Class": [
+     "KELAS"
+    ],
+    "Weight": [
+     "BOBOT"
+    ],
+    "Label": [
+     "LABEL"
+    ],
+    "To": [
+     "SAMPAI"
+    ],
+    "While": [
+     "SELAMA"
+    ],
+    "Until": [
+     "HINGGA"
+    ],
+    "Select": [
+     "PILIH"
+    ],
+    "When": [
+     "KETIKA"
+    ],
+    "Otherwise": [
+     "SEBALIKNYA"
+    ],
+    "Leave": [
+     "KELUAR"
+    ],
+    "Continue": [
+     "LANJUTKAN"
+    ],
+    "Retain": [
+     "PERTAHANKAN"
+    ],
+    "Array": [
+     "LARIK"
+    ],
+    "Length": [
+     "PANJANG"
+    ],
+    "Options": [
+     "PILIHAN"
+    ],
+    "Title": [
+     "JUDUL"
+    ],
+    "File": [
+     "BERKAS"
+    ],
+    "Put": [
+     "TULIS"
+    ],
+    "Delete": [
+     "HAPUS_V"
+    ],
+    "Stop": [
+     "BERHENTI"
+    ],
+    "Rename": [
+     "UBAH_NAMA"
+    ],
+    "Or": [
+     "ATAU"
+    ],
+    "Not": [
+     "BUKAN"
+    ],
+    "In": [
+     "DALAM"
+    ],
+    "Missing": [
+     "HILANG"
+    ],
+    "Descending": [
+     "MENURUN"
+    ],
+    "Import": [
+     "IMPOR"
+    ],
+    "Export": [
+     "EKSPOR"
+    ]
+   }
+  },
+  "vi": {
+   "name": "Tiếng Việt",
+   "keywords": {
+    "Data": [
+     "DỮ_LIỆU"
+    ],
+    "Proc": [
+     "THỦ_TỤC"
+    ],
+    "Run": [
+     "THỰC_HIỆN"
+    ],
+    "Set": [
+     "THIẾT_LẬP"
+    ],
+    "Merge": [
+     "HỢP_NHẤT"
+    ],
+    "By": [
+     "THEO"
+    ],
+    "If": [
+     "NẾU"
+    ],
+    "Then": [
+     "THÌ"
+    ],
+    "Else": [
+     "NGƯỢC_LẠI"
+    ],
+    "Do": [
+     "THỰC_HIỆN_V"
+    ],
+    "End": [
+     "KẾT_THÚC"
+    ],
+    "Input": [
+     "NHẬP"
+    ],
+    "Output": [
+     "XUẤT"
+    ],
+    "Keep": [
+     "GIỮ"
+    ],
+    "Drop": [
+     "BỎ"
+    ],
+    "Where": [
+     "Ở_ĐÂU"
+    ],
+    "Sort": [
+     "SẮP_XẾP"
+    ],
+    "Print": [
+     "IN_ẤN"
+    ],
+    "Means": [
+     "TRUNG_BÌNH"
+    ],
+    "Freq": [
+     "TẦN_SUẤT"
+    ],
+    "Tabulate": [
+     "LẬP_BẢNG"
+    ],
+    "Contents": [
+     "NỘI_DUNG"
+    ],
+    "Format": [
+     "ĐỊNH_DẠNG"
+    ],
+    "Var": [
+     "BIẾN"
+    ],
+    "Class": [
+     "LỚP"
+    ],
+    "Weight": [
+     "TRỌNG_SỐ"
+    ],
+    "Label": [
+     "NHÃN"
+    ],
+    "To": [
+     "ĐẾN"
+    ],
+    "While": [
+     "TRONG_KHI"
+    ],
+    "Until": [
+     "CHO_ĐẾN_KHI"
+    ],
+    "Select": [
+     "CHỌN"
+    ],
+    "When": [
+     "KHI"
+    ],
+    "Otherwise": [
+     "TRƯỜNG_HỢP_KHÁC"
+    ],
+    "Leave": [
+     "THOÁT"
+    ],
+    "Continue": [
+     "TIẾP_TỤC"
+    ],
+    "Retain": [
+     "LƯU_GIỮ"
+    ],
+    "Array": [
+     "MẢNG"
+    ],
+    "Length": [
+     "ĐỘ_DÀI"
+    ],
+    "Options": [
+     "TÙY_CHỌN"
+    ],
+    "Title": [
+     "TIÊU_ĐỀ"
+    ],
+    "File": [
+     "TỆP"
+    ],
+    "Put": [
+     "VIẾT"
+    ],
+    "Delete": [
+     "XÓA"
+    ],
+    "Stop": [
+     "DỪNG"
+    ],
+    "Rename": [
+     "ĐỔI_TÊN"
+    ],
+    "Or": [
+     "HOẶC"
+    ],
+    "Not": [
+     "KHÔNG"
+    ],
+    "In": [
+     "TRONG"
+    ],
+    "Missing": [
+     "THIẾU"
+    ],
+    "Descending": [
+     "GIẢM_DẦN"
+    ],
+    "Import": [
+     "NHẬP_KHẨU"
+    ],
+    "Export": [
+     "XUẤT_KHẨU"
+    ]
+   }
+  }
+ }
+}
