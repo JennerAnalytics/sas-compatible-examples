@@ -39,12 +39,30 @@ def md_indices(nb):
     return [i for i, c in enumerate(nb["cells"]) if c["cell_type"] == "markdown"]
 
 
+def _translatable_prose(src):
+    """Human-prose residue of a markdown cell after stripping code, math, HTML,
+    table rules, and punctuation. Empty => a structural-only cell (a `---`
+    separator or a pure <div>/<img> banner) that stays identical after
+    translation and must not be counted as 'untranslated'."""
+    import re
+    s = "".join(src) if isinstance(src, list) else src
+    s = re.sub(r"```.*?```", " ", s, flags=re.S)
+    s = re.sub(r"`[^`]*`", " ", s)
+    s = re.sub(r"\$\$.*?\$\$", " ", s, flags=re.S)
+    s = re.sub(r"\$[^$]*\$", " ", s)
+    s = re.sub(r"<[^>]+>", " ", s)
+    s = re.sub(r"data:image/[^\"')]+", " ", s)
+    s = re.sub(r"[-=|:#*_>\s]+", " ", s)
+    return s.strip()
+
+
 def md_translated(en_nb, tr_nb):
-    """True if every markdown cell differs from English (i.e. human-translated)."""
+    """True if every prose-bearing markdown cell differs from English.
+    Structural-only cells (separators, HTML banners) are ignored."""
     for i in md_indices(en_nb):
         en = "".join(en_nb["cells"][i]["source"])
         tr = "".join(tr_nb["cells"][i]["source"])
-        if en.strip() and en == tr:
+        if _translatable_prose(en_nb["cells"][i]["source"]) and en == tr:
             return False
     return True
 
