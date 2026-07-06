@@ -1,0 +1,12 @@
+# Notebook re-execution artifacts (outputs are embedded in the .ipynb itself)
+**/listing.txt
+**/ods_output/
+**/work/
+**/.cas/
+**/*.spec.json
+# loose plot/data files the kernel drops next to a notebook
+translations/**/*.svg
+translations/**/*.png
+translations/**/*.csv
+translations/**/*.lst
+temp/
