@@ -13,6 +13,7 @@ translations/*/procs/clp/*/mk
 translations/**/*.svg
 translations/**/*.png
 translations/**/*.csv
+translations/**/*.csv.meta
 translations/**/*.lst
 temp/
 # stray CLI logs / caches from local runs
