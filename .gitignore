@@ -7,6 +7,8 @@
 # PROC BOXPLOT/ANOM default output datasets dropped next to a notebook
 **/BOXSTATS
 **/LINEHISTORY
+# PROC OPTMODEL/CLP makespan side-file dropped next to a notebook
+translations/*/procs/clp/*/mk
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
