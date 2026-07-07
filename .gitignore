@@ -4,9 +4,18 @@
 **/work/
 **/.cas/
 **/*.spec.json
+# PROC BOXPLOT/ANOM default output datasets dropped next to a notebook
+**/BOXSTATS
+**/LINEHISTORY
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
 translations/**/*.csv
 translations/**/*.lst
 temp/
+# stray CLI logs / caches from local runs
+/help.log
+/help.lst
+/run.log
+/run.lst
+__pycache__/
