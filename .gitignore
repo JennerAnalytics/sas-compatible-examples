@@ -13,6 +13,8 @@ translations/*/procs/cpm/*/mk
 translations/*/procs/cpm/*/rprofile
 # PROC EFFECTPLOT MEANS OUT= dataset (output out=mn) dropped next to a notebook
 translations/*/procs/effectplot/*/mn
+# PROC GAGE (via PROC MEANS output out=partavg) dataset dropped next to a notebook
+translations/*/procs/gage/*/partavg
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
