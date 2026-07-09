@@ -21,6 +21,8 @@ translations/**/*.png
 translations/**/*.csv
 translations/**/*.csv.meta
 translations/**/*.lst
+# CODE FILE= scoring-code deliverables (e.g. PROC HPGENSELECT/GLMSELECT) regenerated on re-execution
+translations/**/*.sas
 temp/
 # stray CLI logs / caches from local runs
 /help.log
