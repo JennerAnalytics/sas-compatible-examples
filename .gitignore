@@ -15,6 +15,8 @@ translations/*/procs/cpm/*/rprofile
 translations/*/procs/effectplot/*/mn
 # PROC GAGE (via PROC MEANS output out=partavg) dataset dropped next to a notebook
 translations/*/procs/gage/*/partavg
+# PROC HPQUANTSELECT (output out=work.devpct) dataset dropped next to a notebook
+translations/*/procs/hpquantselect/*/work.devpct
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
