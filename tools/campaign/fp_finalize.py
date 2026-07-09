@@ -23,10 +23,20 @@ def cell_out_text(nb):
                 t += ("".join(x) if isinstance(x, list) else (x or ""))
     return t
 
+def source_code_has_output(source_rel):
+    """Per-index output presence for the English source's code cells. A localized
+    cell is allowed to lack output only where the SOURCE cell at the same index
+    also lacks output (e.g. a PATTERN-statement-only setup cell) — this still
+    catches a genuine execution regression while not flagging a structurally
+    quiet cell that never had output even in the untouched English source."""
+    nb = json.loads((REPO / source_rel).read_text())
+    return [bool(c.get("outputs")) for c in nb["cells"] if c["cell_type"] == "code"]
+
 def main(batch_json):
     batch = json.load(open(batch_json))["batch"]
     clean, problems = [], []
     for s in batch:
+        src_has_output = source_code_has_output(s)
         for l in LANGS:
             rel = localized_path(s, l)
             p = REPO / rel
@@ -38,7 +48,10 @@ def main(batch_json):
             except Exception as e:
                 problems.append(f"{tag} BADJSON {e}"); continue
             code = [c for c in nb["cells"] if c["cell_type"] == "code"]
-            if not code or not all(c.get("outputs") for c in code):
+            if not code:
+                problems.append(f"{tag} MISSING-OUTPUTS"); continue
+            required = src_has_output if len(src_has_output) == len(code) else [True] * len(code)
+            if not all(c.get("outputs") for c, need in zip(code, required) if need):
                 problems.append(f"{tag} MISSING-OUTPUTS"); continue
             moji = MOJI.findall(cell_out_text(nb))
             if moji:

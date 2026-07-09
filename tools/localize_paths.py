@@ -40,8 +40,24 @@ def localized_path(source_rel, lang):
         mid = domains[top][lang]              # localized industry folder
     return f"translations/{lang}/{mid}/{slug_loc}/{slug_loc}.ipynb"
 
+_SRC_OUTPUT_CACHE = {}
+
+def _source_code_has_output(source_rel):
+    """Per-index output presence for the English source's code cells, cached.
+    A localized cell is allowed to lack output only where the SOURCE cell at
+    the same index also lacks output (e.g. a PATTERN-statement-only setup
+    cell) — this still catches a genuine execution regression while not
+    perpetually flagging a structurally quiet cell as "not localized"."""
+    if source_rel not in _SRC_OUTPUT_CACHE:
+        nb = json.loads((REPO/source_rel).read_text())
+        _SRC_OUTPUT_CACHE[source_rel] = [
+            bool(c.get("outputs")) for c in nb["cells"] if c["cell_type"] == "code"
+        ]
+    return _SRC_OUTPUT_CACHE[source_rel]
+
 def is_localized(source_rel, lang):
-    """Fully localized == output path exists, valid JSON, and code cells have outputs."""
+    """Fully localized == output path exists, valid JSON, and code cells have
+    outputs (except where the source cell at that index never had output)."""
     p = REPO/localized_path(source_rel, lang)
     if not p.exists():
         return False
@@ -50,7 +66,11 @@ def is_localized(source_rel, lang):
     except Exception:
         return False
     code = [c for c in nb["cells"] if c["cell_type"] == "code"]
-    return bool(code) and all(c.get("outputs") for c in code)
+    if not code:
+        return False
+    src_has_output = _source_code_has_output(source_rel)
+    required = src_has_output if len(src_has_output) == len(code) else [True] * len(code)
+    return all(c.get("outputs") for c, need in zip(code, required) if need)
 
 def all_sources():
     return [r["path"] for r in json.loads(
