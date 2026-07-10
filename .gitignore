@@ -21,6 +21,8 @@ translations/*/procs/hpquantselect/*/work.devpct
 translations/*/procs/macontrol/*/work.baseline_stats
 # PROC MCMC/MEANS (output out=raw_freq) dataset dropped next to a notebook
 translations/*/procs/mcmc/*/raw_freq
+# PROC MVPDIAGNOSE (via PROC MEANS output out=contrib_means) dataset dropped next to a notebook
+translations/*/procs/mvpdiagnose/*/contrib_means
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
