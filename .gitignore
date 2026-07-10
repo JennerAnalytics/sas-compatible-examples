@@ -17,6 +17,10 @@ translations/*/procs/effectplot/*/mn
 translations/*/procs/gage/*/partavg
 # PROC HPQUANTSELECT (output out=work.devpct) dataset dropped next to a notebook
 translations/*/procs/hpquantselect/*/work.devpct
+# PROC MACONTROL (via PROC MEANS output out=work.baseline_stats) dataset dropped next to a notebook
+translations/*/procs/macontrol/*/work.baseline_stats
+# PROC MCMC/MEANS (output out=raw_freq) dataset dropped next to a notebook
+translations/*/procs/mcmc/*/raw_freq
 # loose plot/data files the kernel drops next to a notebook
 translations/**/*.svg
 translations/**/*.png
