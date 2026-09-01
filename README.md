@@ -14,8 +14,6 @@ checked that it executes:
 - Each generated image has been **visually reviewed**.
 - The advertised SAS procedure is the one actually executed.
 
-Notebooks that could not meet this bar were excluded rather than published. This is a
-deliberately small, high-trust set; it grows as more examples pass review.
 
 ## Layout
 
