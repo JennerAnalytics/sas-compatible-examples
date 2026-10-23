@@ -1,0 +1,186 @@
+                               Duplicate check: rows per report week, region and product
+
+n_keys  n_duplicated_keys
+------  -----------------
+  4158                  0
+                                 Product definitions reported by year (National region)
+
+year  variety             unit    organic  weeks
+----  ------------------  ------  -------  -----
+2014  MINIATURE           each    No           7
+2015  MINIATURE           each    No           8
+2016  MINIATURE           each    No           7
+2017  MINIATURE           each    No           8
+2018  MINIATURE           each    No           7
+2019  MINIATURE           each    No           7
+2020  MINIATURE           each    No           8
+2021  MINIATURE           each    No           9
+2022  MINIATURE           each    No          10
+2023  MINIATURE           each    No          10
+2024  MINIATURE           each    No           9
+2025  MINIATURE           each    No           9
+2026  MINIATURE           each    No           6
+2015  MINIATURE           each    Yes          2
+2016  MINIATURE           each    Yes          1
+2017  MINIATURE           each    Yes          3
+2014  MINIATURE           per lb  No           5
+2015  MINIATURE           per lb  No           6
+2016  MINIATURE           per lb  No           7
+2017  MINIATURE           per lb  No           5
+2018  MINIATURE           per lb  No           8
+2019  MINIATURE           per lb  No           6
+2020  MINIATURE           per lb  No           5
+2021  MINIATURE           per lb  No           7
+2022  MINIATURE           per lb  No           5
+2023  MINIATURE           per lb  No           8
+2024  MINIATURE           per lb  No           6
+2025  MINIATURE           per lb  No           6
+2026  MINIATURE           per lb  No           6
+2023  Marked Extra Large  each    No           8
+2024  Marked Extra Large  each    No           9
+2025  Marked Extra Large  each    No           8
+2026  Marked Extra Large  each    No           4
+2023  Marked Extra Large  per lb  No           2
+2024  Marked Extra Large  per lb  No           4
+2025  Marked Extra Large  per lb  No           3
+2026  Marked Extra Large  per lb  No           3
+2023  Marked Large        each    No           8
+2024  Marked Large        each    No           9
+2025  Marked Large        each    No           9
+2026  Marked Large        each    No           6
+2023  Marked Large        per lb  No           5
+2024  Marked Large        per lb  No           4
+2025  Marked Large        per lb  No           1
+2026  Marked Large        per lb  No           1
+2023  Marked Medium       each    No           7
+2024  Marked Medium       each    No           7
+2025  Marked Medium       each    No           7
+2026  Marked Medium       each    No           6
+2023  Marked Medium       per lb  No           1
+2023  Marked Small        each    No           5
+2024  Marked Small        each    No           4
+2025  Marked Small        each    No           5
+2026  Marked Small        each    No           2
+2024  Marked Small        per lb  No           1
+2011  N/A                 each    No          10
+2012  N/A                 each    No           9
+2013  N/A                 each    No           7
+2014  N/A                 each    No          10
+2015  N/A                 each    No           8
+2016  N/A                 each    No           9
+2017  N/A                 each    No           9
+2018  N/A                 each    No          10
+2019  N/A                 each    No           8
+2020  N/A                 each    No           9
+2021  N/A                 each    No          10
+2022  N/A                 each    No           9
+2023  N/A                 each    No           8
+2024  N/A                 each    No           9
+2025  N/A                 each    No          10
+2026  N/A                 each    No           6
+2016  N/A                 each    Yes          4
+2019  N/A                 each    Yes          1
+2020  N/A                 each    Yes          1
+2022  N/A                 each    Yes          1
+2014  N/A                 per lb  No           7
+2015  N/A                 per lb  No           8
+2016  N/A                 per lb  No          10
+2017  N/A                 per lb  No          10
+2018  N/A                 per lb  No          12
+2019  N/A                 per lb  No          12
+2020  N/A                 per lb  No           7
+2021  N/A                 per lb  No           9
+2022  N/A                 per lb  No           6
+2023  N/A                 per lb  No           8
+2024  N/A                 per lb  No           7
+2025  N/A                 per lb  No           7
+2026  N/A                 per lb  No           4
+2016  N/A                 per lb  Yes          6
+2017  N/A                 per lb  Yes          3
+2020  N/A                 per lb  Yes          1
+2021  N/A                 per lb  Yes          2
+2022  N/A                 per lb  Yes          1
+2014  PIE TYPE            each    No           6
+2015  PIE TYPE            each    No           8
+2016  PIE TYPE            each    No           7
+2017  PIE TYPE            each    No           9
+2018  PIE TYPE            each    No          11
+2019  PIE TYPE            each    No          10
+2020  PIE TYPE            each    No           8
+2021  PIE TYPE            each    No          12
+2022  PIE TYPE            each    No           9
+2023  PIE TYPE            each    No           9
+2024  PIE TYPE            each    No          11
+2025  PIE TYPE            each    No           9
+2026  PIE TYPE            each    No           6
+2014  PIE TYPE            each    Yes          2
+2015  PIE TYPE            each    Yes          2
+2016  PIE TYPE            each    Yes          1
+2017  PIE TYPE            each    Yes          5
+2018  PIE TYPE            each    Yes          2
+2019  PIE TYPE            each    Yes          2
+2021  PIE TYPE            each    Yes          2
+2022  PIE TYPE            each    Yes          4
+2023  PIE TYPE            each    Yes          2
+2024  PIE TYPE            each    Yes          1
+2025  PIE TYPE            each    Yes          2
+2014  PIE TYPE            per lb  No           7
+2015  PIE TYPE            per lb  No           7
+2016  PIE TYPE            per lb  No           7
+2017  PIE TYPE            per lb  No          10
+2018  PIE TYPE            per lb  No          13
+2019  PIE TYPE            per lb  No          13
+2020  PIE TYPE            per lb  No          13
+2021  PIE TYPE            per lb  No          13
+2022  PIE TYPE            per lb  No          12
+2023  PIE TYPE            per lb  No          10
+2024  PIE TYPE            per lb  No           8
+2025  PIE TYPE            per lb  No          12
+2026  PIE TYPE            per lb  No           6
+2014  PIE TYPE            per lb  Yes          7
+2015  PIE TYPE            per lb  Yes         11
+2016  PIE TYPE            per lb  Yes         11
+2017  PIE TYPE            per lb  Yes         10
+2018  PIE TYPE            per lb  Yes         10
+2019  PIE TYPE            per lb  Yes         12
+2020  PIE TYPE            per lb  Yes          9
+2021  PIE TYPE            per lb  Yes         12
+2022  PIE TYPE            per lb  Yes         12
+2023  PIE TYPE            per lb  Yes         12
+2024  PIE TYPE            per lb  Yes         12
+2025  PIE TYPE            per lb  Yes          8
+2026  PIE TYPE            per lb  Yes          5
+                                           Modeling dataset: weeks by season
+
+year  weeks       first        last  no_wholesale  no_trends
+----  -----  ----------  ----------  ------------  ---------
+2011      8  2011-09-03  2011-10-22             0          0
+2012      9  2012-09-01  2012-10-27             1          0
+2013      6  2013-08-31  2013-10-26             1          0
+2014      9  2014-08-30  2014-10-25             1          0
+2015      8  2015-09-05  2015-10-24             1          0
+2016      8  2016-09-03  2016-10-22             1          0
+2017      8  2017-09-02  2017-10-21             2          0
+2018      9  2018-09-01  2018-10-27             1          0
+2019      7  2019-09-07  2019-10-19             0          0
+2020      9  2020-08-29  2020-10-24             1          0
+2021      9  2021-09-04  2021-10-30             1          0
+2022      9  2022-09-03  2022-10-29             1          0
+2023      8  2023-09-02  2023-10-21             1          0
+2024      9  2024-08-31  2024-10-26             2          0
+2025      9  2025-08-30  2025-10-25             1          0
+2026      6  2026-09-05  2026-10-10             1          0
+                                                Excluded national weeks
+
+year  report_begin_date  Stores with ads  Advertised price, weighted average ($ each)  exclusion
+----  -----------------  ---------------  -------------------------------------------  -----------------------------
+2011         2011-08-27              126                                         4.99  outside Sep-Oct season window
+2011         2011-12-10              142                                          1.5  outside Sep-Oct season window
+2013         2013-11-09               72                                         7.99  outside Sep-Oct season window
+2014         2014-01-18               72                                         7.99  outside Sep-Oct season window
+2016         2016-10-29                5                                         4.99  fewer than min_stores ads
+2017         2017-08-26               15                                         4.99  outside Sep-Oct season window
+2018         2018-08-25               15                                            5  outside Sep-Oct season window
+2019         2019-10-26               66                                            5  fewer than min_stores ads
+2021         2021-08-28               15                                         6.99  outside Sep-Oct season window
+2025         2025-08-23               38                                         5.99  outside Sep-Oct season window

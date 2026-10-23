@@ -1,0 +1,1272 @@
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            44
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          6    2011, 2012, 2013, 2014, 2015, 2016
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               1.969066E-11
+The Deviance of the Final Estimate        0.7263791376
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.50422     0.09156     16.43    <.0001
+year 2011       0.05267     0.08999      0.59    0.5621
+year 2012       0.00016     0.08878      0.00    0.9986
+year 2013       0.05192     0.09404      0.55    0.5844
+year 2014      -0.07943     0.08825     -0.90    0.3742
+year 2015       0.03151     0.09053      0.35    0.7299
+year 2016             0           .         .         .
+Linear(dth)    -0.00106     0.00127     -0.83    0.4105
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999439    2.000000    0.019975      40
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.120471      5.8048      0.0549
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            47
+Number of Missing Observations    1
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          6    2011, 2012, 2013, 2014, 2015, 2016
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               1.08196E-10
+The Deviance of the Final Estimate        0.7367575841
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.46601     0.06612     22.17    <.0001
+year 2011       0.08211     0.07218      1.14    0.2624
+year 2012       0.02943     0.07042      0.42    0.6783
+year 2013       0.07938     0.07747      1.02    0.3120
+year 2014      -0.05044     0.07026     -0.72    0.4772
+year 2015       0.06126     0.07235      0.85    0.4025
+year 2016             0           .         .         .
+Linear(dth)    -0.00079     0.00118     -0.67    0.5081
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999478    2.000000    0.018728      40
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.127281      6.5648      0.0375
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            52
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          7    2011, 2012, 2013, 2014, 2015, 2016, 2017
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               6.507416E-10
+The Deviance of the Final Estimate        0.7467977423
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.47733     0.08314     17.77    <.0001
+year 2011       0.07151     0.08328      0.86    0.3954
+year 2012       0.01829     0.08213      0.22    0.8249
+year 2013       0.06722     0.08706      0.77    0.4444
+year 2014      -0.06186     0.08168     -0.76    0.4531
+year 2015       0.05082     0.08374      0.61    0.5472
+year 2016      -0.00716     0.08328     -0.09    0.9319
+year 2017             0           .         .         .
+Linear(dth)    -0.00077     0.00109     -0.71    0.4823
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999516    2.000000    0.016855      44
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.123062      6.9210      0.0314
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            55
+Number of Missing Observations    1
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          7    2011, 2012, 2013, 2014, 2015, 2016, 2017
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               2.1207927E-9
+The Deviance of the Final Estimate        0.7570167294
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.45831     0.06072     24.02    <.0001
+year 2011       0.08493     0.06729      1.26    0.2134
+year 2012       0.03172     0.06565      0.48    0.6313
+year 2013       0.08018     0.07218      1.11    0.2725
+year 2014      -0.04863     0.06549     -0.74    0.4617
+year 2015       0.06445     0.06746      0.96    0.3445
+year 2016       0.00626     0.06729      0.09    0.9262
+year 2017             0           .         .         .
+Linear(dth)    -0.00061     0.00102     -0.60    0.5520
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999544    2.000000    0.016008      47
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.125698      7.4720      0.0238
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            60
+Number of Missing Observations    5
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          8    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               6.906189E-10
+The Deviance of the Final Estimate        0.7895770344
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.46529     0.07798     18.79    <.0001
+year 2011       0.07757     0.07928      0.98    0.3327
+year 2012       0.02392     0.07816      0.31    0.7608
+year 2013       0.07182     0.08291      0.87    0.3906
+year 2014      -0.05705     0.07776     -0.73    0.4666
+year 2015       0.05751     0.07969      0.72    0.4739
+year 2016      -0.00109     0.07928     -0.01    0.9890
+year 2017      -0.00793     0.07910     -0.10    0.9206
+year 2018             0           .         .         .
+Linear(dth)    -0.00058     0.00097     -0.60    0.5540
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999576    2.000000    0.015107      48
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.104522      6.4865      0.0390
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            63
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          8    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               5.644792E-11
+The Deviance of the Final Estimate        0.8418217141
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.39114     0.05892     23.61    <.0001
+year 2011       0.14180     0.06606      2.15    0.0365
+year 2012       0.08754     0.06446      1.36    0.1803
+year 2013       0.13158     0.07083      1.86    0.0689
+year 2014       0.00617     0.06429      0.10    0.9239
+year 2015       0.12214     0.06623      1.84    0.0709
+year 2016       0.06313     0.06606      0.96    0.3436
+year 2017       0.05606     0.06599      0.85    0.3994
+year 2018             0           .         .         .
+Linear(dth)    -0.00026     0.00095     -0.27    0.7872
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999597    2.000000    0.015235      48
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.114950      7.1005      0.0287
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            68
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          9    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               6.727269E-11
+The Deviance of the Final Estimate        0.8928291419
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.56865     0.08292     18.92    <.0001
+year 2011      -0.02681     0.08634     -0.31    0.7573
+year 2012      -0.08327     0.08525     -0.98    0.3329
+year 2013      -0.04150     0.08978     -0.46    0.6457
+year 2014      -0.16414     0.08498     -1.93    0.0585
+year 2015      -0.04696     0.08661     -0.54    0.5898
+year 2016      -0.10548     0.08634     -1.22    0.2269
+year 2017      -0.11237     0.08622     -1.30    0.1978
+year 2018      -0.14420     0.08525     -1.69    0.0963
+year 2019             0           .         .         .
+Linear(dth)    -0.00046     0.00090     -0.52    0.6071
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999633    2.000000    0.014822      48
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.120613      7.5651      0.0228
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            71
+Number of Missing Observations    1
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          9    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               5.006755E-10
+The Deviance of the Final Estimate        0.9759126305
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.43816     0.06051     23.77    <.0001
+year 2011       0.09197     0.06951      1.32    0.1909
+year 2012       0.03508     0.06790      0.52    0.6074
+year 2013       0.07249     0.07425      0.98    0.3329
+year 2014      -0.04595     0.06782     -0.68    0.5007
+year 2015       0.07211     0.06960      1.04    0.3045
+year 2016       0.01330     0.06951      0.19    0.8489
+year 2017       0.00626     0.06948      0.09    0.9285
+year 2018      -0.02586     0.06790     -0.38    0.7047
+year 2019             0           .         .         .
+Linear(dth)    -0.00009     0.00090     -0.10    0.9171
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999649    2.000000    0.015435      51
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.165457     10.0029      0.0067
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            76
+Number of Missing Observations    5
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         10    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               7.377349E-10
+The Deviance of the Final Estimate        1.0546154624
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.50625     0.07818     19.27    <.0001
+year 2011       0.02513     0.08100      0.31    0.7574
+year 2012      -0.03253     0.07985     -0.41    0.6851
+year 2013       0.00412     0.08471      0.05    0.9614
+year 2014      -0.11438     0.07946     -1.44    0.1550
+year 2015       0.00572     0.08139      0.07    0.9442
+year 2016      -0.05354     0.08100     -0.66    0.5111
+year 2017      -0.06089     0.08082     -0.75    0.4540
+year 2018      -0.09346     0.07985     -1.17    0.2462
+year 2019      -0.05842     0.08292     -0.70    0.4837
+year 2020             0           .         .         .
+Linear(dth)    -0.00012     0.00089     -0.13    0.8953
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999682    2.000000    0.015461      52
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.134258      8.0202      0.0181
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            79
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         10    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               5.763102E-10
+The Deviance of the Final Estimate        1.0858518916
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.44111     0.05888     24.48    <.0001
+year 2011       0.08117     0.06678      1.22    0.2285
+year 2012       0.02297     0.06521      0.35    0.7257
+year 2013       0.05665     0.07152      0.79    0.4311
+year 2014      -0.05930     0.06500     -0.91    0.3649
+year 2015       0.06215     0.06699      0.93    0.3569
+year 2016       0.00250     0.06678      0.04    0.9702
+year 2017      -0.00509     0.06669     -0.08    0.9395
+year 2018      -0.03796     0.06521     -0.58    0.5624
+year 2019      -0.00151     0.06899     -0.02    0.9826
+year 2020             0           .         .         .
+Linear(dth)     0.00016     0.00086      0.19    0.8492
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999694    2.000000    0.015250      52
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.149754      9.1023      0.0106
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            84
+Number of Missing Observations    6
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         11    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               3.787836E-10
+The Deviance of the Final Estimate        1.0972957834
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.61057     0.08163     19.73    <.0001
+year 2011      -0.09092     0.08580     -1.06    0.2929
+year 2012      -0.14862     0.08472     -1.75    0.0838
+year 2013      -0.11466     0.08920     -1.29    0.2029
+year 2014      -0.23137     0.08446     -2.74    0.0078
+year 2015      -0.10952     0.08607     -1.27    0.2074
+year 2016      -0.16959     0.08580     -1.98    0.0520
+year 2017      -0.17738     0.08568     -2.07    0.0421
+year 2018      -0.20956     0.08472     -2.47    0.0158
+year 2019      -0.17366     0.08748     -1.99    0.0510
+year 2020      -0.18368     0.08434     -2.18    0.0328
+year 2021             0           .         .         .
+Linear(dth)     0.00028     0.00081      0.35    0.7306
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999708    2.000000    0.014402      55
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.139673      8.9102      0.0116
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            87
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         11    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               6.62322E-10
+The Deviance of the Final Estimate        1.1172379774
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.56331     0.05806     26.92    <.0001
+year 2011      -0.04922     0.06698     -0.73    0.4648
+year 2012      -0.10709     0.06547     -1.64    0.1062
+year 2013      -0.07455     0.07146     -1.04    0.3003
+year 2014      -0.18995     0.06534     -2.91    0.0048
+year 2015      -0.06767     0.06711     -1.01    0.3166
+year 2016      -0.12788     0.06698     -1.91    0.0601
+year 2017      -0.13576     0.06693     -2.03    0.0462
+year 2018      -0.16802     0.06547     -2.57    0.0123
+year 2019      -0.13167     0.06902     -1.91    0.0604
+year 2020      -0.14232     0.06530     -2.18    0.0325
+year 2021             0           .         .         .
+Linear(dth)     0.00044     0.00078      0.56    0.5796
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999718    2.000000    0.014109      58
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.157465     10.2887      0.0058
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            94
+Number of Missing Observations    5
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         12    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               4.102068E-10
+The Deviance of the Final Estimate        1.1522667178
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.66175     0.06863     24.21    <.0001
+year 2011      -0.13407     0.07466     -1.80    0.0764
+year 2012      -0.19399     0.07346     -2.64    0.0100
+year 2013      -0.16294     0.07837     -2.08    0.0409
+year 2014      -0.27619     0.07325     -3.77    0.0003
+year 2015      -0.15315     0.07488     -2.05    0.0442
+year 2016      -0.21274     0.07466     -2.85    0.0056
+year 2017      -0.22037     0.07457     -2.96    0.0041
+year 2018      -0.25492     0.07346     -3.47    0.0008
+year 2019      -0.21532     0.07644     -2.82    0.0061
+year 2020      -0.22830     0.07315     -3.12    0.0025
+year 2021      -0.04992     0.07383     -0.68    0.5009
+year 2022             0           .         .         .
+Linear(dth)     0.00008     0.00073      0.11    0.9156
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999755    2.000000    0.013372      61
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.200580     13.7519      0.0010
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            97
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         12    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               8.499431E-10
+The Deviance of the Final Estimate        1.1560352416
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.65157     0.05089     32.45    <.0001
+year 2011      -0.12700     0.06150     -2.07    0.0421
+year 2012      -0.18689     0.05994     -3.12    0.0025
+year 2013      -0.15598     0.06606     -2.36    0.0206
+year 2014      -0.26916     0.05987     -4.50    <.0001
+year 2015      -0.14601     0.06157     -2.37    0.0201
+year 2016      -0.20567     0.06150     -3.34    0.0012
+year 2017      -0.21333     0.06148     -3.47    0.0008
+year 2018      -0.24783     0.05994     -4.13    <.0001
+year 2019      -0.20822     0.06353     -3.28    0.0015
+year 2020      -0.22131     0.05985     -3.70    0.0004
+year 2021      -0.04273     0.06010     -0.71    0.4791
+year 2022             0           .         .         .
+Linear(dth)     0.00015     0.00071      0.21    0.8376
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999762    2.000000    0.012965      61
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.206467     14.6452      0.0007
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            103
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         13    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               4.525767E-10
+The Deviance of the Final Estimate        1.2448237722
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.69222     0.06753     25.06    <.0001
+year 2011      -0.15884     0.07398     -2.15    0.0346
+year 2012      -0.22048     0.07278     -3.03    0.0032
+year 2013      -0.19143     0.07765     -2.47    0.0157
+year 2014      -0.30213     0.07257     -4.16    <.0001
+year 2015      -0.17831     0.07418     -2.40    0.0184
+year 2016      -0.23750     0.07398     -3.21    0.0019
+year 2017      -0.24501     0.07388     -3.32    0.0013
+year 2018      -0.28142     0.07278     -3.87    0.0002
+year 2019      -0.23912     0.07573     -3.16    0.0022
+year 2020      -0.25403     0.07248     -3.50    0.0007
+year 2021      -0.07758     0.07313     -1.06    0.2917
+year 2022      -0.01889     0.07300     -0.26    0.7964
+year 2023             0           .         .         .
+Linear(dth)    -0.00005     0.00069     -0.08    0.9369
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999780    2.000000    0.013082      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.276422     19.3190      <.0001
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            106
+Number of Missing Observations    1
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         13    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               7.313961E-10
+The Deviance of the Final Estimate        1.2714305546
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.69418     0.05072     33.41    <.0001
+year 2011      -0.16335     0.06159     -2.65    0.0095
+year 2012      -0.22493     0.06003     -3.75    0.0003
+year 2013      -0.19569     0.06613     -2.96    0.0039
+year 2014      -0.30661     0.05996     -5.11    <.0001
+year 2015      -0.18280     0.06167     -2.96    0.0039
+year 2016      -0.24201     0.06159     -3.93    0.0002
+year 2017      -0.24954     0.06156     -4.05    0.0001
+year 2018      -0.28586     0.06003     -4.76    <.0001
+year 2019      -0.24370     0.06362     -3.83    0.0002
+year 2020      -0.25852     0.05993     -4.31    <.0001
+year 2021      -0.08199     0.06020     -1.36    0.1767
+year 2022      -0.02331     0.06014     -0.39    0.6992
+year 2023             0           .         .         .
+Linear(dth)    -0.00001     0.00067     -0.02    0.9874
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999786    2.000000    0.012954      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.280616     19.8638      <.0001
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            111
+Number of Missing Observations    5
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         14    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               6.91843E-10
+The Deviance of the Final Estimate        1.3167587428
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.71457     0.06697     25.60    <.0001
+year 2011      -0.18201     0.07334     -2.48    0.0149
+year 2012      -0.24403     0.07216     -3.38    0.0011
+year 2013      -0.21524     0.07695     -2.80    0.0063
+year 2014      -0.32591     0.07195     -4.53    <.0001
+year 2015      -0.20136     0.07355     -2.74    0.0074
+year 2016      -0.26067     0.07334     -3.55    0.0006
+year 2017      -0.26826     0.07324     -3.66    0.0004
+year 2018      -0.30497     0.07216     -4.23    <.0001
+year 2019      -0.26178     0.07508     -3.49    0.0007
+year 2020      -0.27794     0.07185     -3.87    0.0002
+year 2021      -0.10088     0.07252     -1.39    0.1675
+year 2022      -0.04226     0.07240     -0.58    0.5608
+year 2023      -0.00673     0.07324     -0.09    0.9270
+year 2024             0           .         .         .
+Linear(dth)    -0.00004     0.00066     -0.06    0.9533
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999796    2.000000    0.012766      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.276492     19.7381      <.0001
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            114
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         14    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               6.161105E-10
+The Deviance of the Final Estimate        1.3521918392
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.72471     0.05064     34.06    <.0001
+year 2011      -0.19177     0.06125     -3.13    0.0023
+year 2012      -0.25380     0.05973     -4.25    <.0001
+year 2013      -0.22459     0.06573     -3.42    0.0009
+year 2014      -0.33570     0.05963     -5.63    <.0001
+year 2015      -0.21115     0.06135     -3.44    0.0009
+year 2016      -0.27044     0.06125     -4.42    <.0001
+year 2017      -0.27800     0.06121     -4.54    <.0001
+year 2018      -0.31473     0.05973     -5.27    <.0001
+year 2019      -0.27149     0.06327     -4.29    <.0001
+year 2020      -0.28774     0.05959     -4.83    <.0001
+year 2021      -0.11059     0.05993     -1.85    0.0680
+year 2022      -0.05199     0.05985     -0.87    0.3871
+year 2023      -0.01647     0.06121     -0.27    0.7884
+year 2024             0           .         .         .
+Linear(dth)    -0.00009     0.00065     -0.14    0.8902
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999801    2.000000    0.012740      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.273297     19.6050      <.0001
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            120
+Number of Missing Observations    5
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         15    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               5.437227E-10
+The Deviance of the Final Estimate        1.3791514251
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.72585     0.06547     26.36    <.0001
+year 2011      -0.19329     0.07208     -2.68    0.0085
+year 2012      -0.25509     0.07092     -3.60    0.0005
+year 2013      -0.22599     0.07563     -2.99    0.0035
+year 2014      -0.33732     0.07071     -4.77    <.0001
+year 2015      -0.21239     0.07228     -2.94    0.0041
+year 2016      -0.27196     0.07208     -3.77    0.0003
+year 2017      -0.27967     0.07198     -3.89    0.0002
+year 2018      -0.31602     0.07092     -4.46    <.0001
+year 2019      -0.27291     0.07378     -3.70    0.0004
+year 2020      -0.28953     0.07062     -4.10    <.0001
+year 2021      -0.11136     0.07126     -1.56    0.1212
+year 2022      -0.05294     0.07114     -0.74    0.4585
+year 2023      -0.01814     0.07198     -0.25    0.8016
+year 2024      -0.00957     0.07081     -0.14    0.8927
+year 2025             0           .         .         .
+Linear(dth)    -0.00004     0.00062     -0.07    0.9440
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999812    2.000000    0.012299      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.274502     20.3018      <.0001
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            123
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         15    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               3.720467E-10
+The Deviance of the Final Estimate        1.3817988598
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.70753     0.04903     34.82    <.0001
+year 2011      -0.17776     0.05954     -2.99    0.0035
+year 2012      -0.23962     0.05807     -4.13    <.0001
+year 2013      -0.21101     0.06388     -3.30    0.0013
+year 2014      -0.32195     0.05797     -5.55    <.0001
+year 2015      -0.19677     0.05965     -3.30    0.0013
+year 2016      -0.25643     0.05954     -4.31    <.0001
+year 2017      -0.26418     0.05950     -4.44    <.0001
+year 2018      -0.30055     0.05807     -5.18    <.0001
+year 2019      -0.25722     0.06151     -4.18    <.0001
+year 2020      -0.27421     0.05792     -4.73    <.0001
+year 2021      -0.09577     0.05826     -1.64    0.1032
+year 2022      -0.03738     0.05819     -0.64    0.5220
+year 2023      -0.00265     0.05950     -0.04    0.9645
+year 2024       0.00585     0.05801      0.10    0.9199
+year 2025             0           .         .         .
+Linear(dth)     0.00002     0.00060      0.03    0.9764
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999817    2.000000    0.012002      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.285980     21.7310      <.0001
+
+
+                                       Rolling-origin backtest, seasons 2016-2025
+                             Forecasts use only USDA reports published by each origin date
+
+                                                                                                  Cheapest
+                                                                                                    week
+                 Weeks                                                     95% PI       Mean PI  identified
+model  origin  forecast       MAE ($)      RMSE ($)       MAPE (%)   coverage (%)     width ($)      (%)
+
+A3     Oct21         17  0.3902136263  0.4848897654   7.3395909808            100  2.7727405552          90
+C      Oct21         17  0.3808964777  0.5148630286   7.4088699867  82.3529411765  2.6127015843          60
+B1     Oct21         17  0.4334477305  0.5630433293    7.991111089  94.1176470588  2.7866471937          80
+A2     Oct21         17  0.4724169645  0.6457193694   8.5138899731  94.1176470588  2.8305637401          80
+A0     Oct21         17   0.465201166  0.6877137821   8.2293703845  94.1176470588   2.697375108          90
+A1     Oct21         17  0.4673903506  0.7001118621   8.2183904907  94.1176470588  2.7602666152          70
+Naive  Oct21         17  0.7676147649  0.9469076281  14.2677864423            100  3.2873618634          90
+C      Sep30         47  0.4174828072  0.4959382509  10.0776649219  40.4255319149  2.6157234624          30
+A3     Sep30         47  0.3861493505  0.5027387859   8.6072874715  97.8723404255  2.8313949774          60
+B1     Sep30         47  0.4467309482  0.5600082298  10.0689625732  95.7446808511   2.988881984          30
+Naive  Sep30         47  0.4586279571  0.6147010832  10.0560914275            100   4.902785838          30
+A2     Sep30         47  0.5387578964  0.6431879801  12.1484873764  97.8723404255  3.0859539125          20
+A0     Sep30         47  0.5324929041  0.6480461464  11.8180456752  95.7446808511  2.9895400824          30
+A1     Sep30         47  0.5587042432  0.6705960842  12.4735602294  95.7446808511  3.0838005995          30
+
+
+
+ Mean regret
+         ($)
+
+       0.004
+       0.382
+       0.108
+       0.028
+       0.004
+        0.37
+       0.004
+       0.312
+       0.215
+       0.447
+0.3499999999
+       0.506
+0.3499999999
+       0.691

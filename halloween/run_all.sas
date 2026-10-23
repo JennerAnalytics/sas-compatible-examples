@@ -1,0 +1,11 @@
+%include "%sysget(PUMPKIN_ROOT)/config/settings.sas";
+%include "&root/sas/01_import.sas";
+%include "&root/sas/02_clean.sas";
+%include "&root/sas/03_explore.sas";
+%include "&root/sas/04_baseline.sas";
+%include "&root/sas/05_gam.sas";
+%include "&root/sas/06_state_space.sas";
+%include "&root/sas/06b_regional.sas";
+%include "&root/sas/07_validation.sas";
+%include "&root/sas/08_forecast.sas";
+%include "&root/sas/09_visualization.sas";

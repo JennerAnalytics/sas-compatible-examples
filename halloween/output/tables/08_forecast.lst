@@ -1,0 +1,119 @@
+                                         The GLM Procedure                                         
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+Number of Observations Read       218
+Number of Observations Used       131
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  18      2.07873552   0.11548531      9.45    <.0001
+Error                 112      1.36929811   0.01222588                    
+Corrected Total       130      3.44803363                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.602876   7.175774  0.110571  1.540889
+
+Source             DF   Type I SS  Mean Square   F Value    Pr > F
+-----------  --------  ----------  -----------  --------  --------
+year               15  1.77246393   0.11816426      9.67    <.0001
+dth                 1  0.00037732   0.00037732      0.03    0.8609
+dth*dth             1  0.08466537   0.08466537      6.93    0.0097
+dth*dth*dth         1  0.22122890   0.22122890     18.10    <.0001
+
+Source             DF  Type III SS  Mean Square   F Value    Pr > F
+-----------  --------  -----------  -----------  --------  --------
+year               15   1.72015499   0.11467700      9.38    <.0001
+dth                 1   0.29517476   0.29517476     24.14    <.0001
+dth*dth             1   0.26442856   0.26442856     21.63    <.0001
+dth*dth*dth         1   0.22122890   0.22122890     18.10    <.0001
+
+                      Parameter Estimates                      
+
+Parameter          Estimate  Standard Error   t Value  Pr > |t|
+-----------  --------------  --------------  --------  --------
+Intercept     1.836930367 B      0.05985948     30.69    <.0001
+year 2011    -0.154909692 B      0.05987530     -2.59    0.0110
+year 2012    -0.220165983 B      0.05865298     -3.75    0.0003
+year 2013    -0.193077572 B      0.06464653     -2.99    0.0035
+year 2014    -0.298044056 B      0.05864481     -5.08    <.0001
+year 2015    -0.175712200 B      0.05992347     -2.93    0.0041
+year 2016    -0.233576409 B      0.05987530     -3.90    0.0002
+year 2017    -0.240505780 B      0.05987193     -4.02    0.0001
+year 2018    -0.281101186 B      0.05865298     -4.79    <.0001
+year 2019    -0.234673318 B      0.06160809     -3.81    0.0002
+year 2020    -0.248115917 B      0.05868620     -4.23    <.0001
+year 2021    -0.084082869 B      0.05889194     -1.43    0.1561
+year 2022    -0.022889380 B      0.05878015     -0.39    0.6977
+year 2023     0.021024156 B      0.05987193      0.35    0.7261
+year 2024     0.027559696 B      0.05863414      0.47    0.6392
+year 2025     0.004962657 B      0.05864481      0.08    0.9327
+year 2026     0.000000000 B               .         .         .
+dth          -0.026021714        0.00529586     -4.91    <.0001
+dth*dth       0.000962153        0.00020689      4.65    <.0001
+dth*dth*dth  -0.000009735        0.00000229     -4.25    <.0001
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                        Probability that each remaining ad week has the lowest advertised price
+
+                                                   The FREQ Procedure
+
+ad_week       Frequency    Percent
+-----------------------------------
+2026-10-24        16270     81.35
+2026-10-31         3730     18.65
+                      Predicted lowest-price purchase date (among dates after the forecast cutoff)
+
+      date  predicted_price  prediction_lower_95  prediction_upper_95
+
+2026-10-24             5.51                 4.30                 6.95
+                                   Expected saving at the predicted lowest-price date
+
+ best_date  best_price  compare_date  compare_price  expected_saving
+
+2026-10-24        5.51    2026-10-24           5.51             0.00
+2026-10-24        5.51    2026-10-31           6.33             0.82
+                       Daily October forecast, national advertised carving-pumpkin price ($ each)
+
+      date  observation_status  observed_price  predicted_price  prediction_lower_95  prediction_upper_95
+
+2026-10-01  observed                      5.61             5.29                 4.15                 6.66
+2026-10-02  observed                      5.61             5.27                 4.12                 6.63
+2026-10-03  observed                      5.21             5.24                 4.10                 6.59
+2026-10-04  observed                      5.21             5.21                 4.08                 6.56
+2026-10-05  observed                      5.21             5.19                 4.06                 6.53
+2026-10-06  observed                      5.21             5.17                 4.05                 6.51
+2026-10-07  observed                      5.21             5.15                 4.03                 6.49
+2026-10-08  observed                      5.21             5.14                 4.02                 6.47
+2026-10-09  observed                      5.21             5.12                 4.01                 6.45
+2026-10-10  observed                      5.36             5.11                 4.00                 6.44
+2026-10-11  observed                      5.36             5.11                 4.00                 6.44
+2026-10-12  observed                      5.36             5.11                 3.99                 6.43
+2026-10-13  observed                      5.36             5.11                 3.99                 6.44
+2026-10-14  observed                      5.36             5.11                 4.00                 6.45
+2026-10-15  observed                      5.36             5.13                 4.01                 6.46
+2026-10-16  observed                      5.36             5.14                 4.02                 6.48
+2026-10-17  inferred                         .             5.16                 4.04                 6.51
+2026-10-18  inferred                         .             5.19                 4.06                 6.55
+2026-10-19  inferred                         .             5.23                 4.08                 6.59
+2026-10-20  inferred                         .             5.27                 4.12                 6.64
+2026-10-21  inferred                         .             5.31                 4.15                 6.70
+2026-10-22  inferred                         .             5.37                 4.20                 6.77
+2026-10-23  inferred                         .             5.43                 4.24                 6.86
+2026-10-24  forecast                         .             5.51                 4.30                 6.95
+2026-10-25  forecast                         .             5.59                 4.36                 7.06
+2026-10-26  forecast                         .             5.68                 4.43                 7.18
+2026-10-27  forecast                         .             5.78                 4.51                 7.31
+2026-10-28  forecast                         .             5.90                 4.59                 7.47
+2026-10-29  forecast                         .             6.03                 4.68                 7.64
+2026-10-30  forecast                         .             6.17                 4.78                 7.83
+2026-10-31  forecast                         .             6.33                 4.89                 8.05

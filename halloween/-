@@ -1,0 +1,38 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: inter.ucm_for
+Observations:  1019
+Variables:     16
+Label:         UCM Forecast Output
+
+Variables (in creation order):
+
+  #  Variable   Type    Len  Format     Label
+---  ---------  ----  -----  ---------  ------------------------------
+  1  date        Num      8  YYMMDD10.  
+  2  lp          Num      8             
+  3  FORECAST    Num      8             
+  4  RESIDUAL    Num      8             
+  5  STD         Num      8             Standard Error of Prediction
+  6  LCL         Num      8             Lower Confidence Limit
+  7  UCL         Num      8             Upper Confidence Limit
+  8  S_SERIES    Num      8             Smoothed Series
+  9  VS_SERIES   Num      8             Variance of Smoothed Series
+ 10  S_IRREG     Num      8             Smoothed Irregular
+ 11  VS_IRREG    Num      8             Variance of Smoothed Irregular
+ 12  F_LEVEL     Num      8             Filtered Level
+ 13  VF_LEVEL    Num      8             Variance of Filtered Level
+ 14  S_LEVEL     Num      8             Smoothed Level
+ 15  VS_LEVEL    Num      8             Variance of Smoothed Level
+ 16  STD_ERROR   Num      8             Standard Error
+
+-------------------------------------------------------------------------------
+
+min(ucm_for.date)  max(ucm_for.date)  count(*)
+-----------------  -----------------  --------
+       2011-09-03         2026-11-18      1019
+count(*)  max(daily_frame.date)
+--------  ---------------------
+    1019             2026-10-31

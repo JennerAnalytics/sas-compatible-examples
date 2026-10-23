@@ -1,0 +1,329 @@
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            PK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       131
+Number of Observations Used       131
+
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions          
+
+Number of Effects            2
+Number of Parameters        17
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  15         1.77246      0.11816      8.11
+Error                 115         1.67557      0.01457          
+Corrected Total       130         3.44803                       
+
+Root MSE           0.12071
+Dependent Mean     1.54089
+R-Square            0.5141
+Adj R-Sq            0.4507
+AIC             -406.03478
+AICC            -400.61885
+SBC             -493.03162
+
+                  Parameter Estimates                   
+
+Parameter        DF   Estimate  Standard Error   t Value
+---------  --------  ---------  --------------  --------
+Intercept         1   1.679540        0.049278     34.08
+year 2011         1  -0.153957        0.065189     -2.36
+year 2012         1  -0.208005        0.063618     -3.27
+year 2013         1  -0.160612        0.069690     -2.30
+year 2014         1  -0.294134        0.063618     -4.62
+year 2015         1  -0.170376        0.065189     -2.61
+year 2016         1  -0.232623        0.065189     -3.57
+year 2017         1  -0.241501        0.065189     -3.70
+year 2018         1  -0.268940        0.063618     -4.23
+year 2019         1  -0.237966        0.067155     -3.54
+year 2020         1  -0.248132        0.063618     -3.90
+year 2021         1  -0.057670        0.063618     -0.91
+year 2022         1  -0.001555        0.063618     -0.02
+year 2023         1   0.020029        0.065189      0.31
+year 2024         1   0.035509        0.063618      0.56
+year 2025         1   0.008873        0.063618      0.14
+year 2026         0          0               .         .
+
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            PK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       131
+Number of Observations Used       131
+
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions          
+
+Number of Effects            3
+Number of Parameters        18
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  16         1.77284      0.11080      7.54
+Error                 114         1.67519      0.01469          
+Corrected Total       130         3.44803                       
+
+Root MSE           0.12122
+Dependent Mean     1.54089
+R-Square            0.5142
+Adj R-Sq            0.4460
+AIC             -404.06428
+AICC            -397.95714
+SBC             -488.18593
+
+                   Parameter Estimates                    
+
+Parameter        DF     Estimate  Standard Error   t Value
+---------  --------  -----------  --------------  --------
+Intercept         1     1.676033        0.054112     30.97
+year 2011         1    -0.153463        0.065540     -2.34
+year 2012         1    -0.207363        0.064015     -3.24
+year 2013         1    -0.160414        0.069998     -2.29
+year 2014         1    -0.293689        0.063950     -4.59
+year 2015         1    -0.169684        0.065609     -2.59
+year 2016         1    -0.232129        0.065540     -3.54
+year 2017         1    -0.241106        0.065514     -3.68
+year 2018         1    -0.268298        0.064015     -4.19
+year 2019         1    -0.237423        0.067527     -3.52
+year 2020         1    -0.247786        0.063926     -3.88
+year 2021         1    -0.056732        0.064157     -0.88
+year 2022         1    -0.000715        0.064104     -0.01
+year 2023         1     0.020424        0.065514      0.31
+year 2024         1     0.036053        0.063979      0.56
+year 2025         1     0.009317        0.063950      0.15
+year 2026         0            0               .         .
+dth               1  0.000098791        0.000617      0.16
+
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            PK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       131
+Number of Observations Used       131
+
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions          
+
+Number of Effects            4
+Number of Parameters        19
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  17         1.85751      0.10927      7.76
+Error                 113         1.59053      0.01408          
+Corrected Total       130         3.44803                       
+
+Root MSE           0.11864
+Dependent Mean     1.54089
+R-Square            0.5387
+Adj R-Sq            0.4693
+AIC             -408.85828
+AICC            -402.01143
+SBC             -490.10473
+
+                   Parameter Estimates                    
+
+Parameter        DF     Estimate  Standard Error   t Value
+---------  --------  -----------  --------------  --------
+Intercept         1     1.744282        0.059826     29.16
+year 2011         1    -0.161347        0.064224     -2.51
+year 2012         1    -0.221912        0.062932     -3.53
+year 2013         1    -0.186787        0.069346     -2.69
+year 2014         1    -0.308318        0.062871     -4.90
+year 2015         1    -0.177680        0.064295     -2.76
+year 2016         1    -0.240013        0.064224     -3.74
+year 2017         1    -0.249221        0.064204     -3.88
+year 2018         1    -0.282847        0.062932     -4.49
+year 2019         1    -0.239393        0.066093     -3.62
+year 2020         1    -0.262741        0.062861     -4.18
+year 2021         1    -0.072599        0.063123     -1.15
+year 2022         1    -0.015952        0.063046     -0.25
+year 2023         1     0.012309        0.064204      0.19
+year 2024         1     0.021560        0.062895      0.34
+year 2025         1    -0.005311        0.062871     -0.08
+year 2026         0            0               .         .
+dth               1    -0.005612        0.002405     -2.33
+dth*dth           1  0.000095839     0.000039077      2.45
+
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            PK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       131
+Number of Observations Used       131
+
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions          
+
+Number of Effects            5
+Number of Parameters        20
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  18         2.07874      0.11549      9.45
+Error                 112         1.36930      0.01223          
+Corrected Total       130         3.44803                       
+
+Root MSE           0.11057
+Dependent Mean     1.54089
+R-Square            0.6029
+Adj R-Sq            0.5391
+AIC             -426.47777
+AICC            -418.84141
+SBC             -504.84903
+
+                     Parameter Estimates                     
+
+Parameter          DF      Estimate  Standard Error   t Value
+-----------  --------  ------------  --------------  --------
+Intercept           1      1.836930        0.059859     30.69
+year 2011           1     -0.154910        0.059875     -2.59
+year 2012           1     -0.220166        0.058653     -3.75
+year 2013           1     -0.193078        0.064647     -2.99
+year 2014           1     -0.298044        0.058645     -5.08
+year 2015           1     -0.175712        0.059923     -2.93
+year 2016           1     -0.233576        0.059875     -3.90
+year 2017           1     -0.240506        0.059872     -4.02
+year 2018           1     -0.281101        0.058653     -4.79
+year 2019           1     -0.234673        0.061608     -3.81
+year 2020           1     -0.248116        0.058686     -4.23
+year 2021           1     -0.084083        0.058892     -1.43
+year 2022           1     -0.022889        0.058780     -0.39
+year 2023           1      0.021024        0.059872      0.35
+year 2024           1      0.027560        0.058634      0.47
+year 2025           1      0.004963        0.058645      0.08
+year 2026           0             0               .         .
+dth                 1     -0.026022        0.005296     -4.91
+dth*dth             1      0.000962        0.000207      4.65
+dth*dth*dth         1  -0.000009735     0.000002288     -4.25
+
+
+                                         The GLM Procedure                                         
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+Number of Observations Read       131
+Number of Observations Used       131
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  17      1.85750662   0.10926510      7.76    <.0001
+Error                 113      1.59052701   0.01407546                    
+Corrected Total       130      3.44803363                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.538715   7.699456  0.118640  1.540889
+
+Source          DF   Type I SS  Mean Square   F Value    Pr > F
+--------  --------  ----------  -----------  --------  --------
+year            15  1.77246393   0.11816426      8.40    <.0001
+dth              1  0.00037732   0.00037732      0.03    0.8702
+dth*dth          1  0.08466537   0.08466537      6.02    0.0157
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+year            15   1.77465702   0.11831047      8.41    <.0001
+dth              1   0.07661632   0.07661632      5.44    0.0214
+dth*dth          1   0.08466537   0.08466537      6.02    0.0157
+
+                     Parameter Estimates                     
+
+Parameter        Estimate  Standard Error   t Value  Pr > |t|
+---------  --------------  --------------  --------  --------
+Intercept   1.744281911 B      0.05982560     29.16    <.0001
+year 2011  -0.161346576 B      0.06422443     -2.51    0.0134
+year 2012  -0.221911593 B      0.06293189     -3.53    0.0006
+year 2013  -0.186786571 B      0.06934623     -2.69    0.0081
+year 2014  -0.308317735 B      0.06287128     -4.90    <.0001
+year 2015  -0.177680466 B      0.06429472     -2.76    0.0067
+year 2016  -0.240013293 B      0.06422443     -3.74    0.0003
+year 2017  -0.249220970 B      0.06420371     -3.88    0.0002
+year 2018  -0.282846796 B      0.06293189     -4.49    <.0001
+year 2019  -0.239392855 B      0.06609348     -3.62    0.0004
+year 2020  -0.262741433 B      0.06286092     -4.18    <.0001
+year 2021  -0.072599275 B      0.06312341     -1.15    0.2525
+year 2022  -0.015951677 B      0.06304560     -0.25    0.8007
+year 2023   0.012308966 B      0.06420371      0.19    0.8483
+year 2024   0.021559849 B      0.06289501      0.34    0.7324
+year 2025  -0.005311022 B      0.06287128     -0.08    0.9328
+year 2026   0.000000000 B               .         .         .
+dth        -0.005611822        0.00240533     -2.33    0.0214
+dth*dth     0.000095839        0.00003908      2.45    0.0157
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                              Model A2: first-order residual autocorrelation within season
+
+   Pearson Correlation Coefficients, N = 115
+           Prob > |r| under H0: Rho=0
+                resid
+---------  --------
+lag_resid  -0.05493
+             0.5598
+                                            Model A2 residuals: Shapiro-Wilk
+
+          SW          P_SW            SD
+
+0.8483903436  0.0000000003  0.1106111348

@@ -1,0 +1,113 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: inter.retail_raw
+Observations:  4158
+Variables:     12
+
+Variables (in creation order):
+
+  #  Variable           Type    Len  Format     Label
+---  -----------------  ----  -----  ---------  -----
+  1  report_begin_date   Num      8  YYMMDD10.  
+  2  report_end_date     Num      8  YYMMDD10.  
+  3  published_date      Num      8  YYMMDD10.  
+  4  region             Char     12             
+  5  variety            Char     18             
+  6  unit               Char      6             
+  7  organic            Char      3             
+  8  price_range        Char     10             
+  9  stores_with_ads     Num      8             
+ 10  wtd_avg_price       Num      8             
+ 11  pct_marked_local    Num      8             
+ 12  final_ind          Char      5             
+
+-------------------------------------------------------------------------------
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: inter.wholesale_raw
+Observations:  58767
+Variables:     14
+
+Variables (in creation order):
+
+  #  Variable           Type    Len  Format     Label
+---  -----------------  ----  -----  ---------  -----
+  1  report_date         Num      8  YYMMDD10.  
+  2  market             Char     12             
+  3  slug_name          Char      8             
+  4  origin             Char     21             
+  5  package            Char     28             
+  6  variety            Char     24             
+  7  item_size          Char     12             
+  8  properties         Char     26             
+  9  organic            Char      1             
+ 10  low_price           Num      8             
+ 11  high_price          Num      8             
+ 12  mostly_low_price    Num      8             
+ 13  mostly_high_price   Num      8             
+ 14  market_tone        Char    100             
+
+-------------------------------------------------------------------------------
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: inter.nass_raw
+Observations:  248
+Variables:     21
+
+Variables (in creation order):
+
+  #  Variable          Type    Len  Format     Label
+---  ----------------  ----  -----  ---------  -----
+  1  Program           Char      6             
+  2  Year               Num      8             
+  3  Period            Char     14             
+  4  Week_Ending       Char      1             
+  5  Geo_Level         Char      8             
+  6  State             Char      8             
+  7  State_ANSI        Char      1             
+  8  Ag_District       Char      1             
+  9  Ag_District_Code  Char      1             
+ 10  County            Char      1             
+ 11  County_ANSI       Char      1             
+ 12  Zip_Code          Char      1             
+ 13  Region            Char      1             
+ 14  watershed_code     Num      8             
+ 15  Watershed         Char      1             
+ 16  Commodity         Char      8             
+ 17  Data_Item         Char     62             
+ 18  Domain            Char      5             
+ 19  Domain_Category   Char     13             
+ 20  Value              Num      8  COMMA11.2  
+ 21  CV____            Char      1             
+
+-------------------------------------------------------------------------------
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: inter.trends_raw
+Observations:  2624
+Variables:     6
+
+Variables (in creation order):
+
+  #  Variable      Type    Len  Format     Label
+---  ------------  ----  -----  ---------  -----
+  1  term          Char     13             
+  2  date           Num      8  YYMMDD10.  
+  3  index          Num      8             
+  4  is_partial     Num      8             
+  5  window_start   Num      8  YYMMDD10.  
+  6  window_end     Num      8  YYMMDD10.  
+
+-------------------------------------------------------------------------------
+

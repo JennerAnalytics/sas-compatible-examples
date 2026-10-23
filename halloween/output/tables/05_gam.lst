@@ -1,0 +1,332 @@
+                          Model B1: GAM, year effects + smoothing spline in days-to-Halloween
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            131
+Number of Missing Observations    0
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         16    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               4.981579E-10
+The Deviance of the Final Estimate        1.4100735404
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.68637     0.05009     33.67    <.0001
+year 2011      -0.15886     0.06066     -2.62    0.0101
+year 2012      -0.22011     0.05925     -3.71    0.0003
+year 2013      -0.19042     0.06479     -2.94    0.0040
+year 2014      -0.30278     0.05919     -5.12    <.0001
+year 2015      -0.17759     0.06073     -2.92    0.0042
+year 2016      -0.23752     0.06066     -3.92    0.0002
+year 2017      -0.24541     0.06064     -4.05    <.0001
+year 2018      -0.28104     0.05925     -4.74    <.0001
+year 2019      -0.23864     0.06250     -3.82    0.0002
+year 2020      -0.25520     0.05917     -4.31    <.0001
+year 2021      -0.07570     0.05939     -1.27    0.2050
+year 2022      -0.01751     0.05934     -0.30    0.7685
+year 2023       0.01612     0.06064      0.27    0.7909
+year 2024       0.02519     0.05922      0.43    0.6715
+year 2025       0.00022     0.05919      0.00    0.9970
+year 2026             0           .         .         .
+Linear(dth)     0.00008     0.00057      0.14    0.8864
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999826    2.000000    0.011453      62
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.265119     21.0580      <.0001
+
+
+                               Model B2: GAM + lagged wholesale price and search interest
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year lwh_lag7 gt_patch
+Smoothing Model Component(s): spline(dth)
+
+Summary of Input Data Set
+
+Number of Observations            115
+Number of Missing Observations    0
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         16    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    15
+Final Backfitting Criterion               5.5901683E-9
+The Deviance of the Final Estimate        0.6529013996
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       1.30710     0.87528      1.49    0.1387
+year 2011      -0.15045     0.06655     -2.26    0.0261
+year 2012      -0.12562     0.07226     -1.74    0.0854
+year 2013      -0.16132     0.06341     -2.54    0.0126
+year 2014      -0.28115     0.07224     -3.89    0.0002
+year 2015      -0.20464     0.06372     -3.21    0.0018
+year 2016      -0.23834     0.06433     -3.71    0.0004
+year 2017      -0.22979     0.06432     -3.57    0.0006
+year 2018      -0.29577     0.05658     -5.23    <.0001
+year 2019      -0.23117     0.06158     -3.75    0.0003
+year 2020      -0.27409     0.05319     -5.15    <.0001
+year 2021      -0.08885     0.04973     -1.79    0.0772
+year 2022      -0.02347     0.04792     -0.49    0.6255
+year 2023       0.01949     0.04890      0.40    0.6911
+year 2024       0.02114     0.05418      0.39    0.6972
+year 2025       0.00555     0.05325      0.10    0.9173
+year 2026             0           .         .         .
+lwh_lag7        0.10445     0.16871      0.62    0.5373
+gt_patch       -0.00307     0.00088     -3.50    0.0007
+Linear(dth)    -0.00270     0.00107     -2.53    0.0132
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dth)    0.999734    2.000000    0.006094      56
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)     2.00000      0.081502     11.7341      0.0028
+
+
+                                     Model B3: GAM with smooth wholesale-price term
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dth) spline(lwh_lag7)
+
+Summary of Input Data Set
+
+Number of Observations            115
+Number of Missing Observations    0
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         16    2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    10
+Final Backfitting Criterion               3.1219351E-9
+The Deviance of the Final Estimate        0.6519535094
+
+Regression Model Analysis
+Parameter Estimates
+
+                   Parameter    Standard
+Parameter           Estimate       Error   t Value  Pr > |t|
+
+Intercept            1.41919     0.87896      1.61    0.1098
+year 2011           -0.16573     0.06684     -2.48    0.0150
+year 2012           -0.12643     0.07235     -1.75    0.0839
+year 2013           -0.17197     0.06331     -2.72    0.0079
+year 2014           -0.29763     0.07252     -4.10    <.0001
+year 2015           -0.21060     0.06393     -3.29    0.0014
+year 2016           -0.24182     0.06450     -3.75    0.0003
+year 2017           -0.23601     0.06458     -3.65    0.0004
+year 2018           -0.30518     0.05654     -5.40    <.0001
+year 2019           -0.24312     0.06185     -3.93    0.0002
+year 2020           -0.30064     0.05343     -5.63    <.0001
+year 2021           -0.09765     0.04961     -1.97    0.0520
+year 2022           -0.02396     0.04808     -0.50    0.6194
+year 2023            0.00914     0.04912      0.19    0.8527
+year 2024           -0.00777     0.05443     -0.14    0.8868
+year 2025           -0.02387     0.05350     -0.45    0.6565
+year 2026                  0           .         .         .
+Linear(dth)          0.00023     0.00069      0.34    0.7379
+Linear(lwh_lag7)     0.05329     0.16943      0.31    0.7538
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                         Num
+                   Smoothing                          Unique
+Component          Parameter          DF         GCV     Obs
+
+Spline(dth)         0.999734    2.000000    0.006085      56
+Spline(lwh_lag7)    0.002592    2.000000    0.006085     113
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                                    Sum of
+Source                    DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dth)          2.00000      0.224998     32.0956      <.0001
+Spline(lwh_lag7)     2.00000      0.016076      2.2932      0.3177
+
+
+                                     Model B3: GAM with smooth wholesale-price term
+
+                                         The GLM Procedure                                         
+                                      Class Level Information                                      
+
+Class       Levels  Values                                                                         
+--------  --------  -------------------------------------------------------------------------------
+year            16  2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+Number of Observations Read       115
+Number of Observations Used       115
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  14      1.79288963   0.12806354     13.48    <.0001
+Error                  95      0.66481849   0.00699809                    
+Corrected Total       109      2.45770811                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.729497   5.429061  0.083655  1.540867
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+year            14   0.85556957   0.06111211      8.73    <.0001
+dth              0   0.00000000   0.00000000                    
+dth*dth          0   0.00000000   0.00000000                    
+lwh_lag7         0   0.00000000   0.00000000                    
+gt_patch         0   0.00000000   0.00000000                    
+
+                     Parameter Estimates                     
+
+Parameter        Estimate  Standard Error   t Value  Pr > |t|
+---------  --------------  --------------  --------  --------
+Intercept   1.531822241 B      0.96102307      1.59    0.1143
+year 2011  -0.163490765 B      0.07175015     -2.28    0.0249
+year 2012  -0.135619671 B      0.07688439     -1.76    0.0810
+year 2013  -0.169510933 B      0.06743387     -2.51    0.0136
+year 2014  -0.293535942 B      0.07769716     -3.78    0.0003
+year 2015  -0.211556733 B      0.06664527     -3.17    0.0020
+year 2016  -0.244556579 B      0.06717759     -3.64    0.0004
+year 2017  -0.235857384 B      0.06664051     -3.54    0.0006
+year 2018  -0.301192052 B      0.05877919     -5.12    <.0001
+year 2019  -0.239367443 B      0.06479949     -3.69    0.0004
+year 2020  -0.282339206 B      0.05583754     -5.06    <.0001
+year 2021  -0.091982646 B      0.05057829     -1.82    0.0721
+year 2022  -0.025301814 B      0.04820576     -0.52    0.6009
+year 2023   0.017469306 B      0.04932239      0.35    0.7240
+year 2024   0.014439838 B      0.05612099      0.26    0.7975
+year 2025  -0.003205143 B      0.05607849     -0.06    0.9545
+year 2026   0.000000000 B               .         .         .
+dth        -0.009961035        0.00204640     -4.87    <.0001
+dth*dth     0.000150192        0.00004763      3.15    0.0022
+lwh_lag7    0.068327744        0.18579726      0.37    0.7139
+gt_patch   -0.002436782        0.00107438     -2.27    0.0256
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                      Hypothesis 3: season price level vs national pumpkin production (2011-2025)
+
+                                                   The REG Procedure                                                    
+                                                     Model: MODEL1                                                      
+                                               Dependent Variable: lsmean                                               
+
+Number of Observations Read        15
+Number of Observations Used        15
+
+                      Analysis of Variance                       
+
+                            Sum of     Mean
+Source                 DF   Squares    Square   F Value    Pr > F
+---------------  --------  --------  --------  --------  --------
+Model                   1   0.01030   0.01030      0.75    0.4014
+Error                  13   0.17784   0.01368                    
+Corrected Total        14   0.18814                              
+
+Root MSE             0.11696    R-Square            0.0547
+Dependent Mean       1.41533    Adj R-Sq           -0.0180
+Coeff Var            8.26399
+
+                       Parameter Estimates                       
+
+Variable         DF  Estimate  Standard Error   t Value  Pr > |t|
+---------  --------  --------  --------------  --------  --------
+Intercept         1  -0.59111         2.31296     -0.26    0.8023
+log_total         1   0.12215         0.14080      0.87    0.4014
+
+                        Hypothesis 3: season price level vs fresh-market production (2016-2025)
+
+                                                   The REG Procedure                                                    
+                                                     Model: MODEL1                                                      
+                                               Dependent Variable: lsmean                                               
+
+Number of Observations Read        10
+Number of Observations Used        10
+
+                      Analysis of Variance                       
+
+                            Sum of     Mean
+Source                 DF   Squares    Square   F Value    Pr > F
+---------------  --------  --------  --------  --------  --------
+Model                   1   0.00739   0.00739      0.40    0.5435
+Error                   8   0.14683   0.01835                    
+Corrected Total         9   0.15422                              
+
+Root MSE             0.13548    R-Square            0.0479
+Dependent Mean       1.44126    Adj R-Sq           -0.0711
+Coeff Var            9.39985
+
+                       Parameter Estimates                       
+
+Variable         DF  Estimate  Standard Error   t Value  Pr > |t|
+---------  --------  --------  --------------  --------  --------
+Intercept         1  -2.51249         6.23152     -0.40    0.6974
+log_fresh         1   0.24561         0.38710      0.63    0.5435
+
