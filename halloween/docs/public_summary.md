@@ -1,6 +1,6 @@
 # When should Americans buy their Halloween pumpkins?
 
-**Short answer: this weekend. Waiting for a Halloween bargain probably won't pay off, at least not in the grocery-store ads.**
+**Short answer: now. Waiting for a Halloween bargain probably won't pay off, at least not in the grocery-store ads.**
 
 We analyzed 16 seasons of USDA records of advertised supermarket prices for carving pumpkins (2011-2026), and the pattern repeats almost every year:
 
@@ -10,10 +10,10 @@ We analyzed 16 seasons of USDA records of advertised supermarket prices for carv
 
 ## The 2026 forecast
 
-- The latest USDA report (ad week 10-16 October) puts the national average advertised price at **$5.36 per pumpkin**.
-- Our model expects the cheapest remaining day to be **Saturday 24 October, at about $5.51** (95% prediction interval $4.30-$6.95).
-- By **31 October** the expected advertised price rises to about **$6.33** ($4.89-$8.05).
-- Across 20,000 simulated price paths, the ad week of **24-30 October** was cheaper than Halloween itself **81%** of the time.
+- The latest USDA report (ad week 17-23 October) puts the national average advertised price at **$5.54 per pumpkin**, up from $5.36 a week earlier.
+- Our model expects the cheapest remaining day to be **Tuesday 27 October, at about $5.84** (95% prediction interval $4.57-$7.35).
+- By **31 October** the expected advertised price rises to about **$6.38** ($4.96-$8.10).
+- Across 20,000 simulated price paths, buying by **30 October** beat waiting until Halloween **72%** of the time.
 
 ## How sure are we?
 

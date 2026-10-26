@@ -178,14 +178,23 @@ def main():
     pct_first = float(first_week["percent"])
     wk = dt.date.fromisoformat(first_week["ad_week"])
     wk_end = wk + dt.timedelta(days=6)
+    obs = [(dt.date.fromisoformat(r["date"]), float(r["observed_price"])) for r in fc if r["observed_price"]]
+    weeks_seen = []
+    for d, v in obs:
+        if not weeks_seen or weeks_seen[-1][2] != v:
+            weeks_seen.append([d, d, v])
+        else:
+            weeks_seen[-1][1] = d
+    lw_start, lw_end, lw_price = weeks_seen[-1]
+    pw_price = weeks_seen[-2][2]
     OUT.mkdir(parents=True, exist_ok=True)
 
     cards = {}
     cards["pumpkin_linkedin_1200x627"] = page(1200, 627, (
         '<div class="kicker">The Economics of Halloween</div>'
-        '<h1 style="font-size:50px">Buy your pumpkin this weekend.</h1>'
-        '<p class="sub" style="font-size:22px">Supermarket pumpkin prices typically bottom out in mid-October. '
-        f'From here, expected prices rise into Halloween: {money(best_p)} on {bd:%b} {bd.day}, {money(last_p)} on Oct 31.</p>'
+        '<h1 style="font-size:50px">Don\'t wait for Halloween to buy your pumpkin.</h1>'
+        f'<p class="sub" style="font-size:22px">The latest USDA ad week ({lw_start:%b} {lw_start.day}&ndash;{lw_end.day}) averaged {money(lw_price)}, '
+        f'up from {money(pw_price)}. Expected prices keep rising: {money(best_p)} on {bd:%a} {bd:%b} {bd.day}, {money(last_p)} on Oct 31.</p>'
         + svg_forecast(fc, 1088, 330, (56, 26, 24, 62))
         + FOOT.format(note="Advertised prices, not checkout prices. Ads run weekly, so daily values are modelled.")
     ), p=56, fs=14, es=64)
@@ -204,10 +213,10 @@ def main():
         '<div class="kicker">When should you buy a pumpkin?</div>'
         '<h1 style="font-size:64px">Waiting for a Halloween<br>bargain costs you about</h1>'
         f'<div class="big" style="margin:28px 0 8px">{money(last_p - best_p)}</div>'
-        '<p class="stat">extra per pumpkin, on average: the expected advertised price on Oct 31 versus this weekend.</p>'
+        f'<p class="stat">extra per pumpkin, on average: the expected advertised price on Oct 31 versus {bd:%A}, {bd:%b} {bd.day}.</p>'
         '<div style="height:44px"></div>'
         f'<div class="big" style="font-size:150px">{pct_first:.0f}%</div>'
-        f'<p class="stat">chance the {wk:%b} {wk.day}&ndash;{wk_end:%b} {wk_end.day} ad week is cheaper than Halloween itself '
+        f'<p class="stat">chance that buying by {wk_end:%b} {wk_end.day} beats waiting until Halloween '
         '(20,000 simulated price paths).</p>'
         '<div style="height:36px"></div>'
         '<p class="sub">Prices peak in mid-September, bottom out in mid-October, and climb again in the last week, '

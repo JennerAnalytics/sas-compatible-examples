@@ -2,14 +2,16 @@
 
 ![October 2026 pumpkin price forecast](output/figures/pumpkin_forecast_oct2026.png)
 
-**Short answer for 2026: buy this weekend.** US supermarket ad prices for carving pumpkins typically bottom out in mid-October and rise into Halloween. As of the latest USDA report (the ad week of 10-16 October), our forecast is:
+**Short answer for 2026: buy now; don't wait for Halloween.** US supermarket ad prices for carving pumpkins typically bottom out in mid-October and rise into Halloween. The latest USDA report (ad week 17-23 October) put the national average at $5.54, up from $5.36 the week before. Our forecast:
 
 | | Expected advertised price | 95% prediction interval |
 |---|---|---|
-| Saturday 24 October (predicted cheapest remaining day) | **$5.51** | $4.30 - $6.95 |
-| Halloween, Saturday 31 October | **$6.33** | $4.89 - $8.05 |
+| Tuesday 27 October (predicted cheapest remaining day) | **$5.84** | $4.57 - $7.35 |
+| Halloween, Saturday 31 October | **$6.38** | $4.96 - $8.10 |
 
-Across 20,000 simulated price paths, the ad week of 24-30 October was cheaper than Halloween itself **81%** of the time. Waiting costs about **$0.82** per pumpkin in expectation.
+Across 20,000 simulated price paths, buying by 30 October beat waiting until Halloween **72%** of the time. Waiting costs about **$0.54** per pumpkin in expectation.
+
+The forecast published on 23 October expected the 17-23 October week to come in around $5.2-$5.4 (95% interval roughly $4.0-$6.9). The actual $5.54 was inside that interval and confirmed the turn upward.
 
 The whole analysis is SAS-compatible code run on [Jenner Analytics](https://jenneranalytics.com): import, cleaning, five model families, rolling-origin backtests, the forecast, a simulation and the chart. The programs use standard SAS syntax.
 

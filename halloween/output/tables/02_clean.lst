@@ -2,7 +2,7 @@
 
 n_keys  n_duplicated_keys
 ------  -----------------
-  4158                  0
+  4199                  0
                                  Product definitions reported by year (National region)
 
 year  variety             unit    organic  weeks
@@ -19,7 +19,7 @@ year  variety             unit    organic  weeks
 2023  MINIATURE           each    No          10
 2024  MINIATURE           each    No           9
 2025  MINIATURE           each    No           9
-2026  MINIATURE           each    No           6
+2026  MINIATURE           each    No           7
 2015  MINIATURE           each    Yes          2
 2016  MINIATURE           each    Yes          1
 2017  MINIATURE           each    Yes          3
@@ -35,7 +35,7 @@ year  variety             unit    organic  weeks
 2023  MINIATURE           per lb  No           8
 2024  MINIATURE           per lb  No           6
 2025  MINIATURE           per lb  No           6
-2026  MINIATURE           per lb  No           6
+2026  MINIATURE           per lb  No           7
 2023  Marked Extra Large  each    No           8
 2024  Marked Extra Large  each    No           9
 2025  Marked Extra Large  each    No           8
@@ -47,7 +47,7 @@ year  variety             unit    organic  weeks
 2023  Marked Large        each    No           8
 2024  Marked Large        each    No           9
 2025  Marked Large        each    No           9
-2026  Marked Large        each    No           6
+2026  Marked Large        each    No           7
 2023  Marked Large        per lb  No           5
 2024  Marked Large        per lb  No           4
 2025  Marked Large        per lb  No           1
@@ -55,7 +55,7 @@ year  variety             unit    organic  weeks
 2023  Marked Medium       each    No           7
 2024  Marked Medium       each    No           7
 2025  Marked Medium       each    No           7
-2026  Marked Medium       each    No           6
+2026  Marked Medium       each    No           7
 2023  Marked Medium       per lb  No           1
 2023  Marked Small        each    No           5
 2024  Marked Small        each    No           4
@@ -77,7 +77,7 @@ year  variety             unit    organic  weeks
 2023  N/A                 each    No           8
 2024  N/A                 each    No           9
 2025  N/A                 each    No          10
-2026  N/A                 each    No           6
+2026  N/A                 each    No           7
 2016  N/A                 each    Yes          4
 2019  N/A                 each    Yes          1
 2020  N/A                 each    Yes          1
@@ -94,7 +94,7 @@ year  variety             unit    organic  weeks
 2023  N/A                 per lb  No           8
 2024  N/A                 per lb  No           7
 2025  N/A                 per lb  No           7
-2026  N/A                 per lb  No           4
+2026  N/A                 per lb  No           5
 2016  N/A                 per lb  Yes          6
 2017  N/A                 per lb  Yes          3
 2020  N/A                 per lb  Yes          1
@@ -112,7 +112,7 @@ year  variety             unit    organic  weeks
 2023  PIE TYPE            each    No           9
 2024  PIE TYPE            each    No          11
 2025  PIE TYPE            each    No           9
-2026  PIE TYPE            each    No           6
+2026  PIE TYPE            each    No           7
 2014  PIE TYPE            each    Yes          2
 2015  PIE TYPE            each    Yes          2
 2016  PIE TYPE            each    Yes          1
@@ -136,7 +136,7 @@ year  variety             unit    organic  weeks
 2023  PIE TYPE            per lb  No          10
 2024  PIE TYPE            per lb  No           8
 2025  PIE TYPE            per lb  No          12
-2026  PIE TYPE            per lb  No           6
+2026  PIE TYPE            per lb  No           7
 2014  PIE TYPE            per lb  Yes          7
 2015  PIE TYPE            per lb  Yes         11
 2016  PIE TYPE            per lb  Yes         11
@@ -149,7 +149,7 @@ year  variety             unit    organic  weeks
 2023  PIE TYPE            per lb  Yes         12
 2024  PIE TYPE            per lb  Yes         12
 2025  PIE TYPE            per lb  Yes          8
-2026  PIE TYPE            per lb  Yes          5
+2026  PIE TYPE            per lb  Yes          6
                                            Modeling dataset: weeks by season
 
 year  weeks       first        last  no_wholesale  no_trends
@@ -169,7 +169,7 @@ year  weeks       first        last  no_wholesale  no_trends
 2023      8  2023-09-02  2023-10-21             1          0
 2024      9  2024-08-31  2024-10-26             2          0
 2025      9  2025-08-30  2025-10-25             1          0
-2026      6  2026-09-05  2026-10-10             1          0
+2026      7  2026-09-05  2026-10-17             1          0
                                                 Excluded national weeks
 
 year  report_begin_date  Stores with ads  Advertised price, weighted average ($ each)  exclusion

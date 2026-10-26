@@ -4157,3 +4157,44 @@ report_begin_date,report_end_date,published_date,region,variety,unit,organic,pri
 2026-10-10,2026-10-16,2026-10-16,Southwest,Marked Large,each,No,5.00-6.00,455,5.88,3209,Final
 2026-10-10,2026-10-16,2026-10-16,Southwest,N/A,each,No,3.99-5.99,327,4.25,,Final
 2026-10-10,2026-10-16,2026-10-16,Southwest,N/A,per lb,No,0.50,55,0.5,,Final
+2026-10-17,2026-10-23,2026-10-23,Alaska,Marked Large,per lb,No,0.79,2,0.79,,Final
+2026-10-17,2026-10-23,2026-10-23,Alaska,N/A,each,No,11.00,11,11,,Final
+2026-10-17,2026-10-23,2026-10-23,Alaska,N/A,per lb,No,0.98,3,0.98,,Final
+2026-10-17,2026-10-23,2026-10-23,Hawaii,N/A,per lb,No,0.89,4,0.89,,Final
+2026-10-17,2026-10-23,2026-10-23,Midwest,Marked Large,each,No,5.00-6.99,748,5.4,,Final
+2026-10-17,2026-10-23,2026-10-23,Midwest,Marked Medium,each,No,4.99-5.00,673,5,,Final
+2026-10-17,2026-10-23,2026-10-23,Midwest,N/A,each,No,3.99-4.99,370,4.38,5081,Final
+2026-10-17,2026-10-23,2026-10-23,National,MINIATURE,each,No,0.00-0.00,226,1.32,,Final
+2026-10-17,2026-10-23,2026-10-23,National,MINIATURE,per lb,No,0.00-0.00,65,1.99,,Final
+2026-10-17,2026-10-23,2026-10-23,National,Marked Large,each,No,0.00-0.00,3854,6.09,,Final
+2026-10-17,2026-10-23,2026-10-23,National,Marked Medium,each,No,0.00-0.00,1129,5.15,,Final
+2026-10-17,2026-10-23,2026-10-23,National,N/A,each,No,0.00-0.00,2958,5.54,,Final
+2026-10-17,2026-10-23,2026-10-23,National,N/A,per lb,No,0.00-0.00,116,0.44,,Final
+2026-10-17,2026-10-23,2026-10-23,National,PIE TYPE,each,No,0.00-0.00,1017,3.72,,Final
+2026-10-17,2026-10-23,2026-10-23,National,PIE TYPE,per lb,No,0.00-0.00,1441,1.01,,Final
+2026-10-17,2026-10-23,2026-10-23,National,PIE TYPE,per lb,Yes,0.00-0.00,197,1.66,,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,MINIATURE,per lb,No,1.99,65,1.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,Marked Large,each,No,4.99-7.99,942,5.89,2707,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,Marked Medium,each,No,4.99-5.00,287,5,6376,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,N/A,each,No,6.00-6.99,347,6.53,,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,PIE TYPE,each,No,2.99-3.00,394,3,1827,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,PIE TYPE,per lb,No,1.49,59,1.49,,Final
+2026-10-17,2026-10-23,2026-10-23,Northeast,PIE TYPE,per lb,Yes,1.66,122,1.66,,Final
+2026-10-17,2026-10-23,2026-10-23,Northwest,MINIATURE,each,No,1.49,110,1.49,,Final
+2026-10-17,2026-10-23,2026-10-23,Northwest,Marked Large,each,No,5.99,110,5.99,10000,Final
+2026-10-17,2026-10-23,2026-10-23,Northwest,N/A,each,No,4.99-7.99,639,6.42,5728,Final
+2026-10-17,2026-10-23,2026-10-23,Northwest,N/A,per lb,No,0.39,61,0.39,,Final
+2026-10-17,2026-10-23,2026-10-23,Southcentral,Marked Large,each,No,4.99-5.00,82,4.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Southcentral,N/A,each,No,4.00-6.99,418,4.42,,Final
+2026-10-17,2026-10-23,2026-10-23,Southcentral,PIE TYPE,each,No,2.99,70,2.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Southcentral,PIE TYPE,per lb,Yes,1.66,75,1.66,,Final
+2026-10-17,2026-10-23,2026-10-23,Southeast,MINIATURE,each,No,1.25,74,1.25,,Final
+2026-10-17,2026-10-23,2026-10-23,Southeast,Marked Large,each,No,4.99-7.00,1326,6.92,551,Final
+2026-10-17,2026-10-23,2026-10-23,Southeast,N/A,each,No,4.99-6.00,765,5.87,,Final
+2026-10-17,2026-10-23,2026-10-23,Southeast,PIE TYPE,each,No,3.99-5.00,553,4.33,,Final
+2026-10-17,2026-10-23,2026-10-23,Southeast,PIE TYPE,per lb,No,0.98-0.99,1382,0.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Southwest,MINIATURE,each,No,0.99,42,0.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Southwest,Marked Large,each,No,5.00-6.00,646,5.62,1238,Final
+2026-10-17,2026-10-23,2026-10-23,Southwest,Marked Medium,each,No,5.99,169,5.99,,Final
+2026-10-17,2026-10-23,2026-10-23,Southwest,N/A,each,No,3.99-7.99,419,4.88,,Final
+2026-10-17,2026-10-23,2026-10-23,Southwest,N/A,per lb,No,0.50,55,0.5,,Final

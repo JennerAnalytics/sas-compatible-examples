@@ -4,7 +4,7 @@
 %let out  = &root/output;
 
 %let forecast_year = 2026;
-%let cutoff = '23OCT2026'd;
+%let cutoff = '26OCT2026'd;
 %let min_stores = 100;
 %let seed = 20261031;
 
