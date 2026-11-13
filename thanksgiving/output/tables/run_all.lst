@@ -1,0 +1,3464 @@
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: INTER.RETAIL_RAW
+Observations:  479
+Variables:     12
+
+Variables (in creation order):
+
+  #  Variable           Type    Len  Format     Label
+---  -----------------  ----  -----  ---------  -----
+  1  under16_price       Num      8             
+  2  under16_min         Num      8             
+  3  under16_max         Num      8             
+  4  under16_stores      Num      8             
+  5  over16_price        Num      8             
+  6  over16_min          Num      8             
+  7  over16_max          Num      8             
+  8  over16_stores       Num      8             
+  9  report_begin_date   Num      8  YYMMDD10.  
+ 10  report_end_date     Num      8  YYMMDD10.  
+ 11  published_date      Num      8  YYMMDD10.  
+ 12  condition          Char      6             
+
+-------------------------------------------------------------------------------
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: INTER.REGIONAL_RAW
+Observations:  357
+Variables:     4
+
+Variables (in creation order):
+
+  #  Variable           Type    Len  Format  Label
+---  -----------------  ----  -----  ------  -----
+  1  report_begin_date   Num      8          
+  2  region             Char      2          
+  3  wtd_avg_price       Num      8          
+  4  stores_with_ads     Num      8          
+
+-------------------------------------------------------------------------------
+
+
+PROC CONTENTS
+-------------------------------------------------------------------------------
+
+Data Set Name: INTER.WHOLESALE_RAW
+Observations:  75
+Variables:     5
+
+Variables (in creation order):
+
+  #  Variable           Type    Len  Format  Label
+---  -----------------  ----  -----  ------  -----
+  1  report_begin_date   Num      8          
+  2  wtd_avg_cents_lb    Num      8          
+  3  low_cents_lb        Num      8          
+  4  high_cents_lb       Num      8          
+  5  volume              Num      8          
+
+-------------------------------------------------------------------------------
+
+                                  Duplicate check: rows per report week and condition
+
+n_keys  n_duplicated_keys
+------  -----------------
+   479                  0
+            Size classes: share of weeks where under-16 lb and over-16 lb prices differ by more than 5 cents
+
+condition  weeks  share_differ  mean_gap
+---------  -----  ------------  --------
+Fresh        116         11.2%     0.001
+Frozen       205          8.8%     0.013
+                                           Modeling dataset: weeks by season
+
+year  weeks       first        last   low  high  no_wholesale
+----  -----  ----------  ----------  ----  ----  ------------
+2005      7  2005-10-08  2005-11-19  0.68  0.91             7
+2006      7  2006-10-07  2006-11-18  0.65  0.84             7
+2007      7  2007-10-06  2007-11-17  0.68  0.97             7
+2008      7  2008-10-11  2008-11-22  0.71  0.97             7
+2009      7  2009-10-10  2009-11-21  0.73  0.88             7
+2010      7  2010-10-09  2010-11-20  0.72  0.90             7
+2011      6  2011-10-15  2011-11-19  0.73  1.03             6
+2012      7  2012-10-06  2012-11-17  0.89  1.13             7
+2013      6  2013-10-19  2013-11-23  0.90  1.09             6
+2014      6  2014-10-18  2014-11-22  0.86  0.97             6
+2015      5  2015-10-24  2015-11-21  0.89  1.08             5
+2016      5  2016-10-22  2016-11-19  0.91  1.04             5
+2017      5  2017-10-21  2017-11-18  0.83  1.06             5
+2018      5  2018-10-20  2018-11-17  0.81  0.90             5
+2019      7  2019-10-12  2019-11-23  0.72  0.92             7
+2020      5  2020-10-24  2020-11-21  0.75  0.99             5
+2021      5  2021-10-23  2021-11-20  0.88  1.14             5
+2022      6  2022-10-15  2022-11-19  0.96  1.49             0
+2023      6  2023-10-07  2023-11-18  0.99  1.27             0
+2024      7  2024-10-12  2024-11-23  0.94  1.17             0
+2025      6  2025-10-11  2025-11-22  0.92  1.08             0
+2026      4  2026-10-10  2026-10-31  1.19  1.30             0
+                                     Excluded national frozen weeks near the season
+
+year  report_begin_date  Days to Thanksgiving (ad-week midpoint)  Stores with ads  Advertised price, store-weighted average ($ per lb)  exclusion
+----  -----------------  ---------------------------------------  ---------------  ---------------------------------------------------  -------------------------------
+2005         2005-09-24                                       58              460                                                 0.79  outside pre-Thanksgiving window
+2005         2005-10-01                                       51             1020                                                 0.86  outside pre-Thanksgiving window
+2005         2005-11-26                                       -5               60                                                 0.79  outside pre-Thanksgiving window
+2006         2006-09-23                                       58              220                                                 0.95  outside pre-Thanksgiving window
+2006         2006-09-30                                       51             1490                                                 0.81  outside pre-Thanksgiving window
+2006         2006-11-25                                       -5              260                                                 0.86  outside pre-Thanksgiving window
+2007         2007-09-22                                       58               20                                                 0.99  outside pre-Thanksgiving window
+2007         2007-09-29                                       51             1380                                                 0.73  outside pre-Thanksgiving window
+2007         2007-11-24                                       -5              110                                                 0.71  outside pre-Thanksgiving window
+2008         2008-09-27                                       58             1990                                                 1.07  outside pre-Thanksgiving window
+2008         2008-10-04                                       51             2160                                                 0.91  outside pre-Thanksgiving window
+2008         2008-11-29                                       -5              200                                                 0.95  outside pre-Thanksgiving window
+2009         2009-09-26                                       58              930                                                 0.77  outside pre-Thanksgiving window
+2009         2009-10-03                                       51              650                                                 0.81  outside pre-Thanksgiving window
+2009         2009-11-28                                       -5              110                                                 0.89  outside pre-Thanksgiving window
+2010         2010-09-25                                       58              240                                                 0.83  outside pre-Thanksgiving window
+2010         2010-10-02                                       51              890                                                 1.04  outside pre-Thanksgiving window
+2010         2010-11-27                                       -5              330                                                 0.94  outside pre-Thanksgiving window
+2011         2011-10-01                                       51              900                                                 1.08  outside pre-Thanksgiving window
+2011         2011-10-08                                       44              440                                                 0.84  fewer than min_stores ads
+2011         2011-11-26                                       -5              190                                                 1.09  outside pre-Thanksgiving window
+2012         2012-09-22                                       58              160                                                 1.18  outside pre-Thanksgiving window
+2012         2012-09-29                                       51              610                                                 1.04  outside pre-Thanksgiving window
+2012         2012-11-24                                       -5              210                                                 1.09  outside pre-Thanksgiving window
+2013         2013-11-30                                       -5              200                                                 1.08  outside pre-Thanksgiving window
+2014         2014-09-27                                       58               10                                                 1.29  outside pre-Thanksgiving window
+2014         2014-10-04                                       51              280                                                 1.19  outside pre-Thanksgiving window
+2014         2014-10-11                                       44              290                                                 1.03  fewer than min_stores ads
+2014         2014-11-29                                       -5              260                                                 1.13  outside pre-Thanksgiving window
+2015         2015-09-26                                       58               23                                                 1.69  outside pre-Thanksgiving window
+2015         2015-10-03                                       51              307                                                 1.12  outside pre-Thanksgiving window
+2015         2015-10-10                                       44              129                                                 1.67  fewer than min_stores ads
+2015         2015-10-17                                       37              229                                                 1.26  fewer than min_stores ads
+2015         2015-11-28                                       -5             1221                                                 1.19  outside pre-Thanksgiving window
+2016         2016-09-24                                       58               74                                                 0.93  outside pre-Thanksgiving window
+2016         2016-10-01                                       51              310                                                 0.95  outside pre-Thanksgiving window
+2016         2016-10-08                                       44              109                                                 0.97  fewer than min_stores ads
+2016         2016-10-15                                       37              353                                                 1.15  fewer than min_stores ads
+2016         2016-11-26                                       -5              352                                                 1.08  outside pre-Thanksgiving window
+2017         2017-09-23                                       58               20                                                 1.16  outside pre-Thanksgiving window
+2017         2017-09-30                                       51              435                                                 0.96  outside pre-Thanksgiving window
+2017         2017-10-07                                       44              383                                                 1.31  fewer than min_stores ads
+2017         2017-10-14                                       37              485                                                 1.33  fewer than min_stores ads
+2017         2017-11-25                                       -5              547                                                 0.96  outside pre-Thanksgiving window
+2018         2018-09-22                                       58              225                                                 0.87  outside pre-Thanksgiving window
+2018         2018-09-29                                       51              424                                                 0.95  outside pre-Thanksgiving window
+2018         2018-10-06                                       44              106                                                 1.12  fewer than min_stores ads
+2018         2018-10-13                                       37              479                                                 0.88  fewer than min_stores ads
+2018         2018-11-24                                       -5              184                                                 0.62  outside pre-Thanksgiving window
+2019         2019-10-05                                       51              378                                                 1.04  outside pre-Thanksgiving window
+2019         2019-11-30                                       -5              111                                                 0.78  outside pre-Thanksgiving window
+2020         2020-10-03                                       51              169                                                 0.70  outside pre-Thanksgiving window
+2020         2020-10-10                                       44              270                                                 1.34  fewer than min_stores ads
+2020         2020-10-17                                       37               31                                                 0.99  fewer than min_stores ads
+2020         2020-11-28                                       -5              450                                                 1.17  outside pre-Thanksgiving window
+2021         2021-10-16                                       37              329                                                 1.08  fewer than min_stores ads
+2021         2021-11-27                                       -5             1427                                                 1.30  outside pre-Thanksgiving window
+2022         2022-10-01                                       51               30                                                 2.99  outside pre-Thanksgiving window
+2022         2022-10-08                                       44               12                                                 1.99  fewer than min_stores ads
+2022         2022-11-26                                       -5              574                                                 1.50  outside pre-Thanksgiving window
+2023         2023-09-23                                       58               56                                                 1.66  outside pre-Thanksgiving window
+2023         2023-09-30                                       51              107                                                 1.99  outside pre-Thanksgiving window
+2023         2023-10-14                                       37              207                                                 1.79  fewer than min_stores ads
+2023         2023-11-25                                       -5              252                                                 1.96  outside pre-Thanksgiving window
+2024         2024-10-05                                       51              408                                                 2.19  outside pre-Thanksgiving window
+2024         2024-11-30                                       -5              305                                                 1.87  outside pre-Thanksgiving window
+2025         2025-10-04                                       51              148                                                 1.99  outside pre-Thanksgiving window
+2025         2025-11-29                                       -5              273                                                 1.01  outside pre-Thanksgiving window
+2026         2026-10-03                                       51             2513                                                 1.28  outside pre-Thanksgiving window
+                           Advertised national frozen whole-turkey price by season ($ per lb)
+
+                                                  The MEANS Procedure
+
+                N
+        year  Obs  Variable         Label                                                N          Mean      Minimum       Maximum
+-----------------------------------------------------------------------------------------------------------------------------------
+        2005    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.75         0.68          0.91
+                   stores_with_ads  Stores with ads                                      7       8570.00       630.00      23890.00
+
+        2006    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.74         0.65          0.84
+                   stores_with_ads  Stores with ads                                      7       8565.71      1680.00      28530.00
+
+        2007    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.82         0.68          0.97
+                   stores_with_ads  Stores with ads                                      7       8805.71       550.00      31350.00
+
+        2008    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.86         0.71          0.97
+                   stores_with_ads  Stores with ads                                      7      11091.43      2020.00      42510.00
+
+        2009    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.80         0.73          0.88
+                   stores_with_ads  Stores with ads                                      7       9487.14       990.00      30470.00
+
+        2010    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.78         0.72          0.90
+                   stores_with_ads  Stores with ads                                      7       9325.71       560.00      30850.00
+
+        2011    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          0.86         0.73          1.03
+                   stores_with_ads  Stores with ads                                      6      11178.33       910.00      32130.00
+
+        2012    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.98         0.89          1.13
+                   stores_with_ads  Stores with ads                                      7      10738.57       530.00      36510.00
+
+        2013    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          0.97         0.90          1.09
+                   stores_with_ads  Stores with ads                                      6      13036.67      1200.00      34510.00
+
+        2014    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          0.91         0.86          0.97
+                   stores_with_ads  Stores with ads                                      6      12633.33       510.00      35710.00
+
+        2015    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          0.99         0.89          1.08
+                   stores_with_ads  Stores with ads                                      5      13100.00      1310.00      27497.00
+
+        2016    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          1.00         0.91          1.04
+                   stores_with_ads  Stores with ads                                      5      15252.20      1808.00      31347.00
+
+        2017    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          0.91         0.83          1.06
+                   stores_with_ads  Stores with ads                                      5      16872.00      1556.00      34695.00
+
+        2018    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          0.85         0.81          0.90
+                   stores_with_ads  Stores with ads                                      5      18016.80       801.00      33439.00
+
+        2019    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          0.84         0.72          0.92
+                   stores_with_ads  Stores with ads                                      7      13242.00       766.00      31400.00
+
+        2020    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          0.88         0.75          0.99
+                   stores_with_ads  Stores with ads                                      5      18396.40      2474.00      35662.00
+
+        2021    5  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  5          1.01         0.88          1.14
+                   stores_with_ads  Stores with ads                                      5      13570.00       760.00      29780.00
+
+        2022    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          1.16         0.96          1.49
+                   stores_with_ads  Stores with ads                                      6      13020.67       593.00      34676.00
+
+        2023    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          1.13         0.99          1.27
+                   stores_with_ads  Stores with ads                                      6       9686.67       708.00      28563.00
+
+        2024    7  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  7          1.04         0.94          1.17
+                   stores_with_ads  Stores with ads                                      7      11989.00       728.00      29475.00
+
+        2025    6  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  6          1.00         0.92          1.08
+                   stores_with_ads  Stores with ads                                      6      15189.50      2291.00      28726.00
+
+        2026    4  wtd_avg_price    Advertised price, store-weighted average ($ per lb)  4          1.24         1.19          1.30
+                   stores_with_ads  Stores with ads                                      4       4390.50      2266.00       9794.00
+-----------------------------------------------------------------------------------------------------------------------------------
+
+                 Typical season by ad weeks before Thanksgiving week (0 = Thanksgiving week), 2005-2025
+                            rel_to_low = price divided by that season's lowest weekly price
+
+                                                  The MEANS Procedure
+
+                                     N
+Ad weeks before Thanksgiving week  Obs  Variable         Label                                                 N           Mean         Median        Minimum        Maximum
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                0   21  rel_to_low                                                            21          1.142          1.141          1.000          1.411
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  21          0.928          0.940          0.715          1.230
+                                        stores_with_ads  Stores with ads                                      21      11096.714       9479.000       5190.000      22043.000
+
+                                1   21  rel_to_low                                                            21          1.094          1.073          1.000          1.242
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  21          0.891          0.900          0.715          1.140
+                                        stores_with_ads  Stores with ads                                      21      31986.667      31350.000      23890.000      42510.000
+
+                                2   21  rel_to_low                                                            21          1.057          1.028          1.000          1.160
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  21          0.859          0.845          0.730          1.010
+                                        stores_with_ads  Stores with ads                                      21      20267.571      20860.000      10660.000      29283.000
+
+                                3   21  rel_to_low                                                            21          1.100          1.046          1.000          1.285
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  21          0.901          0.905          0.650          1.171
+                                        stores_with_ads  Stores with ads                                      21       7510.571       6820.000       3983.000      13219.000
+
+                                4   21  rel_to_low                                                            21          1.223          1.222          1.000          1.480
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  21          0.996          0.990          0.749          1.421
+                                        stores_with_ads  Stores with ads                                      21       2364.476       1808.000        760.000       8498.000
+
+                                5   13  rel_to_low                                                            13          1.136          1.085          1.000          1.552
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  13          0.893          0.860          0.680          1.490
+                                        stores_with_ads  Stores with ads                                      13       1198.231        910.000        510.000       2276.000
+
+                                6   11  rel_to_low                                                            11          1.148          1.168          1.000          1.327
+                                        wtd_avg_price    Advertised price, store-weighted average ($ per lb)  11          0.900          0.908          0.657          1.125
+                                        stores_with_ads  Stores with ads                                      11       1262.909        990.000        530.000       2291.000
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                          Which ad week had the season's lowest advertised price? (2005-2025)
+
+                                                   The FREQ Procedure
+
+Ad weeks before Thanksgiving week
+
+wtt    Frequency    Percent
+----------------------------
+0              3     13.64
+1              1      4.55
+2              5     22.73
+3              5     22.73
+4              2      9.09
+5              4     18.18
+6              2      9.09
+                                  Thanksgiving week vs two ad weeks earlier, by season
+
+seasons  seasons_higher  mean_change  median_change
+-------  --------------  -----------  -------------
+     21              16         8.2%           9.3%
+                    Within-season correlations of log advertised price (deviation from season mean)
+
+   Pearson Correlation Coefficients, N = 129
+             Prob > |r| under H0: Rho=0
+                 lp_dev
+-----------  --------
+dtt           0.14951
+               0.0908
+lstores_dev  -0.33536
+               0.0001
+   Spearman Correlation Coefficients, N = 129
+             Prob > |r| under H0: Rho=0
+                 lp_dev
+-----------  --------
+dtt           0.11850
+               0.1810
+lstores_dev  -0.32989
+               0.0001
+               Loss leader check: retail ad price vs wholesale price, three ad weeks through Thanksgiving
+            Wholesale = frozen whole hens 8-16 lb, FOB, USDA weekly national report, week before the ad week
+
+year  retail_ad_price  wholesale_price  margin  margin_pct
+
+2022             0.98             1.75   -0.77      -43.9%
+2023             1.11             1.02    0.08        8.2%
+2024             0.95             0.96   -0.01       -1.0%
+2025             0.97             1.72   -0.75      -43.7%
+                  Log(retail ad price / wholesale price), ad weeks 0-2 before Thanksgiving, 2022-2026
+
+                   The TTEST Procedure                    
+                   Variable:  log_ratio                   
+
+       N      Mean   Std Dev   Std Err   Minimum   Maximum
+--------  --------  --------  --------  --------  --------
+      12   -0.2683    0.3303    0.0954   -0.6327    0.1719
+
+             95% CL Mean                  95% CL Std Dev
+    Mean     Lower     Upper   Std Dev     Lower     Upper
+--------  --------  --------  --------  --------  --------
+ -0.2683   -0.4782   -0.0584    0.3303    0.2340    0.5609
+
+      DF   t Value  Pr > |t|
+--------  --------  --------
+      11     -2.81    0.0169
+
+                          Fresh vs frozen whole turkey, the two ad weeks through Thanksgiving
+
+                                                  The MEANS Procedure
+
+                N
+        year  Obs  Variable      Label                                                N      Mean      Minimum      Maximum
+---------------------------------------------------------------------------------------------------------------------------
+        2005    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.72         0.72         0.72
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.17         1.16         1.18
+                   premium_pct                                                        2      0.63         0.62         0.65
+
+        2006    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.79         0.77         0.82
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.21         1.21         1.22
+                   premium_pct                                                        2      0.53         0.48         0.58
+
+        2007    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.90         0.84         0.96
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.31         1.25         1.36
+                   premium_pct                                                        2      0.45         0.42         0.48
+
+        2008    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.85         0.82         0.88
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.46         1.43         1.48
+                   premium_pct                                                        2      0.71         0.67         0.75
+
+        2009    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.81         0.76         0.86
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.32         1.31         1.33
+                   premium_pct                                                        2      0.63         0.55         0.72
+
+        2010    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.78         0.72         0.84
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.38         1.38         1.39
+                   premium_pct                                                        2      0.78         0.63         0.93
+
+        2011    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.87         0.85         0.88
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.55         1.54         1.56
+                   premium_pct                                                        2      0.78         0.76         0.81
+
+        2012    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.99         0.95         1.04
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.58         1.56         1.60
+                   premium_pct                                                        2      0.59         0.50         0.68
+
+        2013    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.98         0.91         1.05
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.60         1.57         1.64
+                   premium_pct                                                        2      0.64         0.56         0.72
+
+        2014    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.97         0.97         0.97
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.53         1.40         1.66
+                   premium_pct                                                        2      0.58         0.44         0.71
+
+        2015    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.97         0.95         0.99
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.69         1.64         1.73
+                   premium_pct                                                        2      0.74         0.66         0.82
+
+        2016    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      1.01         0.99         1.03
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.71         1.70         1.73
+                   premium_pct                                                        2      0.70         0.68         0.71
+
+        2017    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.90         0.90         0.90
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.63         1.62         1.63
+                   premium_pct                                                        2      0.80         0.79         0.82
+
+        2018    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.83         0.81         0.85
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.56         1.52         1.59
+                   premium_pct                                                        2      0.88         0.79         0.96
+
+        2019    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.86         0.82         0.90
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.61         1.59         1.63
+                   premium_pct                                                        2      0.88         0.82         0.93
+
+        2020    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.80         0.75         0.84
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.69         1.68         1.70
+                   premium_pct                                                        2      1.12         0.98         1.26
+
+        2021    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.97         0.93         1.01
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.81         1.80         1.83
+                   premium_pct                                                        2      0.87         0.78         0.97
+
+        2022    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.99         0.98         1.00
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      2.08         1.93         2.23
+                   premium_pct                                                        2      1.11         0.97         1.24
+
+        2023    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      1.19         1.14         1.23
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.96         1.86         2.05
+                   premium_pct                                                        2      0.66         0.51         0.80
+
+        2024    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.95         0.94         0.95
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.90         1.89         1.91
+                   premium_pct                                                        2      1.00         0.99         1.01
+
+        2025    2  frozen_price  Advertised price, store-weighted average ($ per lb)  2      0.97         0.96         0.98
+                   fresh_price   Advertised price, store-weighted average ($ per lb)  2      1.85         1.84         1.86
+                   premium_pct                                                        2      0.91         0.91         0.92
+---------------------------------------------------------------------------------------------------------------------------
+
+                      Log(fresh / frozen) advertised price, the two ad weeks through Thanksgiving
+
+                   The TTEST Procedure                    
+                  Variable:  log_premium                  
+
+       N      Mean   Std Dev   Std Err   Minimum   Maximum
+--------  --------  --------  --------  --------  --------
+      42    0.5602    0.1112    0.0172    0.3520    0.8155
+
+             95% CL Mean                  95% CL Std Dev
+    Mean     Lower     Upper   Std Dev     Lower     Upper
+--------  --------  --------  --------  --------  --------
+  0.5602    0.5256    0.5949    0.1112    0.0915    0.1418
+
+      DF   t Value  Pr > |t|
+--------  --------  --------
+      41     32.65    <.0001
+
+                                       Model A0: year effects only (flat season)
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            TK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+          Dimensions          
+
+Number of Effects            2
+Number of Parameters        23
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  21         2.42282      0.11537     11.61
+Error                 111         1.10268      0.00993          
+Corrected Total       132         3.52550                       
+
+Root MSE           0.09967
+Dependent Mean    -0.09532
+R-Square            0.6872
+Adj R-Sq            0.6281
+AIC             -458.41613
+AICC            -448.28769
+SBC             -529.82845
+
+                  Parameter Estimates                   
+
+Parameter        DF   Estimate  Standard Error   t Value
+---------  --------  ---------  --------------  --------
+Intercept         1   0.217564        0.049835      4.37
+year 2005         1  -0.510037        0.062471     -8.16
+year 2006         1  -0.526664        0.062471     -8.43
+year 2007         1  -0.426072        0.062471     -6.82
+year 2008         1  -0.370963        0.062471     -5.94
+year 2009         1  -0.441292        0.062471     -7.06
+year 2010         1  -0.463964        0.062471     -7.43
+year 2011         1  -0.373976        0.064337     -5.81
+year 2012         1  -0.240210        0.062471     -3.85
+year 2013         1  -0.255268        0.064337     -3.97
+year 2014         1  -0.311253        0.064337     -4.84
+year 2015         1  -0.234870        0.066861     -3.51
+year 2016         1  -0.218769        0.066861     -3.27
+year 2017         1  -0.318002        0.066861     -4.76
+year 2018         1  -0.384253        0.066861     -5.75
+year 2019         1  -0.400175        0.062471     -6.41
+year 2020         1  -0.353836        0.066861     -5.29
+year 2021         1  -0.215784        0.066861     -3.23
+year 2022         1  -0.083870        0.064337     -1.30
+year 2023         1  -0.099430        0.064337     -1.55
+year 2024         1  -0.179396        0.062471     -2.87
+year 2025         1  -0.222078        0.064337     -3.45
+year 2026         0          0               .         .
+
+
+                                  Model A1: year effects + linear days-to-Thanksgiving
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            TK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+          Dimensions          
+
+Number of Effects            3
+Number of Parameters        24
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  22         2.44936      0.11133     11.38
+Error                 110         1.07614      0.00978          
+Corrected Total       132         3.52550                       
+
+Root MSE           0.09891
+Dependent Mean    -0.09532
+R-Square            0.6948
+Adj R-Sq            0.6337
+AIC             -459.65671
+AICC            -448.54560
+SBC             -528.17868
+
+                  Parameter Estimates                   
+
+Parameter        DF   Estimate  Standard Error   t Value
+---------  --------  ---------  --------------  --------
+Intercept         1   0.180119        0.054430      3.31
+year 2005         1  -0.498300        0.062403     -7.99
+year 2006         1  -0.514928        0.062403     -8.25
+year 2007         1  -0.414335        0.062403     -6.64
+year 2008         1  -0.359226        0.062403     -5.76
+year 2009         1  -0.429556        0.062403     -6.88
+year 2010         1  -0.452228        0.062403     -7.25
+year 2011         1  -0.358327        0.064549     -5.55
+year 2012         1  -0.228473        0.062403     -3.66
+year 2013         1  -0.239620        0.064549     -3.71
+year 2014         1  -0.295604        0.064549     -4.58
+year 2015         1  -0.215310        0.067405     -3.19
+year 2016         1  -0.199432        0.067381     -2.96
+year 2017         1  -0.298441        0.067405     -4.43
+year 2018         1  -0.364692        0.067405     -5.41
+year 2019         1  -0.388438        0.062403     -6.22
+year 2020         1  -0.334275        0.067405     -4.96
+year 2021         1  -0.196224        0.067405     -2.91
+year 2022         1  -0.068408        0.064532     -1.06
+year 2023         1  -0.085085        0.064437     -1.32
+year 2024         1  -0.167659        0.062403     -2.69
+year 2025         1  -0.207734        0.064437     -3.22
+year 2026         0          0               .         .
+dtt               1   0.001118        0.000679      1.65
+
+
+                                Model A2: year effects + quadratic days-to-Thanksgiving
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            TK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+          Dimensions          
+
+Number of Effects            4
+Number of Parameters        25
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  23         2.46246      0.10706     10.98
+Error                 109         1.06304      0.00975          
+Corrected Total       132         3.52550                       
+
+Root MSE           0.09876
+Dependent Mean    -0.09532
+R-Square            0.6985
+Adj R-Sq            0.6348
+AIC             -459.28566
+AICC            -447.13613
+SBC             -524.91728
+
+                   Parameter Estimates                    
+
+Parameter        DF     Estimate  Standard Error   t Value
+---------  --------  -----------  --------------  --------
+Intercept         1     0.196239        0.056096      3.50
+year 2005         1    -0.497978        0.062306     -7.99
+year 2006         1    -0.514605        0.062306     -8.26
+year 2007         1    -0.414013        0.062306     -6.64
+year 2008         1    -0.358904        0.062306     -5.76
+year 2009         1    -0.429233        0.062306     -6.89
+year 2010         1    -0.451905        0.062306     -7.25
+year 2011         1    -0.354889        0.064517     -5.50
+year 2012         1    -0.228151        0.062306     -3.66
+year 2013         1    -0.236181        0.064517     -3.66
+year 2014         1    -0.292166        0.064517     -4.53
+year 2015         1    -0.210761        0.067414     -3.13
+year 2016         1    -0.194758        0.067397     -2.89
+year 2017         1    -0.293892        0.067414     -4.36
+year 2018         1    -0.360143        0.067414     -5.34
+year 2019         1    -0.388115        0.062306     -6.23
+year 2020         1    -0.329726        0.067414     -4.89
+year 2021         1    -0.191675        0.067414     -2.84
+year 2022         1    -0.064865        0.064504     -1.01
+year 2023         1    -0.084356        0.064340     -1.31
+year 2024         1    -0.167336        0.062306     -2.69
+year 2025         1    -0.207005        0.064340     -3.22
+year 2026         0            0               .         .
+dtt               1    -0.001532        0.002385     -0.64
+dtt*dtt           1  0.000061392     0.000052971      1.16
+
+
+                                  Model A3: year effects + cubic days-to-Thanksgiving
+
+The GLMSELECT Procedure
+
+
+         Model Information         
+
+Data Set            TK.MODEL_WEEKLY
+Dependent Variable  lp             
+Selection Method    None           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+          Dimensions          
+
+Number of Effects            5
+Number of Parameters        26
+
+                      Analysis of Variance                      
+
+Source                 DF  Sum of Squares  Mean Square   F Value
+---------------  --------  --------------  -----------  --------
+Model                  24         2.57239      0.10718     12.15
+Error                 108         0.95311      0.00883          
+Corrected Total       132         3.52550                       
+
+Root MSE           0.09394
+Dependent Mean    -0.09532
+R-Square            0.7297
+Adj R-Sq            0.6696
+AIC             -471.80340
+AICC            -458.55811
+SBC             -534.54467
+
+                     Parameter Estimates                     
+
+Parameter          DF      Estimate  Standard Error   t Value
+-----------  --------  ------------  --------------  --------
+Intercept           1      0.253513        0.055775      4.55
+year 2005           1     -0.491585        0.059297     -8.29
+year 2006           1     -0.508212        0.059297     -8.57
+year 2007           1     -0.407620        0.059297     -6.87
+year 2008           1     -0.352511        0.059297     -5.94
+year 2009           1     -0.422840        0.059297     -7.13
+year 2010           1     -0.445513        0.059297     -7.51
+year 2011           1     -0.355513        0.061372     -5.79
+year 2012           1     -0.221758        0.059297     -3.74
+year 2013           1     -0.236806        0.061372     -3.86
+year 2014           1     -0.292791        0.061372     -4.77
+year 2015           1     -0.206964        0.064137     -3.23
+year 2016           1     -0.191652        0.064118     -2.99
+year 2017           1     -0.290095        0.064137     -4.52
+year 2018           1     -0.356346        0.064137     -5.56
+year 2019           1     -0.381723        0.059297     -6.44
+year 2020           1     -0.325929        0.064137     -5.08
+year 2021           1     -0.187878        0.064137     -2.93
+year 2022           1     -0.066066        0.061361     -1.08
+year 2023           1     -0.073110        0.061287     -1.19
+year 2024           1     -0.160944        0.059297     -2.71
+year 2025           1     -0.195758        0.061287     -3.19
+year 2026           0             0               .         .
+dtt                 1     -0.020041        0.005714     -3.51
+dtt*dtt             1      0.001112        0.000302      3.68
+dtt*dtt*dtt         1  -0.000015570     0.000004411     -3.53
+
+
+                                          Model A2 (OLS): parameter estimates
+
+                                                   The GLM Procedure                                                    
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  23      2.46246298   0.10706361     10.98    <.0001
+Error                 109      1.06304095   0.00975267                    
+Corrected Total       132      3.52550394                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.698471   103.5994  0.098756  -0.09532
+
+Source          DF   Type I SS  Mean Square   F Value    Pr > F
+--------  --------  ----------  -----------  --------  --------
+year            21  2.42282059   0.11537241     11.83    <.0001
+dtt              1  0.02654250   0.02654250      2.72    0.1019
+dtt*dtt          1  0.01309990   0.01309990      1.34    0.2490
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+year            21   2.43823556   0.11610646     11.91    <.0001
+dtt              1   0.00402617   0.00402617      0.41    0.5219
+dtt*dtt          1   0.01309990   0.01309990      1.34    0.2490
+
+                     Parameter Estimates                     
+
+Parameter        Estimate  Standard Error   t Value  Pr > |t|
+---------  --------------  --------------  --------  --------
+Intercept   0.196238706 B      0.05609638      3.50    0.0007
+year 2005  -0.497977700 B      0.06230647     -7.99    <.0001
+year 2006  -0.514604873 B      0.06230647     -8.26    <.0001
+year 2007  -0.414012557 B      0.06230647     -6.64    <.0001
+year 2008  -0.358903652 B      0.06230647     -5.76    <.0001
+year 2009  -0.429232810 B      0.06230647     -6.89    <.0001
+year 2010  -0.451905002 B      0.06230647     -7.25    <.0001
+year 2011  -0.354888523 B      0.06451661     -5.50    <.0001
+year 2012  -0.228150677 B      0.06230647     -3.66    0.0004
+year 2013  -0.236181084 B      0.06451661     -3.66    0.0004
+year 2014  -0.292165955 B      0.06451661     -4.53    <.0001
+year 2015  -0.210760856 B      0.06741436     -3.13    0.0023
+year 2016  -0.194758036 B      0.06739702     -2.89    0.0047
+year 2017  -0.293892381 B      0.06741436     -4.36    <.0001
+year 2018  -0.360142900 B      0.06741436     -5.34    <.0001
+year 2019  -0.388115398 B      0.06230647     -6.23    <.0001
+year 2020  -0.329726143 B      0.06741436     -4.89    <.0001
+year 2021  -0.191674750 B      0.06741436     -2.84    0.0053
+year 2022  -0.064865320 B      0.06450429     -1.01    0.3168
+year 2023  -0.084356385 B      0.06433983     -1.31    0.1926
+year 2024  -0.167336330 B      0.06230647     -2.69    0.0084
+year 2025  -0.207005105 B      0.06433983     -3.22    0.0017
+year 2026   0.000000000 B               .         .         .
+dtt        -0.001532300        0.00238484     -0.64    0.5219
+dtt*dtt     0.000061392        0.00005297      1.16    0.2490
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                              Model A2: first-order residual autocorrelation within season
+
+   Pearson Correlation Coefficients, N = 111
+           Prob > |r| under H0: Rho=0
+                resid
+---------  --------
+lag_resid   0.01910
+             0.8423
+                                            Model A2 residuals: Shapiro-Wilk
+
+          SW          P_SW            SD
+
+0.9903115321  0.4846211202  0.0897404065
+                         Model B1: GAM, year effects + smoothing spline in days-to-Thanksgiving
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            133
+Number of Missing Observations    0
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         22    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               2.788966E-11
+The Deviance of the Final Estimate        0.9334331878
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.17513     0.05116      3.42    0.0009
+year 2005      -0.49371     0.05865     -8.42    <.0001
+year 2006      -0.51034     0.05865     -8.70    <.0001
+year 2007      -0.40975     0.05865     -6.99    <.0001
+year 2008      -0.35464     0.05865     -6.05    <.0001
+year 2009      -0.42497     0.05865     -7.25    <.0001
+year 2010      -0.44764     0.05865     -7.63    <.0001
+year 2011      -0.35516     0.06067     -5.85    <.0001
+year 2012      -0.22389     0.05865     -3.82    0.0002
+year 2013      -0.23645     0.06067     -3.90    0.0002
+year 2014      -0.29244     0.06067     -4.82    <.0001
+year 2015      -0.20956     0.06336     -3.31    0.0013
+year 2016      -0.19383     0.06333     -3.06    0.0028
+year 2017      -0.29269     0.06336     -4.62    <.0001
+year 2018      -0.35894     0.06336     -5.67    <.0001
+year 2019      -0.38385     0.05865     -6.54    <.0001
+year 2020      -0.32853     0.06336     -5.19    <.0001
+year 2021      -0.19048     0.06336     -3.01    0.0033
+year 2022      -0.06536     0.06066     -1.08    0.2836
+year 2023      -0.07811     0.06057     -1.29    0.1999
+year 2024      -0.16307     0.05865     -2.78    0.0064
+year 2025      -0.20076     0.06057     -3.31    0.0012
+year 2026             0           .         .         .
+Linear(dtt)     0.00113     0.00064      1.78    0.0784
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999579    2.000000    0.007460       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.142708     16.5115      0.0003
+
+
+                Model B2 (OLS): does the number of advertising stores explain price beyond the calendar?
+
+                                                   The GLM Procedure                                                    
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  24      2.59418934   0.10809122     12.53    <.0001
+Error                 108      0.93131460   0.00862328                    
+Corrected Total       132      3.52550394                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.735835   97.41633  0.092862  -0.09532
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+year            21   2.45078028   0.11670382     13.53    <.0001
+dtt              1   0.00179114   0.00179114      0.21    0.6495
+dtt*dtt          1   0.00389410   0.00389410      0.45    0.5030
+lstores          1   0.13172635   0.13172635     15.28    0.0002
+
+                     Parameter Estimates                     
+
+Parameter        Estimate  Standard Error   t Value  Pr > |t|
+---------  --------------  --------------  --------  --------
+Intercept   0.689791926 B      0.13685390      5.04    <.0001
+year 2005  -0.520951426 B      0.05888200     -8.85    <.0001
+year 2006  -0.532649206 B      0.05876949     -9.06    <.0001
+year 2007  -0.451634994 B      0.05937339     -7.61    <.0001
+year 2008  -0.371203224 B      0.05867233     -6.33    <.0001
+year 2009  -0.453194915 B      0.05890778     -7.69    <.0001
+year 2010  -0.483537932 B      0.05914427     -8.18    <.0001
+year 2011  -0.391692378 B      0.06139257     -6.38    <.0001
+year 2012  -0.260230070 B      0.05916001     -4.40    <.0001
+year 2013  -0.259512969 B      0.06095911     -4.26    <.0001
+year 2014  -0.328311775 B      0.06136697     -5.35    <.0001
+year 2015  -0.244565017 B      0.06397824     -3.82    0.0002
+year 2016  -0.217274295 B      0.06363592     -3.41    0.0009
+year 2017  -0.314425466 B      0.06360824     -4.94    <.0001
+year 2018  -0.379651649 B      0.06358713     -5.97    <.0001
+year 2019  -0.391293619 B      0.05859351     -6.68    <.0001
+year 2020  -0.340623161 B      0.06345220     -5.37    <.0001
+year 2021  -0.228670294 B      0.06409373     -3.57    0.0005
+year 2022  -0.098601694 B      0.06126563     -1.61    0.1104
+year 2023  -0.120810798 B      0.06121464     -1.97    0.0510
+year 2024  -0.180720873 B      0.05868787     -3.08    0.0026
+year 2025  -0.209477008 B      0.06050319     -3.46    0.0008
+year 2026   0.000000000 B               .         .         .
+dtt        -0.001023745        0.00224628     -0.46    0.6495
+dtt*dtt    -0.000037547        0.00005587     -0.67    0.5030
+lstores    -0.048069503        0.01229900     -3.91    0.0002
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                      Feature-rate elasticity: log price on log advertising stores, within season
+
+                                                   The GLM Procedure                                                    
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+Number of Observations Read       133
+Number of Observations Used       133
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  22      2.54855577   0.11584344     13.04    <.0001
+Error                 110      0.97694816   0.00888135                    
+Corrected Total       132      3.52550394                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.722891   98.86324  0.094241  -0.09532
+
+Source          DF  Type III SS  Mean Square   F Value    Pr > F
+--------  --------  -----------  -----------  --------  --------
+year            21   2.44710663   0.11652889     13.12    <.0001
+lstores          1   0.12573519   0.12573519     14.16    0.0003
+
+                     Parameter Estimates                     
+
+Parameter        Estimate  Standard Error   t Value  Pr > |t|
+---------  --------------  --------------  --------  --------
+Intercept   0.421862242 B      0.07189219      5.87    <.0001
+year 2005  -0.501184749 B      0.05911544     -8.48    <.0001
+year 2006  -0.515252643 B      0.05914642     -8.71    <.0001
+year 2007  -0.424825031 B      0.05906954     -7.19    <.0001
+year 2008  -0.356568815 B      0.05919236     -6.02    <.0001
+year 2009  -0.432953012 B      0.05911017     -7.32    <.0001
+year 2010  -0.459607800 B      0.05907996     -7.78    <.0001
+year 2011  -0.362860319 B      0.06090393     -5.96    <.0001
+year 2012  -0.236085273 B      0.05907878     -4.00    0.0001
+year 2013  -0.237158404 B      0.06102235     -3.89    0.0002
+year 2014  -0.299796108 B      0.06090840     -4.92    <.0001
+year 2015  -0.214432107 B      0.06345165     -3.38    0.0010
+year 2016  -0.192756243 B      0.06359562     -3.03    0.0030
+year 2017  -0.290673457 B      0.06363458     -4.57    <.0001
+year 2018  -0.356392154 B      0.06365087     -5.60    <.0001
+year 2019  -0.381044870 B      0.05928701     -6.43    <.0001
+year 2020  -0.321504294 B      0.06380002     -5.04    <.0001
+year 2021  -0.197002926 B      0.06341547     -3.11    0.0024
+year 2022  -0.071400763 B      0.06092244     -1.17    0.2437
+year 2023  -0.092679098 B      0.06085869     -1.52    0.1307
+year 2024  -0.165564796 B      0.05918287     -2.80    0.0061
+year 2025  -0.197684527 B      0.06117674     -3.23    0.0016
+year 2026   0.000000000 B               .         .         .
+lstores    -0.024957079        0.00663292     -3.76    0.0003
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                 Model C: unobserved-components model, daily latent level observed at ad-week midpoints
+
+
+                 The UCM Procedure
+
+
+          Input Data Set
+
+Name                INTER.DAILY_FRAME
+Time ID Variable    date
+
+          Estimation Span Summary
+
+Variable  Type            First        Last    Nobs   NMiss         Min         Max        Mean      StdDev
+lp        Dependent  2005-10-11  2026-11-03    7694    7561   -0.430232  0.39878596  -0.0953245  0.16342694
+dtt       Predictor  2005-10-11  2026-11-03    7694       0           0          50  3.57577333  10.3784073
+dtt2      Predictor  2005-10-11  2026-11-03    7694       0           0        2500  120.483494  411.242952
+
+          Forecast Span Summary
+
+Variable  Type            First        Last    Nobs   NMiss         Min         Max        Mean      StdDev
+lp        Dependent  2005-10-11  2026-11-03    7694    7561   -0.430232  0.39878596  -0.0953245  0.16342694
+dtt       Predictor  2005-10-11  2026-11-03    7694       0           0          50  3.57577333  10.3784073
+dtt2      Predictor  2005-10-11  2026-11-03    7694       0           0        2500  120.483494  411.242952
+
+          Preliminary Estimates of the Free Parameters
+
+Component    Parameter          Estimate
+Irregular    Error Variance            1
+Level        Error Variance            1
+
+                             Likelihood Optimization Algorithm Converged in 10 Iterations.
+
+          Final Estimates of the Free Parameters
+
+                                           Approx              Approx
+Component    Parameter          Estimate   Std Error  t Value  Pr > |t|
+Irregular    Error Variance    0.0093767  0.00129436     7.24    <.0001
+Level        Error Variance   0.00001731  7.68116E-6     2.25    0.0243
+dtt          Coefficient      -0.0013662  0.00235843    -0.58    0.5624
+dtt2         Coefficient      0.00006105  0.00005228     1.17    0.2430
+
+          Likelihood Based Fit Statistics
+
+Statistic                                  Value
+Diffuse Log Likelihood                    86.509
+Diffuse Part of Log Likelihood            -6.531
+Non-Missing Observations Used                133
+Estimated Parameters                           2
+Initialized Diffuse State Elements             3
+Normalized Residual Sum of Squares           130
+AIC (smaller is better)                     -169
+BIC (smaller is better)                   -163.3
+AICC (smaller is better)                  -168.9
+HQIC (smaller is better)                  -166.7
+CAIC (smaller is better)                  -161.3
+
+          Fit Statistics Based on Residuals
+
+Mean Squared Error                       0.01811
+Root Mean Squared Error                  0.13457
+Mean Absolute Percentage Error         166.71467
+Maximum Percent Error                 2889.57597
+R-Square                                 0.31263
+Adjusted R-Square                        0.30726
+Amemiya's Adjusted R-Square              0.29115
+
+Number of non-missing residuals used for computing the fit statistics = 130
+
+     Significance Analysis of Components
+          (Based on the Final State)
+
+Component       DF    Chi-Square  Pr > ChiSq
+Irregular        1          0.31      0.5764
+Level            1          8.20      0.0042
+
+          Trend Information (Based on the Final State)
+
+Name     Estimate  Standard Error
+Level  0.14372563      0.05019654
+
+                    Forecasts
+
+                                Standard
+   Obs        date  Forecast       Error   95% Confidence Limits
+  7698  2026-11-04    0.1432      0.1069     -0.0664      0.3528
+  7699  2026-11-05    0.1420      0.1070     -0.0678      0.3517
+  7700  2026-11-06    0.1408      0.1071     -0.0692      0.3508
+  7701  2026-11-07    0.1398      0.1073     -0.0704      0.3500
+  7702  2026-11-08    0.1389      0.1074     -0.0715      0.3493
+  7703  2026-11-09    0.1381      0.1075     -0.0725      0.3487
+  7704  2026-11-10    0.1375      0.1075     -0.0733      0.3483
+  7705  2026-11-11    0.1370      0.1076     -0.0740      0.3479
+  7706  2026-11-12    0.1366      0.1077     -0.0746      0.3477
+  7707  2026-11-13    0.1363      0.1078     -0.0751      0.3476
+  7708  2026-11-14    0.1361      0.1079     -0.0754      0.3477
+  7709  2026-11-15    0.1361      0.1080     -0.0757      0.3478
+  7710  2026-11-16    0.1362      0.1082     -0.0758      0.3482
+  7711  2026-11-17    0.1364      0.1083     -0.0759      0.3486
+  7712  2026-11-18    0.1367      0.1085     -0.0759      0.3493
+  7713  2026-11-19    0.1372      0.1086     -0.0758      0.3501
+  7714  2026-11-20    0.1377      0.1088     -0.0756      0.3510
+  7715  2026-11-21    0.1384      0.1091     -0.0754      0.3522
+  7716  2026-11-22    0.1392      0.1093     -0.0751      0.3536
+  7717  2026-11-23    0.1402      0.1097     -0.0747      0.3551
+  7718  2026-11-24    0.1412      0.1100     -0.0744      0.3569
+  7719  2026-11-25    0.1424      0.1104     -0.0740      0.3588
+  7720  2026-11-26    0.1437      0.1109     -0.0736      0.3610
+
+               Outlier Summary
+
+   Obs        date  Break Type    Estimate    Standard  Chi-Square  DF  Pr > ChiSq
+                                                 Error
+  6220  2022-10-18  AO          0.30527872  0.10498113        8.46   1      0.0036
+
+                                   Model C: daily forecasts for November (log scale)
+
+      date            lp      FORECAST           STD            LCL           UCL
+
+2026-11-01             .  0.1408071572  0.1091150023  -0.0730543176  0.3546686319
+2026-11-02             .   0.139160914  0.1092593646  -0.0749835056  0.3533053336
+2026-11-03  0.1697674745   0.137640359  0.1093962918   -0.076772433  0.3520531509
+2026-11-04             .  0.1432147154  0.1069234153  -0.0663513277  0.3527807584
+2026-11-05             .  0.1419559718  0.1070391515  -0.0678369102  0.3517488538
+2026-11-06             .  0.1408193203  0.1071492072  -0.0691892667  0.3508279073
+2026-11-07             .  0.1398047609  0.1072539391  -0.0704090969  0.3500186187
+2026-11-08             .  0.1389122936  0.1073540076  -0.0714976949  0.3493222821
+2026-11-09             .  0.1381419184  0.1074503752   -0.072456947  0.3487407838
+2026-11-10             .  0.1374936353  0.1075443053  -0.0732893299  0.3482766004
+2026-11-11             .  0.1369674442  0.1076373617  -0.0739979081  0.3479327965
+2026-11-12             .  0.1365633452   0.107731407  -0.0745863326  0.3477130231
+2026-11-13             .  0.1362813384  0.1078286017  -0.0750588375  0.3476215142
+2026-11-14             .  0.1361214236   0.107931402  -0.0754202371  0.3476630843
+2026-11-15             .  0.1360836009  0.1080425578  -0.0756759213   0.347843123
+2026-11-16             .  0.1361678702  0.1081651095  -0.0758318488  0.3481675893
+2026-11-17             .  0.1363742317  0.1083023834  -0.0758945393  0.3486430027
+2026-11-18             .  0.1367026853  0.1084579864  -0.0758710619  0.3492764324
+2026-11-19             .  0.1371532309  0.1086357983  -0.0757690211  0.3500754829
+2026-11-20             .  0.1377258686  0.1088399628  -0.0755965386  0.3510482759
+2026-11-21             .  0.1384205984  0.1090748764  -0.0753622309  0.3522034278
+2026-11-22             .  0.1392374203  0.1093451737   -0.075075182  0.3535500227
+2026-11-23             .  0.1401763343  0.1096557116  -0.0747449112  0.3550975798
+2026-11-24             .  0.1412373404  0.1100115494  -0.0743813344  0.3568560152
+2026-11-25             .  0.1424204386  0.1104179265  -0.0739947207  0.3588355978
+2026-11-26             .  0.1437256288  0.1108802367  -0.0735956417  0.3610468993
+                         Regional coverage: ad weeks with >= 100 advertising stores, 2015-2025
+
+region  weeks  seasons  mean_price
+------  -----  -------  ----------
+SE         55       11        0.87
+MW         54       11        0.93
+NE         53       11        0.95
+SW         52       11        0.96
+SC         49       11        0.98
+NW         40       11        1.02
+                     Model D: regional mixed model with random region and region-by-season effects
+
+             The Mixed Procedure              
+              Model Information               
+
+Data Set                    TK.RETAIL_REGIONAL
+Dependent Variable                          lp
+Covariance Structure       Variance Components
+Estimation Method                         REML
+Residual Variance Method               Profile
+Fixed Effects SE Method          Kenward-Roger
+Degrees of Freedom Method        Kenward-Roger
+
+                            Class Level Information                            
+
+Class       Levels  Values                                                     
+--------  --------  -----------------------------------------------------------
+region           6  MW NE NW SC SE SW                                          
+year            12  2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions           
+
+Covariance Parameters         3
+Columns in X                 15
+Columns in Z                 78
+Subjects                      1
+Max Obs per Subject         315
+
+         Number of Observations          
+
+Number of Observations Read           315
+Number of Observations Used           315
+Number of Observations Not Used         0
+
+                 Iteration History                 
+
+Iteration  Evaluations  -2 Res Log Like   Criterion
+---------  -----------  ---------------  ----------
+        0            1    -208.39330106            
+        1            1    -235.39216562  0.10468158
+        2            1    -238.08749403  0.08893464
+        3            2    -239.54669348  0.43490759
+        4            1    -211.20957886  0.04989915
+        5            1    -211.47684979  0.05507083
+        6            1    -212.09538862  0.07861544
+        7            1    -213.90209536  0.04766752
+        8            1    -214.14459725  0.04661411
+        9            1    -214.30429310  0.04691527
+       10            1    -214.46515810  0.04681677
+       11            1    -214.62580110  0.04668580
+       12            1    -214.78611424  0.04664059
+       13            1    -214.94639992  0.04589885
+       14            1    -215.10426731  0.04660032
+       15            1    -215.26465868  0.04637928
+       16            1    -215.42441015  0.04669336
+       17            1    -215.58531961  0.04652320
+       18            1    -215.74575759  0.04624828
+       19            1    -215.90539997  0.04648326
+       20            1    -216.06596102  0.04639454
+       21            1    -216.22635407  0.04641175
+       22            1    -216.38692715  0.04630058
+       23            1    -216.54721025  0.04648036
+       24            1    -216.70825323  0.04626362
+       25            1    -216.86868124  0.04643537
+       26            1    -217.02981906  0.04608787
+       27            1    -217.18984780  0.04605475
+       28            1    -217.34989424  0.04603009
+       29            1    -217.50998625  0.04611042
+       30            1    -217.67046744  0.04598757
+       31            1    -217.83062463  0.04624481
+       32            1    -217.99181670  0.04608835
+       33            1    -218.15256424  0.04588397
+       34            1    -218.31270938  0.04597955
+       35            1    -218.47331366  0.04599849
+       36            1    -218.63410439  0.04590937
+       37            1    -218.79469277  0.04579897
+       38            1    -218.95501772  0.04582398
+       39            1    -219.11554812  0.04578753
+       40            1    -219.27607500  0.04580032
+       41            1    -219.43676359  0.04579345
+       42            1    -219.59754568  0.04577948
+       43            1    -219.75839234  0.04576095
+       44            1    -219.91929841  0.04571633
+       45            1    -220.61292387  0.04564850
+       46            1    -221.30772524  0.04554413
+       47            1    -222.00311498  0.04545824
+       48            1    -222.69937772  0.04537589
+       49            1    -223.39655424  0.04530326
+       50            1    -224.09478990  0.04525344
+       51            1    -224.79443097  0.04519707
+       52            1    -225.49537199  0.04519799
+       53            1    -226.19852667  0.04520037
+       54            1    -226.90390382  0.04521869
+       55            1    -227.61175973  0.04525841
+       56            1    -228.32243086  0.04534078
+       57            1    -229.03660983  0.04548535
+       58            1    -229.75530351  0.04568469
+       59            1    -233.99094041  0.04927175
+       60            1    -238.56004763  0.11504485
+       61            1    -240.80675928  0.00631827
+       62            1    -241.68191333  0.00060903
+       63            1    -241.76190313  0.00001356
+       64            1    -241.76356840  0.00000001
+
+                                               Convergence criteria met.
+
+
+Covariance Parameter Estimates
+
+Cov Parm     Estimate
+-----------  --------
+region         0.0019
+region*year    0.0018
+Residual       0.0194
+
+          Fit Statistics           
+
+Statistic                     Value
+------------------------  ---------
+-2 Res Log Likelihood     -241.7636
+AIC (Smaller is Better)   -235.7636
+AICC (Smaller is Better)  -235.6828
+BIC (Smaller is Better)   -236.3883
+
+                        Solution for Fixed Effects                         
+
+Effect     year      Estimate  Standard Error        DF   t Value  Pr > |t|
+---------  --------  --------  --------------  --------  --------  --------
+Intercept              0.1456          0.0533     131.2      2.73    0.0072
+year       2015       -0.1537          0.0548     104.8     -2.80    0.0060
+year       2016       -0.1287          0.0552     105.8     -2.33    0.0215
+year       2017       -0.2520          0.0548     105.0     -4.59    <.0001
+year       2018       -0.3169          0.0552     107.2     -5.74    <.0001
+year       2019       -0.2823          0.0542     101.1     -5.21    <.0001
+year       2020       -0.2633          0.0544     102.2     -4.84    <.0001
+year       2021       -0.1799          0.0564     111.5     -3.19    0.0018
+year       2022       -0.0499          0.0555     108.3     -0.90    0.3711
+year       2023        0.0211          0.0559     108.4      0.38    0.7061
+year       2024       -0.0939          0.0542     101.1     -1.73    0.0860
+year       2025       -0.1729          0.0545     102.9     -3.17    0.0020
+year       2026             0               .         .         .         .
+dtt                   -0.0079          0.0032     240.9     -2.47    0.0143
+dtt*dtt                0.0004          0.0001     243.2      4.10    <.0001
+
+         Type 3 Tests of Fixed Effects          
+
+Effect      Num DF    Den DF   F Value    Pr > F
+--------  --------  --------  --------  --------
+year            11      51.2     10.96    <.0001
+dtt              1     240.9      6.08    0.0143
+dtt*dtt          1     243.2     16.83    <.0001
+                            Do regions share the price level and the within-season pattern?
+
+             The Mixed Procedure              
+              Model Information               
+
+Data Set                    TK.RETAIL_REGIONAL
+Dependent Variable                          lp
+Covariance Structure       Variance Components
+Estimation Method                         REML
+Residual Variance Method               Profile
+Fixed Effects SE Method          Kenward-Roger
+Degrees of Freedom Method        Kenward-Roger
+
+                            Class Level Information                            
+
+Class       Levels  Values                                                     
+--------  --------  -----------------------------------------------------------
+region           6  MW NE NW SC SE SW                                          
+year            12  2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 2025 2026
+
+          Dimensions           
+
+Covariance Parameters         2
+Columns in X                 27
+Columns in Z                 72
+Subjects                      1
+Max Obs per Subject         315
+
+         Number of Observations          
+
+Number of Observations Read           315
+Number of Observations Used           315
+Number of Observations Not Used         0
+
+                 Iteration History                  
+
+Iteration  Evaluations  -2 Res Log Like    Criterion
+---------  -----------  ---------------  -----------
+        0            1    -167.02642847             
+        1            1     -10.68329825  10.56760453
+        2            1     -18.47188188   6.13211016
+        3            1     -26.28641249   4.33084860
+        4            1     -34.14044138   3.35727500
+        5            1     -42.04765516   2.74145030
+        6            1     -49.99990940   2.32594923
+        7            1     -58.02278711   2.02355642
+        8            1     -66.12214141   1.79911196
+        9            1     -74.32834242   1.62557183
+       10            1     -82.66285680   1.48993506
+       11            1     -91.15789799   1.38284481
+       12            1     -99.85160426   1.30394139
+       13            1    -108.83007169   1.25097579
+       14            1    -118.21656160   1.22873588
+       15            1    -128.22789618   1.25403446
+       16            1    -139.30141645   1.40387334
+       17            1    -152.73474329   2.32107064
+       18            1    -176.35395263   0.47059859
+       19            1    -182.63107560   0.19105373
+       20            1    -189.97497303   0.00034274
+       21            1    -190.00020346   0.00062137
+       22            1    -190.04600486   0.00108836
+       23            1    -190.12573457   0.00205045
+       24            1    -190.27643745   0.00402076
+       25            1    -190.57053914   0.00902898
+       26            1    -191.21817666   0.04639278
+       27            1    -193.09106801   0.00014356
+       28            1    -193.10502423   0.00000002
+       29            1    -193.10502589   0.00000000
+
+                                               Convergence criteria met.
+
+
+Covariance Parameter Estimates
+
+Cov Parm     Estimate
+-----------  --------
+region*year    0.0020
+Residual       0.0185
+
+          Fit Statistics           
+
+Statistic                     Value
+------------------------  ---------
+-2 Res Log Likelihood     -193.1050
+AIC (Smaller is Better)   -189.1050
+AICC (Smaller is Better)  -189.0634
+BIC (Smaller is Better)   -184.5517
+
+          Type 3 Tests of Fixed Effects           
+
+Effect        Num DF    Den DF   F Value    Pr > F
+----------  --------  --------  --------  --------
+year              11      50.2     10.92    <.0001
+dtt                1     236.3      6.22    0.0133
+dtt*dtt            1     238.9     17.03    <.0001
+region             5     218.5      3.59    0.0039
+region*dtt         5     254.9      3.34    0.0062
+
+                      Least Squares Means                       
+                         Effect=region                          
+
+region    Estimate  Standard Error        DF   t Value  Pr > |t|
+--------  --------  --------------  --------  --------  --------
+MW         -0.0471          0.0224      45.7     -2.10    0.0412
+NE         -0.0039          0.0225      46.6     -0.17    0.8648
+NW          0.0874          0.0252      68.4      3.46    0.0009
+SC          0.0357          0.0231      52.1      1.54    0.1289
+SE         -0.0340          0.0223      44.9     -1.52    0.1348
+SW         -0.0189          0.0227      47.7     -0.84    0.4074
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            51
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          8    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               3.590521E-10
+The Deviance of the Final Estimate        0.3949167068
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.00193     0.06901      0.03    0.9778
+year 2005      -0.29848     0.07009     -4.26    0.0001
+year 2006      -0.31511     0.07009     -4.50    <.0001
+year 2007      -0.21452     0.07009     -3.06    0.0039
+year 2008      -0.15941     0.07009     -2.27    0.0284
+year 2009      -0.22974     0.07009     -3.28    0.0022
+year 2010      -0.25241     0.07009     -3.60    0.0009
+year 2011      -0.15814     0.07256     -2.18    0.0353
+year 2012             0           .         .         .
+Linear(dtt)     0.00019     0.00104      0.18    0.8545
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.998921    2.000000    0.009118       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.091244      9.2418      0.0098
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            52
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          8    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               3.72749E-11
+The Deviance of the Final Estimate        0.3975221573
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.01811     0.05991     -0.30    0.7640
+year 2005      -0.28100     0.06264     -4.49    <.0001
+year 2006      -0.29762     0.06264     -4.75    <.0001
+year 2007      -0.19703     0.06264     -3.15    0.0031
+year 2008      -0.14192     0.06264     -2.27    0.0288
+year 2009      -0.21225     0.06264     -3.39    0.0016
+year 2010      -0.23492     0.06264     -3.75    0.0005
+year 2011      -0.14016     0.06514     -2.15    0.0374
+year 2012             0           .         .         .
+Linear(dtt)     0.00027     0.00102      0.26    0.7934
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.998941    2.000000    0.008972       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.099160     10.2273      0.0060
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            57
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          9    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.117794E-9
+The Deviance of the Final Estimate        0.4192486569
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.02946     0.07520     -0.39    0.6971
+year 2005      -0.27122     0.07802     -3.48    0.0011
+year 2006      -0.28785     0.07802     -3.69    0.0006
+year 2007      -0.18725     0.07802     -2.40    0.0206
+year 2008      -0.13214     0.07802     -1.69    0.0972
+year 2009      -0.20247     0.07802     -2.60    0.0127
+year 2010      -0.22515     0.07802     -2.89    0.0060
+year 2011      -0.12953     0.07991     -1.62    0.1120
+year 2012      -0.00139     0.07802     -0.02    0.9858
+year 2013             0           .         .         .
+Linear(dtt)     0.00035     0.00094      0.37    0.7132
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999036    2.000000    0.008507       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.108525     11.6485      0.0030
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            58
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year          9    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               2.041007E-11
+The Deviance of the Final Estimate        0.4195560526
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.03901     0.06179     -0.63    0.5309
+year 2005      -0.26278     0.06622     -3.97    0.0003
+year 2006      -0.27941     0.06622     -4.22    0.0001
+year 2007      -0.17881     0.06622     -2.70    0.0097
+year 2008      -0.12370     0.06622     -1.87    0.0681
+year 2009      -0.19403     0.06622     -2.93    0.0053
+year 2010      -0.21671     0.06622     -3.27    0.0020
+year 2011      -0.12102     0.06823     -1.77    0.0827
+year 2012       0.00705     0.06622      0.11    0.9157
+year 2013             0           .         .         .
+Linear(dtt)     0.00037     0.00093      0.39    0.6961
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999052    2.000000    0.008345       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.112035     12.2835      0.0022
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            63
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         10    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.609136E-10
+The Deviance of the Final Estimate        0.4235602764
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.17023     0.07123     -2.39    0.0207
+year 2005      -0.13001     0.07435     -1.75    0.0865
+year 2006      -0.14664     0.07435     -1.97    0.0541
+year 2007      -0.04604     0.07435     -0.62    0.5385
+year 2008       0.00906     0.07435      0.12    0.9035
+year 2009      -0.06126     0.07435     -0.82    0.4139
+year 2010      -0.08394     0.07435     -1.13    0.2643
+year 2011       0.01176     0.07612      0.15    0.8779
+year 2012       0.13982     0.07435      1.88    0.0659
+year 2013       0.13047     0.07612      1.71    0.0927
+year 2014             0           .         .         .
+Linear(dtt)     0.00031     0.00086      0.36    0.7206
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999127    2.000000    0.007666       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.120358     14.2079      0.0008
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            64
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         10    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               2.521508E-11
+The Deviance of the Final Estimate        0.4304162089
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.13994     0.05898     -2.37    0.0215
+year 2005      -0.15967     0.06368     -2.51    0.0154
+year 2006      -0.17630     0.06368     -2.77    0.0078
+year 2007      -0.07571     0.06368     -1.19    0.2400
+year 2008      -0.02060     0.06368     -0.32    0.7476
+year 2009      -0.09093     0.06368     -1.43    0.1594
+year 2010      -0.11360     0.06368     -1.78    0.0804
+year 2011      -0.01810     0.06558     -0.28    0.7836
+year 2012       0.11015     0.06368      1.73    0.0897
+year 2013       0.10060     0.06558      1.53    0.1312
+year 2014             0           .         .         .
+Linear(dtt)     0.00026     0.00086      0.30    0.7673
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999140    2.000000    0.007652       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.114420     13.5576      0.0011
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            68
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         11    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               7.0614613E-9
+The Deviance of the Final Estimate        0.4464177681
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.02053     0.09422      0.22    0.8283
+year 2005      -0.31430     0.09737     -3.23    0.0021
+year 2006      -0.33093     0.09737     -3.40    0.0013
+year 2007      -0.23034     0.09737     -2.37    0.0216
+year 2008      -0.17523     0.09737     -1.80    0.0775
+year 2009      -0.24556     0.09737     -2.52    0.0147
+year 2010      -0.26823     0.09737     -2.75    0.0080
+year 2011      -0.17291     0.09859     -1.75    0.0851
+year 2012      -0.04448     0.09737     -0.46    0.6497
+year 2013      -0.05420     0.09859     -0.55    0.5847
+year 2014      -0.11019     0.09859     -1.12    0.2687
+year 2015             0           .         .         .
+Linear(dtt)    -0.00001     0.00082     -0.01    0.9939
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999189    2.000000    0.007411       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.113537     13.7338      0.0010
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            69
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         11    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               2.822874E-10
+The Deviance of the Final Estimate        0.4527477718
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.06900     0.06775      1.02    0.3129
+year 2005      -0.36268     0.07280     -4.98    <.0001
+year 2006      -0.37931     0.07280     -5.21    <.0001
+year 2007      -0.27872     0.07280     -3.83    0.0003
+year 2008      -0.22361     0.07280     -3.07    0.0033
+year 2009      -0.29394     0.07280     -4.04    0.0002
+year 2010      -0.31661     0.07280     -4.35    <.0001
+year 2011      -0.22132     0.07430     -2.98    0.0043
+year 2012      -0.09286     0.07280     -1.28    0.2075
+year 2013      -0.10261     0.07430     -1.38    0.1729
+year 2014      -0.15860     0.07430     -2.13    0.0373
+year 2015             0           .         .         .
+Linear(dtt)    -0.00004     0.00082     -0.04    0.9649
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999200    2.000000    0.007394       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.108827     13.2204      0.0013
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            73
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         12    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               1.756781E-11
+The Deviance of the Final Estimate        0.4724257378
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.02365     0.09340      0.25    0.8010
+year 2005      -0.32052     0.09665     -3.32    0.0016
+year 2006      -0.33715     0.09665     -3.49    0.0009
+year 2007      -0.23655     0.09665     -2.45    0.0174
+year 2008      -0.18145     0.09665     -1.88    0.0655
+year 2009      -0.25177     0.09665     -2.61    0.0116
+year 2010      -0.27445     0.09665     -2.84    0.0062
+year 2011      -0.17921     0.09785     -1.83    0.0721
+year 2012      -0.05069     0.09665     -0.52    0.6019
+year 2013      -0.06051     0.09785     -0.62    0.5387
+year 2014      -0.11649     0.09785     -1.19    0.2387
+year 2015      -0.03602     0.09950     -0.36    0.7186
+year 2016             0           .         .         .
+Linear(dtt)     0.00011     0.00080      0.14    0.8874
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999242    2.000000    0.007244       7
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.109881     13.4901      0.0012
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            75
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         12    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               8.019057E-10
+The Deviance of the Final Estimate        0.4796244774
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.01191     0.05483      0.22    0.8287
+year 2005      -0.31087     0.06170     -5.04    <.0001
+year 2006      -0.32749     0.06170     -5.31    <.0001
+year 2007      -0.22690     0.06170     -3.68    0.0005
+year 2008      -0.17179     0.06170     -2.78    0.0072
+year 2009      -0.24212     0.06170     -3.92    0.0002
+year 2010      -0.26479     0.06170     -4.29    <.0001
+year 2011      -0.16957     0.06329     -2.68    0.0095
+year 2012      -0.04104     0.06170     -0.67    0.5085
+year 2013      -0.05087     0.06329     -0.80    0.4248
+year 2014      -0.10685     0.06329     -1.69    0.0966
+year 2015      -0.02628     0.06555     -0.40    0.6900
+year 2016             0           .         .         .
+Linear(dtt)     0.00016     0.00079      0.20    0.8384
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999261    2.000000    0.007136       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.113602     14.2113      0.0008
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            78
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         13    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               3.98482E-11
+The Deviance of the Final Estimate        0.4815497095
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.04944     0.09109      0.54    0.5892
+year 2005      -0.34738     0.09437     -3.68    0.0005
+year 2006      -0.36400     0.09437     -3.86    0.0003
+year 2007      -0.26341     0.09437     -2.79    0.0070
+year 2008      -0.20830     0.09437     -2.21    0.0310
+year 2009      -0.27863     0.09437     -2.95    0.0044
+year 2010      -0.30130     0.09437     -3.19    0.0022
+year 2011      -0.20609     0.09553     -2.16    0.0349
+year 2012      -0.07755     0.09437     -0.82    0.4144
+year 2013      -0.08738     0.09553     -0.91    0.3639
+year 2014      -0.14336     0.09553     -1.50    0.1385
+year 2015      -0.06274     0.09714     -0.65    0.5207
+year 2016      -0.04639     0.09712     -0.48    0.6346
+year 2017             0           .         .         .
+Linear(dtt)     0.00014     0.00077      0.19    0.8529
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999287    2.000000    0.006859       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.112991     14.5477      0.0007
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            79
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         13    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               4.174621E-10
+The Deviance of the Final Estimate        0.4997382558
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.05539     0.06625     -0.84    0.4063
+year 2005      -0.24414     0.07146     -3.42    0.0011
+year 2006      -0.26077     0.07146     -3.65    0.0005
+year 2007      -0.16017     0.07146     -2.24    0.0285
+year 2008      -0.10506     0.07146     -1.47    0.1465
+year 2009      -0.17539     0.07146     -2.45    0.0169
+year 2010      -0.19807     0.07146     -2.77    0.0073
+year 2011      -0.10276     0.07292     -1.41    0.1637
+year 2012       0.02569     0.07146      0.36    0.7204
+year 2013       0.01595     0.07292      0.22    0.8276
+year 2014      -0.04004     0.07292     -0.55    0.5849
+year 2015       0.04100     0.07496      0.55    0.5863
+year 2016       0.05738     0.07494      0.77    0.4467
+year 2017             0           .         .         .
+Linear(dtt)     0.00019     0.00078      0.25    0.8031
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999296    2.000000    0.007019       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.124388     15.6811      0.0004
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            83
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         14    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               6.486E-11
+The Deviance of the Final Estimate        0.5073406072
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.18367     0.09052     -2.03    0.0465
+year 2005      -0.11742     0.09388     -1.25    0.2154
+year 2006      -0.13405     0.09388     -1.43    0.1580
+year 2007      -0.03346     0.09388     -0.36    0.7227
+year 2008       0.02165     0.09388      0.23    0.8183
+year 2009      -0.04868     0.09388     -0.52    0.6058
+year 2010      -0.07135     0.09388     -0.76    0.4499
+year 2011       0.02395     0.09503      0.25    0.8018
+year 2012       0.15240     0.09388      1.62    0.1093
+year 2013       0.14266     0.09503      1.50    0.1381
+year 2014       0.08667     0.09503      0.91    0.3651
+year 2015       0.16793     0.09662      1.74    0.0869
+year 2016       0.18426     0.09660      1.91    0.0608
+year 2017       0.08480     0.09662      0.88    0.3833
+year 2018             0           .         .         .
+Linear(dtt)     0.00027     0.00075      0.36    0.7202
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999327    2.000000    0.006747       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.123770     16.1013      0.0003
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            84
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         14    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               5.163456E-10
+The Deviance of the Final Estimate        0.5144031283
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.13129     0.06506     -2.02    0.0476
+year 2005      -0.16948     0.07030     -2.41    0.0187
+year 2006      -0.18610     0.07030     -2.65    0.0101
+year 2007      -0.08551     0.07030     -1.22    0.2281
+year 2008      -0.03040     0.07030     -0.43    0.6668
+year 2009      -0.10073     0.07030     -1.43    0.1566
+year 2010      -0.12340     0.07030     -1.76    0.0838
+year 2011      -0.02814     0.07174     -0.39    0.6961
+year 2012       0.10035     0.07030      1.43    0.1581
+year 2013       0.09056     0.07174      1.26    0.2112
+year 2014       0.03458     0.07174      0.48    0.6313
+year 2015       0.11564     0.07373      1.57    0.1215
+year 2016       0.13195     0.07372      1.79    0.0780
+year 2017       0.03251     0.07373      0.44    0.6607
+year 2018             0           .         .         .
+Linear(dtt)     0.00024     0.00075      0.32    0.7508
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999334    2.000000    0.006752       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.118796     15.4730      0.0004
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            90
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         15    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               1.139759E-10
+The Deviance of the Final Estimate        0.5590576244
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.26007     0.05775     -4.50    <.0001
+year 2005      -0.03939     0.06168     -0.64    0.5251
+year 2006      -0.05602     0.06168     -0.91    0.3668
+year 2007       0.04458     0.06168      0.72    0.4722
+year 2008       0.09968     0.06168      1.62    0.1104
+year 2009       0.02936     0.06168      0.48    0.6356
+year 2010       0.00668     0.06168      0.11    0.9140
+year 2011       0.09994     0.06363      1.57    0.1207
+year 2012       0.23044     0.06168      3.74    0.0004
+year 2013       0.21865     0.06363      3.44    0.0010
+year 2014       0.16267     0.06363      2.56    0.0127
+year 2015       0.24314     0.06619      3.67    0.0005
+year 2016       0.25935     0.06616      3.92    0.0002
+year 2017       0.16000     0.06619      2.42    0.0182
+year 2018       0.09375     0.06619      1.42    0.1610
+year 2019             0           .         .         .
+Linear(dtt)     0.00025     0.00074      0.33    0.7395
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999381    2.000000    0.006803       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.109724     14.1312      0.0009
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            91
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         15    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               9.7062854E-9
+The Deviance of the Final Estimate        0.5901568246
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.20450     0.05150     -3.97    0.0002
+year 2005      -0.09119     0.05690     -1.60    0.1134
+year 2006      -0.10782     0.05690     -1.89    0.0621
+year 2007      -0.00722     0.05690     -0.13    0.8993
+year 2008       0.04789     0.05690      0.84    0.4028
+year 2009      -0.02244     0.05690     -0.39    0.6944
+year 2010      -0.04512     0.05690     -0.79    0.4304
+year 2011       0.04694     0.05898      0.80    0.4286
+year 2012       0.17864     0.05690      3.14    0.0024
+year 2013       0.16565     0.05898      2.81    0.0064
+year 2014       0.10967     0.05898      1.86    0.0670
+year 2015       0.18912     0.06173      3.06    0.0031
+year 2016       0.20527     0.06169      3.33    0.0014
+year 2017       0.10599     0.06173      1.72    0.0902
+year 2018       0.03974     0.06173      0.64    0.5217
+year 2019             0           .         .         .
+Linear(dtt)     0.00009     0.00075      0.12    0.9073
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999388    2.000000    0.007095       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.097857     12.1045      0.0024
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            95
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         16    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               5.3971804E-9
+The Deviance of the Final Estimate        0.5955987633
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.02118     0.09106     -0.23    0.8167
+year 2005      -0.27145     0.09477     -2.86    0.0054
+year 2006      -0.28808     0.09477     -3.04    0.0032
+year 2007      -0.18748     0.09477     -1.98    0.0515
+year 2008      -0.13238     0.09477     -1.40    0.1665
+year 2009      -0.20270     0.09477     -2.14    0.0357
+year 2010      -0.22538     0.09477     -2.38    0.0199
+year 2011      -0.13368     0.09591     -1.39    0.1674
+year 2012      -0.00162     0.09477     -0.02    0.9864
+year 2013      -0.01497     0.09591     -0.16    0.8764
+year 2014      -0.07095     0.09591     -0.74    0.4617
+year 2015       0.00808     0.09748      0.08    0.9341
+year 2016       0.02425     0.09747      0.25    0.8042
+year 2017      -0.07505     0.09748     -0.77    0.4438
+year 2018      -0.14130     0.09748     -1.45    0.1513
+year 2019      -0.16159     0.09477     -1.71    0.0923
+year 2020             0           .         .         .
+Linear(dtt)    -0.00005     0.00071     -0.07    0.9478
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999411    2.000000    0.006833       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.098568     12.5776      0.0019
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            96
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         16    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               1.206632E-10
+The Deviance of the Final Estimate        0.5958365072
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.02044     0.06495     -0.31    0.7539
+year 2005      -0.27234     0.07057     -3.86    0.0002
+year 2006      -0.28897     0.07057     -4.09    0.0001
+year 2007      -0.18838     0.07057     -2.67    0.0093
+year 2008      -0.13327     0.07057     -1.89    0.0627
+year 2009      -0.20360     0.07057     -2.88    0.0051
+year 2010      -0.22627     0.07057     -3.21    0.0020
+year 2011      -0.13457     0.07199     -1.87    0.0654
+year 2012      -0.00252     0.07057     -0.04    0.9716
+year 2013      -0.01586     0.07199     -0.22    0.8262
+year 2014      -0.07184     0.07199     -1.00    0.3215
+year 2015       0.00719     0.07397      0.10    0.9228
+year 2016       0.02336     0.07396      0.32    0.7529
+year 2017      -0.07594     0.07397     -1.03    0.3078
+year 2018      -0.14219     0.07397     -1.92    0.0583
+year 2019      -0.16248     0.07057     -2.30    0.0240
+year 2020             0           .         .         .
+Linear(dtt)    -0.00005     0.00071     -0.07    0.9442
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999417    2.000000    0.006758       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.098822     12.7708      0.0017
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            100
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         17    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.1989009E-9
+The Deviance of the Final Estimate        0.6561267795
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.10846     0.09307      1.17    0.2474
+year 2005      -0.40739     0.09695     -4.20    <.0001
+year 2006      -0.42401     0.09695     -4.37    <.0001
+year 2007      -0.32342     0.09695     -3.34    0.0013
+year 2008      -0.26831     0.09695     -2.77    0.0070
+year 2009      -0.33864     0.09695     -3.49    0.0008
+year 2010      -0.36131     0.09695     -3.73    0.0004
+year 2011      -0.26966     0.09811     -2.75    0.0074
+year 2012      -0.13756     0.09695     -1.42    0.1598
+year 2013      -0.15096     0.09811     -1.54    0.1278
+year 2014      -0.20694     0.09811     -2.11    0.0380
+year 2015      -0.12741     0.09971     -1.28    0.2050
+year 2016      -0.11137     0.09970     -1.12    0.2673
+year 2017      -0.21054     0.09971     -2.11    0.0379
+year 2018      -0.27679     0.09971     -2.78    0.0069
+year 2019      -0.29752     0.09695     -3.07    0.0029
+year 2020      -0.24637     0.09971     -2.47    0.0156
+year 2021             0           .         .         .
+Linear(dtt)     0.00025     0.00072      0.35    0.7309
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999438    2.000000    0.007119       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.087867     10.7134      0.0047
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            101
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         17    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               4.988738E-11
+The Deviance of the Final Estimate        0.6565222755
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.09020     0.06639      1.36    0.1781
+year 2005      -0.38942     0.07223     -5.39    <.0001
+year 2006      -0.40605     0.07223     -5.62    <.0001
+year 2007      -0.30546     0.07223     -4.23    <.0001
+year 2008      -0.25035     0.07223     -3.47    0.0008
+year 2009      -0.32068     0.07223     -4.44    <.0001
+year 2010      -0.34335     0.07223     -4.75    <.0001
+year 2011      -0.25168     0.07368     -3.42    0.0010
+year 2012      -0.11959     0.07223     -1.66    0.1016
+year 2013      -0.13297     0.07368     -1.80    0.0748
+year 2014      -0.18896     0.07368     -2.56    0.0122
+year 2015      -0.10936     0.07569     -1.44    0.1524
+year 2016      -0.09331     0.07568     -1.23    0.2211
+year 2017      -0.19249     0.07569     -2.54    0.0129
+year 2018      -0.25874     0.07569     -3.42    0.0010
+year 2019      -0.27956     0.07223     -3.87    0.0002
+year 2020      -0.22833     0.07569     -3.02    0.0034
+year 2021             0           .         .         .
+Linear(dtt)     0.00025     0.00071      0.36    0.7229
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999443    2.000000    0.007047       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.089681     11.0646      0.0040
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            106
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         18    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               4.0762665E-9
+The Deviance of the Final Estimate        0.6847985509
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.34665     0.06764      5.12    <.0001
+year 2005      -0.64938     0.07234     -8.98    <.0001
+year 2006      -0.66601     0.07234     -9.21    <.0001
+year 2007      -0.56542     0.07234     -7.82    <.0001
+year 2008      -0.51031     0.07234     -7.05    <.0001
+year 2009      -0.58064     0.07234     -8.03    <.0001
+year 2010      -0.60331     0.07234     -8.34    <.0001
+year 2011      -0.51149     0.07394     -6.92    <.0001
+year 2012      -0.37956     0.07234     -5.25    <.0001
+year 2013      -0.39278     0.07394     -5.31    <.0001
+year 2014      -0.44877     0.07394     -6.07    <.0001
+year 2015      -0.36862     0.07608     -4.84    <.0001
+year 2016      -0.35268     0.07606     -4.64    <.0001
+year 2017      -0.45175     0.07608     -5.94    <.0001
+year 2018      -0.51800     0.07608     -6.81    <.0001
+year 2019      -0.53952     0.07234     -7.46    <.0001
+year 2020      -0.48759     0.07608     -6.41    <.0001
+year 2021      -0.34953     0.07608     -4.59    <.0001
+year 2022             0           .         .         .
+Linear(dtt)     0.00042     0.00070      0.60    0.5471
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999468    2.000000    0.006977       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.100111     12.4262      0.0020
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            108
+Number of Missing Observations    2
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         18    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    4
+Final Backfitting Criterion               7.944214E-11
+The Deviance of the Final Estimate        0.7688964958
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.19315     0.05087      3.80    0.0003
+year 2005      -0.50279     0.05899     -8.52    <.0001
+year 2006      -0.51942     0.05899     -8.81    <.0001
+year 2007      -0.41883     0.05899     -7.10    <.0001
+year 2008      -0.36372     0.05899     -6.17    <.0001
+year 2009      -0.43405     0.05899     -7.36    <.0001
+year 2010      -0.45672     0.05899     -7.74    <.0001
+year 2011      -0.36399     0.06091     -5.98    <.0001
+year 2012      -0.23296     0.05899     -3.95    0.0002
+year 2013      -0.24528     0.06091     -4.03    0.0001
+year 2014      -0.30127     0.06091     -4.95    <.0001
+year 2015      -0.21939     0.06355     -3.45    0.0009
+year 2016      -0.20343     0.06353     -3.20    0.0019
+year 2017      -0.30252     0.06355     -4.76    <.0001
+year 2018      -0.36877     0.06355     -5.80    <.0001
+year 2019      -0.39293     0.05899     -6.66    <.0001
+year 2020      -0.33836     0.06355     -5.32    <.0001
+year 2021      -0.20030     0.06355     -3.15    0.0022
+year 2022             0           .         .         .
+Linear(dtt)     0.00069     0.00073      0.95    0.3428
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999477    2.000000    0.007678       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.136606     15.4569      0.0004
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            112
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         19    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.2525153E-9
+The Deviance of the Final Estimate        0.8575673021
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.07430     0.07424      1.00    0.3196
+year 2005      -0.38763     0.07895     -4.91    <.0001
+year 2006      -0.40426     0.07895     -5.12    <.0001
+year 2007      -0.30367     0.07895     -3.85    0.0002
+year 2008      -0.24856     0.07895     -3.15    0.0022
+year 2009      -0.31889     0.07895     -4.04    0.0001
+year 2010      -0.34156     0.07895     -4.33    <.0001
+year 2011      -0.25022     0.08074     -3.10    0.0026
+year 2012      -0.11781     0.07895     -1.49    0.1391
+year 2013      -0.13152     0.08074     -1.63    0.1068
+year 2014      -0.18750     0.08074     -2.32    0.0225
+year 2015      -0.10526     0.08313     -1.27    0.2087
+year 2016      -0.08947     0.08310     -1.08    0.2845
+year 2017      -0.18839     0.08313     -2.27    0.0258
+year 2018      -0.25464     0.08313     -3.06    0.0029
+year 2019      -0.27777     0.07895     -3.52    0.0007
+year 2020      -0.22422     0.08313     -2.70    0.0083
+year 2021      -0.08617     0.08313     -1.04    0.3027
+year 2022       0.03962     0.08072      0.49    0.6248
+year 2023             0           .         .         .
+Linear(dtt)     0.00092     0.00074      1.25    0.2159
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999498    2.000000    0.008235       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.136737     14.3503      0.0008
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            113
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         19    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               9.432885E-11
+The Deviance of the Final Estimate        0.8594905071
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.09074     0.06091      1.49    0.1398
+year 2005      -0.40344     0.06741     -5.98    <.0001
+year 2006      -0.42006     0.06741     -6.23    <.0001
+year 2007      -0.31947     0.06741     -4.74    <.0001
+year 2008      -0.26436     0.06741     -3.92    0.0002
+year 2009      -0.33469     0.06741     -4.96    <.0001
+year 2010      -0.35736     0.06741     -5.30    <.0001
+year 2011      -0.26626     0.06936     -3.84    0.0002
+year 2012      -0.13361     0.06741     -1.98    0.0505
+year 2013      -0.14755     0.06936     -2.13    0.0361
+year 2014      -0.20354     0.06936     -2.93    0.0042
+year 2015      -0.12145     0.07198     -1.69    0.0950
+year 2016      -0.10568     0.07195     -1.47    0.1454
+year 2017      -0.20458     0.07198     -2.84    0.0055
+year 2018      -0.27083     0.07198     -3.76    0.0003
+year 2019      -0.29357     0.06741     -4.35    <.0001
+year 2020      -0.24042     0.07198     -3.34    0.0012
+year 2021      -0.10237     0.07198     -1.42    0.1584
+year 2022       0.02357     0.06934      0.34    0.7347
+year 2023             0           .         .         .
+Linear(dtt)     0.00089     0.00073      1.22    0.2263
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999502    2.000000    0.008175       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.135363     14.3318      0.0008
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            119
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         20    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               4.3252485E-9
+The Deviance of the Final Estimate        0.8781557988
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.04562     0.06102      0.75    0.4565
+year 2005      -0.35604     0.06673     -5.34    <.0001
+year 2006      -0.37266     0.06673     -5.58    <.0001
+year 2007      -0.27207     0.06673     -4.08    <.0001
+year 2008      -0.21696     0.06673     -3.25    0.0016
+year 2009      -0.28729     0.06673     -4.31    <.0001
+year 2010      -0.30996     0.06673     -4.65    <.0001
+year 2011      -0.21886     0.06873     -3.18    0.0020
+year 2012      -0.08621     0.06673     -1.29    0.1995
+year 2013      -0.10015     0.06873     -1.46    0.1484
+year 2014      -0.15614     0.06873     -2.27    0.0253
+year 2015      -0.07437     0.07138     -1.04    0.3001
+year 2016      -0.05857     0.07136     -0.82    0.4138
+year 2017      -0.15750     0.07138     -2.21    0.0297
+year 2018      -0.22375     0.07138     -3.13    0.0023
+year 2019      -0.24617     0.06673     -3.69    0.0004
+year 2020      -0.19333     0.07138     -2.71    0.0080
+year 2021      -0.05528     0.07138     -0.77    0.4406
+year 2022       0.07099     0.06871      1.03    0.3041
+year 2023       0.05888     0.06859      0.86    0.3928
+year 2024             0           .         .         .
+Linear(dtt)     0.00079     0.00070      1.13    0.2632
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999529    2.000000    0.007902       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.146865     16.0553      0.0003
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            120
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         20    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               7.581907E-11
+The Deviance of the Final Estimate        0.887032192
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.07413     0.05324      1.39    0.1670
+year 2005      -0.38298     0.06039     -6.34    <.0001
+year 2006      -0.39960     0.06039     -6.62    <.0001
+year 2007      -0.29901     0.06039     -4.95    <.0001
+year 2008      -0.24390     0.06039     -4.04    0.0001
+year 2009      -0.31423     0.06039     -5.20    <.0001
+year 2010      -0.33690     0.06039     -5.58    <.0001
+year 2011      -0.24629     0.06250     -3.94    0.0002
+year 2012      -0.11315     0.06039     -1.87    0.0640
+year 2013      -0.12758     0.06250     -2.04    0.0439
+year 2014      -0.18357     0.06250     -2.94    0.0041
+year 2015      -0.10222     0.06530     -1.57    0.1208
+year 2016      -0.08646     0.06528     -1.32    0.1885
+year 2017      -0.18535     0.06530     -2.84    0.0055
+year 2018      -0.25160     0.06530     -3.85    0.0002
+year 2019      -0.27311     0.06039     -4.52    <.0001
+year 2020      -0.22119     0.06530     -3.39    0.0010
+year 2021      -0.08314     0.06530     -1.27    0.2060
+year 2022       0.04354     0.06248      0.70    0.4876
+year 2023       0.03166     0.06238      0.51    0.6129
+year 2024             0           .         .         .
+Linear(dtt)     0.00073     0.00070      1.04    0.3018
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999532    2.000000    0.007911       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.143233     15.6630      0.0004
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            125
+Number of Missing Observations    4
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         21    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.959822E-10
+The Deviance of the Final Estimate        0.9172593525
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept       0.02702     0.07186      0.38    0.7077
+year 2005      -0.34255     0.07699     -4.45    <.0001
+year 2006      -0.35917     0.07699     -4.67    <.0001
+year 2007      -0.25858     0.07699     -3.36    0.0011
+year 2008      -0.20347     0.07699     -2.64    0.0095
+year 2009      -0.27380     0.07699     -3.56    0.0006
+year 2010      -0.29647     0.07699     -3.85    0.0002
+year 2011      -0.20473     0.07870     -2.60    0.0107
+year 2012      -0.07272     0.07699     -0.94    0.3472
+year 2013      -0.08602     0.07870     -1.09    0.2770
+year 2014      -0.14201     0.07870     -1.80    0.0742
+year 2015      -0.05969     0.08098     -0.74    0.4628
+year 2016      -0.04399     0.08096     -0.54    0.5881
+year 2017      -0.14282     0.08098     -1.76    0.0808
+year 2018      -0.20907     0.08098     -2.58    0.0113
+year 2019      -0.23268     0.07699     -3.02    0.0032
+year 2020      -0.17865     0.08098     -2.21    0.0296
+year 2021      -0.04060     0.08098     -0.50    0.6172
+year 2022       0.08504     0.07868      1.08    0.2824
+year 2023       0.07272     0.07859      0.93    0.3570
+year 2024      -0.01190     0.07699     -0.15    0.8774
+year 2025             0           .         .         .
+Linear(dtt)     0.00101     0.00067      1.50    0.1368
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999552    2.000000    0.007831       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.141924     15.6274      0.0004
+
+
+
+                                                   The GAM Procedure
+Dependent Variable: lp
+Regression Model Component(s): year
+Smoothing Model Component(s): spline(dtt)
+
+Summary of Input Data Set
+
+Number of Observations            126
+Number of Missing Observations    3
+Distribution                      Gaussian
+Link Function                     Identity
+
+Class Level Information
+
+Class    Levels    Values
+year         21    2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025
+
+Iteration Summary and Fit Statistics
+
+Final Number of Backfitting Iterations    3
+Final Backfitting Criterion               1.384735E-11
+The Deviance of the Final Estimate        0.9262520651
+
+Regression Model Analysis
+Parameter Estimates
+
+              Parameter    Standard
+Parameter      Estimate       Error   t Value  Pr > |t|
+
+Intercept      -0.01469     0.05916     -0.25    0.8043
+year 2005      -0.30242     0.06606     -4.58    <.0001
+year 2006      -0.31905     0.06606     -4.83    <.0001
+year 2007      -0.21846     0.06606     -3.31    0.0013
+year 2008      -0.16335     0.06606     -2.47    0.0151
+year 2009      -0.23368     0.06606     -3.54    0.0006
+year 2010      -0.25635     0.06606     -3.88    0.0002
+year 2011      -0.16408     0.06793     -2.42    0.0175
+year 2012      -0.03260     0.06606     -0.49    0.6227
+year 2013      -0.04537     0.06793     -0.67    0.5057
+year 2014      -0.10135     0.06793     -1.49    0.1388
+year 2015      -0.01869     0.07045     -0.27    0.7913
+year 2016      -0.00297     0.07043     -0.04    0.9665
+year 2017      -0.10182     0.07045     -1.45    0.1514
+year 2018      -0.16808     0.07045     -2.39    0.0189
+year 2019      -0.19256     0.06606     -2.92    0.0044
+year 2020      -0.13766     0.07045     -1.95    0.0535
+year 2021       0.00039     0.07045      0.01    0.9956
+year 2022       0.12572     0.06792      1.85    0.0671
+year 2023       0.11303     0.06784      1.67    0.0987
+year 2024       0.02822     0.06606      0.43    0.6702
+year 2025             0           .         .         .
+Linear(dtt)     0.00107     0.00067      1.59    0.1148
+
+Smoothing Model Analysis
+Fit Summary for Smoothing Components
+
+                                                    Num
+              Smoothing                          Unique
+Component     Parameter          DF         GCV     Obs
+
+Spline(dtt)    0.999555    2.000000    0.007841       8
+
+Smoothing Model Analysis
+Analysis of Deviance
+
+                               Sum of
+Source               DF       Squares  Chi-Square  Pr > ChiSq
+
+Spline(dtt)     2.00000      0.145024     15.9702      0.0003
+
+
+                                       Rolling-origin backtest, seasons 2012-2025
+          Origins 26 and 14 days before Thanksgiving; forecasts use only USDA reports published by each origin
+
+                                                           Mean    Cheapest
+                                                 95% PI     PI       week      Mean
+                 Weeks     MAE    RMSE    MAPE  coverage   width  identified  regret
+model  origin  forecast  ($/lb)  ($/lb)    (%)     (%)    ($/lb)      (%)     ($/lb)
+
+C      T-14          40   0.074   0.091    8.0      97.5    0.42        50.0   0.014
+A1     T-14          40   0.092   0.112    9.9      97.5    0.47        35.7   0.067
+B1     T-14          40   0.088   0.112    9.5      95.0    0.44        50.0   0.014
+A3     T-14          40   0.086   0.113    9.4      95.0    0.45        42.9   0.023
+Naive  T-14          40   0.092   0.115   10.0     100.0    0.71        50.0   0.014
+A0     T-14          40   0.095   0.116   10.3      95.0    0.47        50.0   0.014
+A2     T-14          40   0.097   0.121   10.6      95.0    0.47        50.0   0.014
+C      T-26          56   0.079   0.105    8.3      69.6    0.43        21.4   0.065
+A3     T-26          56   0.112   0.150   12.0      92.9    0.50        35.7   0.028
+B1     T-26          56   0.113   0.151   12.1      91.1    0.49        42.9   0.018
+A1     T-26          56   0.122   0.163   13.0      91.1    0.54        14.3   0.103
+A2     T-26          56   0.126   0.166   13.4      91.1    0.53        35.7   0.071
+A0     T-26          56   0.125   0.168   13.3      91.1    0.53        28.6   0.103
+Naive  T-26          56   0.140   0.181   14.9      98.2    0.86        28.6   0.103
+              Final model (A3): log advertised price on season effects and a cubic in days to Thanksgiving
+                                Fit on all national weeks published by November 12, 2026
+
+                                                   The GLM Procedure                                                    
+                                                Class Level Information                                                 
+
+Class       Levels  Values                                                                                              
+--------  --------  ----------------------------------------------------------------------------------------------------
+year            22  2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023 2024 
+                    2025 2026                                                                                           
+
+Number of Observations Read       229
+Number of Observations Used       133
+
+                            The GLM Procedure                             
+                          Dependent Variable: lp                          
+
+Source                 DF  Sum of Squares  Mean Square   F Value    Pr > F
+---------------  --------  --------------  -----------  --------  --------
+Model                  24      2.57239137   0.10718297     12.15    <.0001
+Error                 108      0.95311257   0.00882512                    
+Corrected Total       132      3.52550394                                 
+
+R-Square  Coeff Var  Root MSE   lp Mean
+--------  ---------  --------  --------
+0.729652   98.54978  0.093942  -0.09532
+
+Source             DF   Type I SS  Mean Square   F Value    Pr > F
+-----------  --------  ----------  -----------  --------  --------
+year               21  2.42282059   0.11537241     13.07    <.0001
+dtt                 1  0.02654250   0.02654250      3.01    0.0857
+dtt*dtt             1  0.01309990   0.01309990      1.48    0.2257
+dtt*dtt*dtt         1  0.10992838   0.10992838     12.46    0.0006
+
+Source             DF  Type III SS  Mean Square   F Value    Pr > F
+-----------  --------  -----------  -----------  --------  --------
+year               21   2.41422121   0.11496291     13.03    <.0001
+dtt                 1   0.10856711   0.10856711     12.30    0.0007
+dtt*dtt             1   0.11971758   0.11971758     13.57    0.0004
+dtt*dtt*dtt         1   0.10992838   0.10992838     12.46    0.0006
+
+                      Parameter Estimates                      
+
+Parameter          Estimate  Standard Error   t Value  Pr > |t|
+-----------  --------------  --------------  --------  --------
+Intercept     0.253513182 B      0.05577516      4.55    <.0001
+year 2005    -0.491585273 B      0.05929722     -8.29    <.0001
+year 2006    -0.508212446 B      0.05929722     -8.57    <.0001
+year 2007    -0.407620130 B      0.05929722     -6.87    <.0001
+year 2008    -0.352511225 B      0.05929722     -5.94    <.0001
+year 2009    -0.422840382 B      0.05929722     -7.13    <.0001
+year 2010    -0.445512574 B      0.05929722     -7.51    <.0001
+year 2011    -0.355513345 B      0.06137221     -5.79    <.0001
+year 2012    -0.221758250 B      0.05929722     -3.74    0.0003
+year 2013    -0.236805906 B      0.06137221     -3.86    0.0002
+year 2014    -0.292790777 B      0.06137221     -4.77    <.0001
+year 2015    -0.206963841 B      0.06413750     -3.23    0.0017
+year 2016    -0.191652330 B      0.06411802     -2.99    0.0035
+year 2017    -0.290095366 B      0.06413750     -4.52    <.0001
+year 2018    -0.356345885 B      0.06413750     -5.56    <.0001
+year 2019    -0.381722971 B      0.05929722     -6.44    <.0001
+year 2020    -0.325929128 B      0.06413750     -5.08    <.0001
+year 2021    -0.187877734 B      0.06413750     -2.93    0.0041
+year 2022    -0.066066233 B      0.06136119     -1.08    0.2840
+year 2023    -0.073109552 B      0.06128670     -1.19    0.2355
+year 2024    -0.160943903 B      0.05929722     -2.71    0.0077
+year 2025    -0.195758272 B      0.06128670     -3.19    0.0018
+year 2026     0.000000000 B               .         .         .
+dtt          -0.020041342        0.00571397     -3.51    0.0007
+dtt*dtt       0.001112482        0.00030205      3.68    0.0004
+dtt*dtt*dtt  -0.000015570        0.00000441     -3.53    0.0006
+
+NOTE: The X'X matrix has been found to be singular, and a generalized inverse was used to solve the normal equations.
+      Terms whose estimates are followed by the letter 'B' are not uniquely estimable.
+
+                        Probability that each remaining ad week has the lowest advertised price
+
+                                                   The FREQ Procedure
+
+ad_week       Frequency    Percent
+-----------------------------------
+2026-11-07         7677     38.39
+2026-11-14         7574     37.87
+2026-11-21         4749     23.75
+                       Buying the day after the cutoff vs the day before Thanksgiving (simulated)
+
+p_now_beats_last_minute  mean_cost_of_waiting
+
+                  79.5%                 0.134
+                      Predicted lowest-price purchase date (among dates after the forecast cutoff)
+
+      date  predicted_price  prediction_lower_95  prediction_upper_95
+
+2026-11-14             1.16                 0.94                 1.43
+                                   Expected saving at the predicted lowest-price date
+
+ best_date  best_price  compare_date  compare_price  expected_saving_per_lb  saving_16lb_bird
+
+2026-11-14       1.164    2026-11-13          1.165                   0.001              0.01
+2026-11-14       1.164    2026-11-25          1.272                   0.108              1.72
+                        Daily forecast, national advertised frozen whole-turkey price ($ per lb)
+
+      date  observation_status  observed_price  predicted_price  prediction_lower_95  prediction_upper_95
+
+2026-10-10  observed                      1.23             1.17                 0.93                 1.45
+2026-10-11  observed                      1.23             1.19                 0.95                 1.47
+2026-10-12  observed                      1.23             1.21                 0.97                 1.49
+2026-10-13  observed                      1.23             1.23                 0.99                 1.51
+2026-10-14  observed                      1.23             1.24                 1.00                 1.52
+2026-10-15  observed                      1.23             1.25                 1.01                 1.54
+2026-10-16  observed                      1.23             1.26                 1.02                 1.55
+2026-10-17  observed                      1.30             1.27                 1.03                 1.56
+2026-10-18  observed                      1.30             1.28                 1.03                 1.57
+2026-10-19  observed                      1.30             1.28                 1.04                 1.57
+2026-10-20  observed                      1.30             1.29                 1.04                 1.58
+2026-10-21  observed                      1.30             1.29                 1.04                 1.58
+2026-10-22  observed                      1.30             1.29                 1.04                 1.58
+2026-10-23  observed                      1.30             1.29                 1.04                 1.58
+2026-10-24  observed                      1.26             1.28                 1.04                 1.57
+2026-10-25  observed                      1.26             1.28                 1.03                 1.57
+2026-10-26  observed                      1.26             1.28                 1.03                 1.56
+2026-10-27  observed                      1.26             1.27                 1.02                 1.56
+2026-10-28  observed                      1.26             1.26                 1.02                 1.55
+2026-10-29  observed                      1.26             1.26                 1.01                 1.54
+2026-10-30  observed                      1.26             1.25                 1.01                 1.53
+2026-10-31  observed                      1.19             1.24                 1.00                 1.52
+2026-11-01  observed                      1.19             1.23                 1.00                 1.51
+2026-11-02  observed                      1.19             1.23                 0.99                 1.50
+2026-11-03  observed                      1.19             1.22                 0.98                 1.49
+2026-11-04  observed                      1.19             1.21                 0.98                 1.48
+2026-11-05  observed                      1.19             1.20                 0.97                 1.48
+2026-11-06  observed                      1.19             1.20                 0.96                 1.47
+2026-11-07  inferred                         .             1.19                 0.96                 1.46
+2026-11-08  inferred                         .             1.18                 0.95                 1.45
+2026-11-09  inferred                         .             1.18                 0.95                 1.45
+2026-11-10  inferred                         .             1.17                 0.94                 1.44
+2026-11-11  inferred                         .             1.17                 0.94                 1.44
+2026-11-12  inferred                         .             1.17                 0.94                 1.43
+2026-11-13  forecast                         .             1.16                 0.94                 1.43
+2026-11-14  forecast                         .             1.16                 0.94                 1.43
+2026-11-15  forecast                         .             1.16                 0.94                 1.43
+2026-11-16  forecast                         .             1.17                 0.94                 1.43
+2026-11-17  forecast                         .             1.17                 0.94                 1.44
+2026-11-18  forecast                         .             1.18                 0.95                 1.44
+2026-11-19  forecast                         .             1.18                 0.95                 1.45
+2026-11-20  forecast                         .             1.19                 0.96                 1.46
+2026-11-21  forecast                         .             1.20                 0.97                 1.48
+2026-11-22  forecast                         .             1.22                 0.98                 1.49
+2026-11-23  forecast                         .             1.23                 0.99                 1.51
+2026-11-24  forecast                         .             1.25                 1.00                 1.54
+2026-11-25  forecast                         .             1.27                 1.02                 1.57
+2026-11-26  forecast                         .             1.30                 1.04                 1.60
