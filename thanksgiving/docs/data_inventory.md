@@ -6,6 +6,7 @@ Retrieved 12 November 2026 from USDA Agricultural Marketing Service (AMS) Market
 |---|---|---|---|---|---|
 | USDA AMS, *Weekly Grocery Store Turkey Feature Activity* (report 2867), section "Report Details", section Whole, region National, conventional birds | `usda_ams_turkey_whole_national.csv` | Weekly (ad week, normally Saturday to Friday) | Ad weeks beginning 10 Sep to 20 Dec, 2005 to 2025; 2026 to the week of 31 Oct | $ per lb | 479 |
 | Same report, six contiguous regions (Midwest, Northeast, Northwest, South Central, Southeast, Southwest), frozen, conventional, under 16 lb | `usda_ams_turkey_frozen_by_region.csv` | Weekly | Ad weeks beginning 20 Oct to 28 Nov, 2015 to 2026 | $ per lb | 357 |
+| Same report, eight regions (the six contiguous regions, Alaska and Hawaii), frozen, conventional, under 16 lb, with the lowest and highest advertised price. Retrieved 15 November 2026. | `usda_ams_turkey_frozen_by_region_range.csv` | Weekly | Ad weeks beginning 1 Oct to 30 Nov, 2015 to 2025; 2026 to the week of 7 Nov | $ per lb | 575 |
 | USDA AMS, *Weekly National Turkey Report* (report 3647), whole young hens 8-16 lb, frozen, conventional, U.S. Grade A, domestic, FOB | `usda_ams_turkey_wholesale_frozen_hens.csv` | Weekly | September to mid-December, 2022 to 2026 | cents per lb | 75 |
 
 USDA MyMarketNews does not serve these tables to scripted clients, so they were saved from the Public Data page in a browser.
@@ -15,6 +16,8 @@ USDA MyMarketNews does not serve these tables to scripted clients, so they were 
 `usda_ams_turkey_whole_national.csv`: one row per ad week and condition (Fresh or Frozen). `under16_*` and `over16_*` are USDA's two size classes, "Whole Turkey < 16 Lbs" and "Whole Turkey > 16 Lbs": store-weighted average advertised price, lowest and highest advertised price (reported from 2024), and the number of stores advertising.
 
 `usda_ams_turkey_frozen_by_region.csv`: `report_begin_date` (yyyymmdd), region code, store-weighted average price and stores advertising.
+
+`usda_ams_turkey_frozen_by_region_range.csv`: `report_begin_date` (yyyymmdd), region code, store-weighted average price, lowest and highest advertised price, and stores advertising. It is used only by the price-spread steps and is one ad week newer than the other files.
 
 `usda_ams_turkey_wholesale_frozen_hens.csv`: `report_begin_date` (yyyymmdd, a Monday), weighted average, low and high price in cents per lb, and volume traded. A week with two lines is averaged by volume.
 
