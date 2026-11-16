@@ -96,6 +96,43 @@ Each day in the output CSV carries one of three statuses:
 
 The predicted lowest-price date is $d^* = \arg\min_d \hat E[P_d]$ over dates after the cutoff. The probability that each remaining ad week is the cheapest comes from 20,000 joint simulations (seed 20261126). Each simulated path draws a common level shift with the standard error of the mean forecast, plus an independent shock per ad week with the residual variance. The same paths give the probability that the price on the first forecast day is below the price on Thanksgiving Day.
 
+## Price spread and quantiles
+
+The models above describe the national average. `sas/11_price_spread.sas` models the low end and the spread, from USDA's regional lines: for each region and ad week, the store-weighted average, the lowest and the highest advertised price of a conventional frozen whole turkey under 16 lb. The models use the six contiguous regions, 2015 to 2026, ad weeks with at least 100 advertising stores and a midpoint 0 to 47 days before Thanksgiving: 364 region-weeks.
+
+Two responses are modelled, both in logs: the **regional average price** and the **lowest advertised price** in the region.
+
+| Step | Specification | Jenner procedure |
+|---|---|---|
+| Season level | Residuals of the response on region and a cubic in days to Thanksgiving; the season level is their store-weighted mean by year. It is subtracted from the response. | PROC GLM, PROC SQL |
+| Quantiles | 10th, 50th and 90th percentiles of the season-adjusted response on region effects and a natural cubic spline in days to Thanksgiving (4 knots). Standard errors by resampling. | PROC QUANTREG |
+| Variance | Normal model with region effects and a cubic in days to Thanksgiving; error variance $\sigma^2 \exp(\gamma_1 t + \gamma_2 t^2)$, by maximum likelihood | PROC AUTOREG, HETERO statement |
+| Curves for 2026 | Regional predictions plus the 2026 season level, combined across regions with store-share weights (geometric mean) | PROC SQL |
+
+The season level is common to all three percentiles. Letting each percentile have its own season effects fits 12 extra parameters per percentile to about 30 observations per season and was further from calibration in the backtest.
+
+**Results.** The lowest advertised price falls from a median of \$1.02 per lb 44 days before Thanksgiving to \$0.35 at 16 days and stays there; its 10th to 90th percentile band is about \$0.24 to \$0.44 from then on. The median regional average goes from \$1.16 to \$0.99. The variance model's standard deviation of the log regional average falls from 0.36 six ad weeks before Thanksgiving week to 0.11 in Thanksgiving week ($\gamma_2 = 0.0011$, $p = 0.04$). Within a region the spread grows: the mean ratio of highest to lowest advertised price is 1.1 six weeks out and 5.6 the week before Thanksgiving week. Tables: `output/tables/spread_profile.csv`, `quantile_curves.csv`, `quantile_regional.csv` and `variance_profile.csv`.
+
+**Backtest.** Seasons 2019 to 2025, origin 14 days before Thanksgiving, the same split as the main backtest. Each fit uses earlier seasons plus the forecast season's weeks published by the origin. The score is the pinball loss on the log scale, $\rho_\tau(u) = u\,(\tau - 1[u < 0])$, and the share of outcomes below each predicted percentile, which should equal the percentile.
+
+| Response | Model | Pinball loss, 10th | Below 10th | Below 50th | Below 90th |
+|---|---|---|---|---|---|
+| Lowest advertised price | Quantile regression | 0.054 | 25% | 59% | 83% |
+| | Normal, constant variance | 0.051 | 22% | 56% | 89% |
+| | Normal, variance by date | 0.057 | 26% | 56% | 83% |
+| Regional average price | Quantile regression | 0.034 | 31% | 61% | 82% |
+| | Normal, constant variance | 0.027 | 15% | 62% | 97% |
+| | Normal, variance by date | 0.032 | 24% | 63% | 90% |
+
+No model is calibrated at the 10th percentile, and quantile regression is not better than a normal model with constant variance. More than half of the outcomes fall below the predicted median: late-season prices came in lower than the season level estimated from the early weeks implied. The 2026 curves are a description of how the spread has moved in past seasons, not a calibrated forecast of this season's low end.
+
+**Limits.**
+
+- The percentiles are across region-weeks. USDA does not publish store-level prices, so a percentile across stores cannot be computed. Given only a region's low $a$ and mean $m$, the 10th percentile across its stores lies between $a$ and $(m - 0.1a)/0.9$: for the Southeast in the week of 7 November 2026, between \$0.24 and \$0.92.
+- The lowest advertised price is one ad. USDA notes that some of the lowest prices require an additional purchase.
+- In 2022 five Northeast lines report a lowest price above the average. Those lows are set to missing. One highest price above \$5 per lb (\$7.57, Southeast, 2015) is set to missing.
+- The maps (`sas/12_spread_charts.sas`) colour every county by its region's value. The state lists of the regions follow USDA's National Retail Report; the District of Columbia is placed in the Northeast.
+
 ## Limitations
 
 - Advertised prices are not transaction prices. Loyalty-card prices, coupons and "free turkey with purchase" offers are not in the data.
@@ -106,4 +143,4 @@ The predicted lowest-price date is $d^* = \arg\min_d \hat E[P_d]$ over dates aft
 
 ## Reproducibility
 
-`run_all.sas` runs the whole analysis, including every chart and social card, and `config/settings.sas` holds all settings (cutoff date, store threshold, season window, seed).
+`run_all.sas` runs the whole analysis, including every chart and social card (`run_spread.sas` runs the price-spread steps alone), and `config/settings.sas` holds all settings (cutoff date, store threshold, season window, seed).

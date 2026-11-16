@@ -29,6 +29,31 @@ These are associations, not causal effects.
 |---|---|
 | ![Typical season](output/social/turkey_season_curve_1080x1080.png) | ![Loss leader](output/social/turkey_loss_leader_1080x1080.png) |
 
+## Beyond the average: when the cheapest turkeys appear
+
+![Price spread over the season](output/figures/turkey_price_spread_thanksgiving2026.png)
+
+The forecast above is about the *average* advertised price. A shopper hunting for a deal cares about the low end, and the low end behaves differently. USDA also reports the lowest and highest advertised price in each of its regions each week, so the spread can be modelled as well (575 region-weeks, 2015-2026, through the ad week of 7-13 November 2026).
+
+1. **The average moves by cents; the cheapest ad moves by two-thirds.** Six weeks before Thanksgiving the cheapest ad in a region is typically $1.02 per lb, about the same as the average. By mid-November it is $0.35 and it stays there through Thanksgiving week. Over the same weeks the regional average goes from $1.16 to $0.99.
+2. **The deals start about four weeks out and are everywhere two weeks out.** The share of region-weeks with an ad at or below $0.50 per lb is 5% five weeks before Thanksgiving week, 16% four weeks before, 48% three weeks before and 86-91% in the two weeks before Thanksgiving week.
+3. **Prices spread out inside a region as they converge between regions.** The highest advertised price in a region is 1.1 times the lowest six weeks out and 5.6 times the lowest the week before Thanksgiving week. Between regions the opposite happens: the standard deviation of the log regional average falls from 0.36 to 0.11 as more stores advertise.
+4. **Regions differ at the low end.** In the ad week of 7-13 November 2026 the cheapest ad was $0.24 per lb in the Southeast and $0.29 in the Northeast, against $0.58 in the Northwest.
+
+| | |
+|---|---|
+| ![10th-percentile price by region](output/figures/turkey_p10_price_map_2026.png) | ![Cheapest ad by region](output/figures/turkey_lowest_price_map_2026.png) |
+
+The percentile curves come from PROC QUANTREG (10th, 50th and 90th percentiles of season-adjusted log prices, with region effects and a spline in days to Thanksgiving). The variance model is PROC AUTOREG with a HETERO statement. The maps are drawn with PROC SGMAP on county boundaries. USDA publishes these prices for eight regions, so every county in a region has the same value.
+
+Read these limits before using the numbers:
+
+- **These are not percentiles across stores.** USDA publishes a low, an average and a high for each region, not store-level prices. The 10th percentile here is across region-weeks: a good week for a region, not a cheap store in it.
+- **The cheapest ads often have strings attached.** USDA notes that some of the lowest prices require an additional purchase, typically of $20 to $50.
+- **The low end is harder to predict than the average.** In a backtest on seasons 2019-2025 from 14 days before Thanksgiving, 15-31% of outcomes fell below the predicted 10th percentile, against a target of 10%, for quantile regression and for two normal models alike. Prices late in the season fell further than the early weeks of the season suggested. Quantile regression was not clearly better than the normal models.
+
+Details are in [docs/methodology.md](docs/methodology.md#price-spread-and-quantiles).
+
 ## Models and validation
 
 | Model | Specification | Jenner procedure |
@@ -68,8 +93,10 @@ Full details are in [docs/methodology.md](docs/methodology.md).
 | | |
 |---|---|
 | ![LinkedIn card](output/social/turkey_linkedin_1200x627.png) | ![Cost of waiting](output/social/turkey_cost_of_waiting_1080x1350.png) |
+| ![Best deals over the season](output/social/turkey_deals_linkedin_1200x627.png) | ![Share of regions with a 50-cent ad](output/social/turkey_deals_by_week_1080x1080.png) |
+| ![Cheapest ad by region](output/social/turkey_deals_map_1200x627.png) | |
 
-`sas/10_social_cards.sas` draws all four cards with PROC SGPLOT from the forecast tables. The chart at the top is drawn by `sas/09_visualization.sas` (SVG, PNG, PDF in `output/figures/`). Suggested post text is in [output/social/post_copy.md](output/social/post_copy.md).
+`sas/10_social_cards.sas` draws the four forecast cards with PROC SGPLOT from the forecast tables, and `sas/13_deal_cards.sas` draws the three deal cards from the price-spread tables. The chart at the top is drawn by `sas/09_visualization.sas` (SVG, PNG, PDF in `output/figures/`). Suggested post text is in [output/social/post_copy.md](output/social/post_copy.md).
 
 ## Reproduce
 
@@ -78,15 +105,21 @@ export TURKEY_ROOT="$(pwd)" JENNER_UNLIMITED=1
 jenner run_all.sas -log logs/run_all.log -print output/tables/run_all.lst
 ```
 
+The price-spread analysis needs only the raw data and runs on its own in a few minutes:
+
+```bash
+jenner run_spread.sas -log logs/run_spread.log -print output/tables/price_spread.lst
+```
+
 The backtest (`sas/07_validation.sas`) fits 28 state-space models and takes most of the run time. The forecast cutoff, store threshold, season window, backtest seasons and random seed are set in `config/settings.sas`. USDA publishes each ad week on the Friday it ends: to refresh, add the new rows to the files in `data/raw/`, move `cutoff`, and run again.
 
 | Path | Contents |
 |---|---|
-| `sas/01_import.sas` ... `sas/10_social_cards.sas` | the pipeline, in order |
+| `sas/01_import.sas` ... `sas/13_deal_cards.sas` | the pipeline, in order |
 | `data/raw/` | source data (USDA AMS retail feature activity, national and regional; USDA AMS wholesale) |
 | `data/processed/model_weekly.csv` | the modeling dataset |
 | `output/forecasts/turkey_price_forecast_thanksgiving2026.csv` | the daily forecast with 95% intervals and observed/inferred/forecast status |
-| `output/tables/` | model comparison, backtest detail, season profile, loss-leader table, and `run_all.lst`, the full SAS listing of the run |
+| `output/tables/` | model comparison, backtest detail, season profile, loss-leader table, `run_all.lst`, the SAS listing of steps 01 to 10, and the price-spread tables with their listing, `price_spread.lst` |
 | `output/social/` | cards for sharing and post text |
 | `docs/` | [data inventory](docs/data_inventory.md), [methodology](docs/methodology.md), [public summary](docs/public_summary.md) |
 

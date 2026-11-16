@@ -23,6 +23,27 @@ Caveats: these are national average advertised supermarket prices for convention
 
 #Thanksgiving #DataScience #Econometrics #Forecasting #SAS #Analytics
 
+## LinkedIn, the deals post (use with turkey_deals_linkedin_1200x627.png, or as a carousel with turkey_deals_by_week_1080x1080.png and turkey_deals_map_1200x627.png)
+
+Numbers are from the price-spread run on USDA data through the ad week of 7-13 November 2026. Rerun `run_spread.sas` after each Friday USDA release and update the figures below.
+
+🦃 I found one turkey for $88 and another for $11. So we stopped asking what the average turkey costs and asked when the best deals show up.
+
+The average advertised price of a frozen whole turkey hardly moves before Thanksgiving: about $1.16/lb in mid-October, about $1.00 by the holiday. The cheapest ads tell a different story.
+
+📉 The typical cheapest ad in a US region falls from $1.02/lb in mid-October to about $0.35 by November 10.
+🎯 The best deals (the 10th percentile of those cheapest ads) fall from $0.68 to $0.24/lb, and stay there through Thanksgiving week.
+📅 Five weeks before Thanksgiving week, 5% of regions have a turkey advertised at 50 cents a pound or less. Three weeks before: 48%. The week before: 91%.
+🗺️ In the ad week of 7-13 November the cheapest ad was $0.24/lb in the Southeast and $0.29 in the Northeast, against $0.58 in the Northwest.
+
+So the deals are not better at the last minute. They arrive about 16 days out, and they hold.
+
+For the statisticians: PROC QUANTREG for the 10th, 50th and 90th percentiles, PROC AUTOREG with a HETERO statement for how the variance changes over the season, and PROC SGMAP for the map. All SAS-compatible code running on Jenner Analytics, open source (MIT): https://github.com/JennerAnalytics/sas-compatible-examples/tree/main/thanksgiving
+
+Caveats: these are advertised prices from USDA, not checkout receipts. USDA publishes a low, an average and a high for each region, not store-level prices, so the percentiles are across regions and seasons. Some of the lowest prices require an additional purchase. In a backtest the low end was harder to predict than the average.
+
+#Thanksgiving #DataScience #Statistics #QuantileRegression #SAS #Analytics
+
 ## Short version (X / Bluesky / Threads)
 
 🦃 Don't wait for Thanksgiving week to buy your turkey. 22 years of USDA supermarket ad data: frozen-turkey prices bottom out in mid-November and rise ~11% by the holiday. Forecast $1.16/lb around Nov 14 vs $1.27 on Nov 25. Open SAS-compatible code on Jenner Analytics: https://github.com/JennerAnalytics/sas-compatible-examples/tree/main/thanksgiving
@@ -43,3 +64,6 @@ Data: USDA Agricultural Marketing Service. Analysis in SAS-compatible code on Je
 - turkey_season_curve_1080x1080.png: Curve of the typical frozen-turkey price season relative to its low: about 11% above the low in late October, lowest in mid-November, rising to about 11% above the low on Thanksgiving.
 - turkey_cost_of_waiting_1080x1350.png: Waiting until the last minute costs about $1.72 on a 16-lb frozen turkey; 79% chance that this week's advertised price beats Thanksgiving week's.
 - turkey_loss_leader_1080x1080.png: Paired bars for 2022 to 2025 comparing wholesale and supermarket advertised prices per lb: $1.75 vs $0.98, $1.02 vs $1.11, $0.96 vs $0.95, $1.72 vs $0.97.
+- turkey_deals_linkedin_1200x627.png: Line chart of frozen turkey ad prices from mid-October to Thanksgiving 2026. The best deals fall from $0.68 to $0.24 per lb by November 10 and stay flat; the typical cheapest ad falls from $1.02 to $0.35; the regional average stays near $1.00 to $1.16.
+- turkey_deals_by_week_1080x1080.png: Bar chart of the share of US regions with a turkey advertised at $0.50 per lb or less, by ad week: 0%, 5%, 16%, 48%, 86%, 91%, and 81% in Thanksgiving week.
+- turkey_deals_map_1200x627.png: US map coloured by region showing the lowest advertised frozen turkey price in the ad week of 7-13 November 2026: Southeast $0.24, Northeast $0.29, Midwest $0.35, South Central $0.48, Southwest $0.49, Northwest $0.58, Alaska $0.58, Hawaii $0.99.
