@@ -1,5 +1,5 @@
                                    Regional price range file: region-weeks by season                                   1
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
     year  region_weeks  low_above_average       first        last
 -----------------------------------------------------------------
@@ -16,7 +16,7 @@
     2025            44                  0  2025-10-11  2025-11-22
     2026            36                  0  2026-10-10  2026-11-07
                          Season profile of the price range, six contiguous regions, 2015 onward                        2
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
     Ad weeks
       before
@@ -31,7 +31,7 @@ Thanksgiving
            1            66             31,056       0.93     0.34         0.19      2.11                  91%         61%
            0            63             14,868       0.94     0.37         0.19      2.03                  81%         56%
                             Season level relative to the pooled seasonal curve (log points)                            3
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
           Regional      Lowest
            average  advertised
@@ -50,7 +50,7 @@ Thanksgiving
     2025     0.009      -0.122
     2026     0.053      -0.101
          Quantile regression of the season-adjusted log regional average price: 10th, 50th and 90th percentiles        4
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
 
 The QUANTREG Procedure
@@ -145,7 +145,7 @@ spl 2                  1       0.0028         0.0008       0.0013       0.0043  
 spl 3                  1      -0.0049         0.0017      -0.0082      -0.0016    -2.93   0.0037
 
         Quantile regression of the season-adjusted log lowest advertised price: 10th, 50th and 90th percentiles        5
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
 
 The QUANTREG Procedure
@@ -240,7 +240,7 @@ spl 2                  1       0.0089         0.0010       0.0069       0.0109  
 spl 3                  1      -0.0172         0.0022      -0.0215      -0.0129    -7.93   <.0001
 
                         Quantile curves for 2026, store-weighted across six regions, by ad week                        6
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
                                Days to
                           Thanksgiving
@@ -262,7 +262,7 @@ Regional average price              16  2026-11-10    0.89    0.99    1.10
 Regional average price               9  2026-11-17    0.90    0.99    1.12
 Regional average price               2  2026-11-24    0.91    1.00    1.15
   Variance model for the season-adjusted log regional average price: error variance exp-linear in days to Thanksgiving 7
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
 
                      The AUTOREG Procedure
@@ -323,7 +323,7 @@ Regional average price               2  2026-11-24    0.91    1.00    1.15
           HET1             1     0.006972       0.0208     0.34     0.7376
           HET2             1     0.001112     0.000534     2.08     0.0373
 
-                                                Variance over the season           16:28 Sunday, November 15, 2026     8
+                                                Variance over the season           17:53 Sunday, November 15, 2026     8
     Between region-weeks: model and residual SD of the log average price. Within a region-week: log high/low range.
 
     Ad weeks
@@ -339,7 +339,7 @@ Thanksgiving
            1            66     0.113        0.098            0.271            1.73                5.6
            0            63     0.106        0.117            0.271            1.59                4.9
                         Quantile backtest, seasons 2019-2025, origin 14 days before Thanksgiving                       9
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 Pinball loss on the log scale (lower is better); share of outcomes below the predicted quantile (target = the quantile)
 
 measure                   model                             Quantile  region_weeks  pinball_loss  share_below
@@ -363,7 +363,7 @@ Regional average price    Normal, constant variance              0.9           1
 Regional average price    Normal, variance by date               0.9           117        0.0264        89.7%
 Regional average price    Quantile regression                    0.9           117        0.0283        82.1%
             Regional prices, ad week 7 Nov to 13 Nov 2026: observed, and modelled percentiles for that week           10
-                                                                                   16:28 Sunday, November 15, 2026
+                                                                                   17:53 Sunday, November 15, 2026
 
                                        Advertised
                                            price,      Lowest     Highest

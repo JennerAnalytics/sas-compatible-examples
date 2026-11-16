@@ -51,7 +51,7 @@ run;
 
 ods graphics on / reset=all width=1200px height=627px imagefmt=png
     imagename="turkey_linkedin_1200x627" noborder;
-proc sgplot data=inter.card_fc noautolegend;
+proc sgplot data=inter.card_fc noautolegend pad=28px;
     styleattrs backcolor=&paper wallcolor=&paper;
     title1 j=l height=11pt bold color=&accent 'THE ECONOMICS OF THANKSGIVING';
     title2 j=l height=20pt bold color=&ink "Don't wait for Thanksgiving week to buy your turkey.";
@@ -69,7 +69,7 @@ proc sgplot data=inter.card_fc noautolegend;
         datalabel=eve_label datalabelattrs=(color=&ink size=11 weight=bold) datalabelpos=topleft;
     refline &cutoff / axis=x lineattrs=(pattern=dash color=gray) label='forecast starts' labelloc=inside labelpos=max;
     xaxis type=time display=(nolabel) values=("17OCT&forecast_year"d "31OCT&forecast_year"d "14NOV&forecast_year"d "26NOV&forecast_year"d)
-        valuesdisplay=('Oct 17' 'Oct 31' 'Nov 14' 'Nov 26') valueattrs=(color=&muted size=10);
+        valuesdisplay=('Oct 17' 'Oct 31' 'Nov 14' 'Nov 26') valueattrs=(color=&muted size=10) valueshint;
     yaxis display=(nolabel) valuesformat=dollar6.2 min=0.90 max=1.65 grid gridattrs=(color=cxE6E3DD)
         valueattrs=(color=&muted size=10);
     keylegend 'obs' 'fc' 'band' / location=outside position=bottom across=3 noborder;
@@ -103,7 +103,7 @@ run;
 
 ods graphics on / reset=all width=1080px height=1080px imagefmt=png
     imagename="turkey_season_curve_1080x1080" noborder;
-proc sgplot data=inter.card_profile noautolegend;
+proc sgplot data=inter.card_profile noautolegend pad=28px;
     styleattrs backcolor=&paper wallcolor=&paper;
     title1 j=l height=13pt bold color=&accent 'MYTH VS. DATA';
     title2 j=l height=27pt bold color=&ink 'The best turkey deals come';
@@ -116,8 +116,8 @@ proc sgplot data=inter.card_profile noautolegend;
         datalabel=note datalabelattrs=(color=&ink size=15 weight=bold) datalabelpos=top;
     xaxis type=time display=(nolabel) values=("17OCT&forecast_year"d "31OCT&forecast_year"d "14NOV&forecast_year"d "26NOV&forecast_year"d)
         valuesdisplay=('Oct 17' 'Oct 31' 'Nov 14' 'Nov 26') valueattrs=(color=&muted size=13)
-        offsetmin=0.04 offsetmax=0.12;
-    yaxis display=(nolabel) min=0.97 max=1.16 values=(1 1.05 1.10) valuesdisplay=('low' '+5%' '+10%')
+        offsetmin=0.04 offsetmax=0.12 valueshint;
+    yaxis display=(nolabel) min=0.97 max=1.16 values=(1 1.05 1.10) valuesdisplay=('low' '+5%' '+10%') valueshint
         grid gridattrs=(color=cxE6E3DD) valueattrs=(color=&muted size=13);
     footnote1 j=l height=9pt color=gray "Fitted seasonal pattern; October values rest on fewer ads. Data: USDA Agricultural Marketing Service,";
     footnote2 j=l height=9pt color=gray "national average advertised supermarket price, conventional frozen whole turkeys, per lb.";
@@ -138,7 +138,7 @@ run;
 
 ods graphics on / reset=all width=1080px height=1080px imagefmt=png
     imagename="turkey_loss_leader_1080x1080" noborder;
-proc sgplot data=inter.card_ll;
+proc sgplot data=inter.card_ll pad=28px;
     styleattrs backcolor=&paper wallcolor=&paper datacolors=(&navy &accent);
     title1 j=l height=13pt bold color=&accent 'THE LOSS LEADER';
     title2 j=l height=24pt bold color=&ink "In &ll_year, supermarkets advertised";
@@ -174,7 +174,7 @@ run;
 
 ods graphics on / reset=all width=1080px height=1350px imagefmt=png
     imagename="turkey_cost_of_waiting_1080x1350" noborder;
-proc sgplot data=inter.card_wait noautolegend noborder;
+proc sgplot data=inter.card_wait noautolegend noborder pad=28px;
     styleattrs backcolor=&paper wallcolor=&paper;
     title1 j=l height=13pt bold color=&accent 'WHEN SHOULD YOU BUY A TURKEY?';
     title2 j=l height=26pt bold color=&ink 'Waiting until the last minute';

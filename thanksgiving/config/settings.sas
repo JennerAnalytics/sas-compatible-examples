@@ -11,8 +11,9 @@
 %let bt_first = 2012;
 %let bt_last = 2025;
 
+options dlcreatedir;
 libname inter "&root/data/intermediate";
-libname tk "&root/data/processed";
+libname tk "&root/data/intermediate/tk";
 
 %include "&root/sas/macros.sas";
 

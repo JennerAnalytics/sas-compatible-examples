@@ -93,8 +93,10 @@ Full details are in [docs/methodology.md](docs/methodology.md).
 | | |
 |---|---|
 | ![LinkedIn card](output/social/turkey_linkedin_1200x627.png) | ![Cost of waiting](output/social/turkey_cost_of_waiting_1080x1350.png) |
+| ![Best deals over the season](output/social/turkey_deals_linkedin_1200x627.png) | ![Share of regions with a 50-cent ad](output/social/turkey_deals_by_week_1080x1080.png) |
+| ![Cheapest ad by region](output/social/turkey_deals_map_1200x627.png) | |
 
-`sas/10_social_cards.sas` draws all four cards with PROC SGPLOT from the forecast tables. The chart at the top is drawn by `sas/09_visualization.sas` (SVG, PNG, PDF in `output/figures/`). Suggested post text is in [output/social/post_copy.md](output/social/post_copy.md).
+`sas/10_social_cards.sas` draws the four forecast cards with PROC SGPLOT from the forecast tables, and `sas/13_deal_cards.sas` draws the three deal cards from the price-spread tables. The chart at the top is drawn by `sas/09_visualization.sas` (SVG, PNG, PDF in `output/figures/`). Suggested post text is in [output/social/post_copy.md](output/social/post_copy.md).
 
 ## Reproduce
 
@@ -113,7 +115,7 @@ The backtest (`sas/07_validation.sas`) fits 28 state-space models and takes most
 
 | Path | Contents |
 |---|---|
-| `sas/01_import.sas` ... `sas/12_spread_charts.sas` | the pipeline, in order |
+| `sas/01_import.sas` ... `sas/13_deal_cards.sas` | the pipeline, in order |
 | `data/raw/` | source data (USDA AMS retail feature activity, national and regional; USDA AMS wholesale) |
 | `data/processed/model_weekly.csv` | the modeling dataset |
 | `output/forecasts/turkey_price_forecast_thanksgiving2026.csv` | the daily forecast with 95% intervals and observed/inferred/forecast status |
